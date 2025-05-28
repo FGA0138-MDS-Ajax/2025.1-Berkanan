@@ -4,6 +4,11 @@ nav:
   - Instruções mkdocs: "index.md"
   - Atas de Reunião:
     - Ata 1: "atas-reuniao/ata-reuniao-1.md"
+  - Documento de Arquitetura:
+    - CerraDex: "doc-arquitetura/index-arquitetura.md"
+    - Introdução: "doc-arquitetura/introducao.md"
+    - Representação Arquitetural: "doc-arquitetura/rep-arquitetural.md"
+    - Bibliografia: "doc-arquitetura/bibliografia.md"
 
 theme:
   name: material
