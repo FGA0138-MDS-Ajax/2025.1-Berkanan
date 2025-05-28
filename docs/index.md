@@ -1,17 +1,13 @@
-# Welcome to MkDocs
+# Documentação do Projeto - CerraDex
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+O Projeto ***CerraDex*** propõe um site interativo que reúne informações confiáveis e visuais sobre espécies em risco de extinção no cerrado.
 
-## Commands
+### Por que isso é importante?
+O cerrado está sumindo rápido, e com ele, animais únicos e essenciais para o equilíbrio do ecossistema natural. Muitas pessoas sequer sabem da existência de alguns desses animais — e aí entra o *CerraDex*!
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Objetivo do projeto
+O CerraDex toma como objetivo tornar o conteúdo científico acessível. Além de engajar jovens, curiosos e aqueles que não conhecem o cerrado no assunto, com foco em preservar esse rico patrimônio natural!
 
-## Project layout
+Acesse e explore! Salvar o cerrado começa com **conhecer** quem vive nele.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+[*link em breve!*]

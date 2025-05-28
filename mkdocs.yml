@@ -1,7 +1,7 @@
 site_name: Documentação
 
 nav:
-  - Instruções mkdocs: "index.md"
+  - CerraDex: "index.md"
   - Atas de Reunião:
     - Ata 1: "atas-reuniao/ata-reuniao-1.md"
   - Documento de Arquitetura:
@@ -9,6 +9,7 @@ nav:
     - Introdução: "doc-arquitetura/introducao.md"
     - Representação Arquitetural: "doc-arquitetura/rep-arquitetural.md"
     - Bibliografia: "doc-arquitetura/bibliografia.md"
+  - Instruções mkdocs: "mkdocs.md"
 
 theme:
-  name: material
+  name: sandstone
