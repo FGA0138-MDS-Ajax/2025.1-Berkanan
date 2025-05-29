@@ -17,5 +17,5 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-bootswatch 
+      - run: pip install mkdocs-landing
       - run: mkdocs gh-deploy --force
