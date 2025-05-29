@@ -32,9 +32,8 @@ A arquitetura em camadas é uma estratégia fundamental de organização de sist
 
 Cada camada  atua de forma independente, representando uma abstração específica no processamento das requisições. A forma como elas se comunicam é definida pela equipe de desenvolvimento, de acordo com as necessidades do projeto.
 
+![Figura 1](/docs/img/img1.png)
 *Desenho esquemático da representação arquitetural.*
-
-![Figura 1](img/img1.png)
 
 ## 2.4 Metas e restrições arquiteturais
 
@@ -62,6 +61,15 @@ O sistema da aplicação está subdividido nos módulos de:
 - Galeria: armazenamento de imagens das páginas da aplicação, como fotos das espécies de animais ameaçados. Esse módulo se comunica por meio da adição de imagens em alguns pontos das páginas. Além de uma interface que permite que os usuários visualizem cada imagem individualmente e alterne entre elas;
 - CRUD: sistema de cadastro e manipulação dos dados das espécies. Sendo esse módulo necessário para a criação de novas páginas e a atualização ou remoção do conteúdo de páginas. Esse módulo funciona permitindo que os moderadores selecionados pelo administrador possam alterar as páginas conforme desejarem.
 
+![Figura 2](/docs/img/img3.png)
+*Desenho esquemático do diagrama de estados.*
+
+![Figura 3](/docs/img/img2.png)
+*Desenho esquemático do diagrama de atividades.*
+
+![Figura 4](/docs/img/img4.png)
+*Desenho esquemático do diagrama de classes.*
+
 ## 2.7 Visão de Implementação
 
 Camada de Usuário:
@@ -77,6 +85,9 @@ Camada de Negócios
 Camada do Banco:
 - Guarda a informação do animal em questão (nome, espécie, imagem, dados referentes a ele).
 Passa para o site a informação coletada.
+
+![Figura 5](/docs/img/img5.png)
+*Desenho esquemático do diagrama de pacotes.*
 
 ## 2.8 Visão de Implantação
 
