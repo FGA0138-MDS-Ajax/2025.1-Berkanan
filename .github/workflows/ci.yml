@@ -17,5 +17,5 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install lantana
+      - run: pip install mkdocs-bootswatch
       - run: mkdocs gh-deploy --force
