@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://placehold.co/600x200/transparent/white?text=Cerradex&font=montserrat" alt="Logo Cerradex (Substitua com seu logo)" width="400"/>
-
-  <h1>Cerradex</h1>
+  <h1 style="font-size: 100px;">Cerradex</h1>
 
   <p>
     <strong>O Projeto CerraDex propõe um site interativo que reúne informações confiáveis e visuais sobre espécies em risco de extinção no cerrado.</strong>
