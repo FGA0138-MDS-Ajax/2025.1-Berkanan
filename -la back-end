@@ -1,0 +1,25 @@
+[33mcommit 279880d90e6275880f4f5a1362ae071844e2f6dd[m
+Author: Lucas M <lucasmateustds@gmail.com>
+Date:   Mon Jun 9 22:26:44 2025 -0300
+
+    :tada: Commit inicial
+
+A	back-end
+A	docker-compose.yml
+A	front-end/.gitignore
+A	front-end/Dockerfile
+A	front-end/README.md
+A	front-end/next.config.ts
+A	front-end/package-lock.json
+A	front-end/package.json
+A	front-end/postcss.config.mjs
+A	front-end/public/file.svg
+A	front-end/public/globe.svg
+A	front-end/public/next.svg
+A	front-end/public/vercel.svg
+A	front-end/public/window.svg
+A	front-end/src/app/favicon.ico
+A	front-end/src/app/globals.css
+A	front-end/src/app/layout.tsx
+A	front-end/src/app/page.tsx
+A	front-end/tsconfig.json
