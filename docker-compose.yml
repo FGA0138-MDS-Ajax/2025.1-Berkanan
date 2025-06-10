@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: 
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      # Only mount node_modules to prevent overwriting build
+      - /app/node_modules
+      # Optional: mount src for development if needed
+      - ./front-end/src:/app/src
+      - ./front-end/public:/app/public
+    restart: unless-stopped
+
+  backend:
+    build: 
+      context: ./back-end
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./back-end:/app
+    restart: unless-stopped
