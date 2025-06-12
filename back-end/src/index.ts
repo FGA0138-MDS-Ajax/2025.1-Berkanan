@@ -1,7 +1,8 @@
+import 'dotenv/config'
 import { Elysia } from "elysia";
 import swagger from "@elysiajs/swagger";
-import { LOG } from "./utils/logger.util";
 
+import { LOG } from "./utils/logger.util";
 import { routes } from './routes/index';
 
 const app = new Elysia();
