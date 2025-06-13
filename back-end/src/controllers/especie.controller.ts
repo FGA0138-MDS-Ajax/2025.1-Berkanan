@@ -1,6 +1,5 @@
 import { getAllEspecies } from '../models/especie.model';
 
-export const getEspecies = () => {
-    return getAllEspecies();
+export const getEspecies = async () => {
+    return await getAllEspecies();
 };
-

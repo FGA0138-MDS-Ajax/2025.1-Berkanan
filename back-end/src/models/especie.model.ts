@@ -1,14 +1,13 @@
-type Especie = {
-    id: number;
-    tendenciaPopulacional: string;
-    genero: string;
-    epiteto_especifico: string;
-    observacoes: string;
+import { supabase } from '../lib/supabaseClient';
+
+export const getAllEspecies = async () => {
+    const { data, error } = await supabase
+        .from('especie')
+        .select('*');
+
+    if (error) {
+        throw new Error(error.message);
+    }
+
+    return data;
 };
-
-let especies: Especie[] = [
-    { id: 1, tendenciaPopulacional: 'Crescimento', genero: 'Chrysocyon', epiteto_especifico: 'brachyurus', observacoes: 'Lobo-guará' },
-    { id: 2, tendenciaPopulacional: 'Queda', genero: 'Panthera', epiteto_especifico: 'onca', observacoes: 'Onça-pintada' }
-];
-
-export const getAllEspecies = () => especies;
