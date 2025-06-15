@@ -7,13 +7,8 @@
  * @module routes/index
  */
 
-import dotenv from 'dotenv';
-dotenv.config();
-
 import { Elysia } from 'elysia';
 import { healthRoute } from './health.route';
-import { especieRoutes } from './especie.routes';
-
 // Importe outras rotas abaixo conforme necessário
 
 /**
@@ -24,5 +19,4 @@ import { especieRoutes } from './especie.routes';
  * @type {Elysia}
  */
 export const routes = new Elysia()
-  .use(healthRoute)
-  .use(especieRoutes);
+  .use(healthRoute);
