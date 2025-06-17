@@ -118,7 +118,7 @@ Liste alguns problemas comuns e suas soluções.
 
 Se o projeto for open source e você quiser contribuições, explique como:
 
-1.  Faça um Fork do projeto.
+1.  Execute o comando ``git pull``.
 2.  Crie uma Branch para sua Feature (`git checkout -b feature/MinhaNovaFeature`).
 3.  Commit suas mudanças (`git commit -m 'Adiciona MinhaNovaFeature'`).
 4.  Push para a Branch (`git push origin feature/MinhaNovaFeature`).
