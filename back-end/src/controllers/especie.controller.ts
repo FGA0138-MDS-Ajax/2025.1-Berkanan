@@ -1,9 +1,13 @@
-import { getAllEspecies, saveEspecie, type Especie } from '../models/especie.model';
+import { getAllEspecies, inserir, alterar, type Especie } from '../models/especie.model';
 
 export const getEspecies = async () => {
     return await getAllEspecies();
 };
 
-export const salvarEspecies = async (especie: Especie) => {
-    return await saveEspecie(especie);
+export const inserirEspecie = async (especie: Especie) => {
+    return await inserir(especie);
+};
+
+export const alterarEspecie = async (especie: Especie) => {
+    return await alterar(especie);
 };
