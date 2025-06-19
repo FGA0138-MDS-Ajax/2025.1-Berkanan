@@ -1,6 +1,4 @@
-import type { Species } from "@/app/components/types/species"
-
-//só pra conseguir visualizar enquanto não tem o banco
+import type { Species } from "@/types/species.types"
 
 export const speciesData: Species[] = [
   {
