@@ -1,14 +1,13 @@
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../utils/supabase.utils';
+import type { Especie } from '../types/especie.type';
 
-export type Especie = {
-    id: number;
-    genero: string;
-    epiteto_especifico: string;
-    observacoes?: string;
-    tendencia_populacional: string;
-};
-
-export const getAllEspecies = async () => {
+/**
+ * Recupera todas as espécies cadastradas na tabela "especie" do Supabase.
+ *
+ * @returns {Promise<Especie[]>} Uma promessa que resolve para um array contendo todas as espécies encontradas.
+ * @throws {Error} Caso ocorra algum erro na consulta ao banco de dados.
+ */
+export const getAllEspecies = async (): Promise<Especie[]> => {
     const { data, error } = await supabase
         .from('especie')
         .select('*');
@@ -17,10 +16,17 @@ export const getAllEspecies = async () => {
         throw new Error(error.message);
     }
 
-    return data;
+    return data as Especie[];
 };
 
-export const inserir = async (especie: Especie) => {
+/**
+ * Insere uma nova espécie na tabela "especie" do Supabase.
+ *
+ * @param {Especie} especie - Objeto contendo os dados da espécie a ser inserida.
+ * @returns {Promise<Especie>} Uma promessa que resolve para a espécie recém-inserida.
+ * @throws {Error} Caso ocorra algum erro durante a inserção.
+ */
+export const inserir_especie = async (especie: Especie): Promise<Especie> => {
     const { data, error } = await supabase
         .from('especie')
         .insert([especie])
@@ -32,10 +38,17 @@ export const inserir = async (especie: Especie) => {
         throw new Error(error.message);
     }
 
-    return data;
+    return data as Especie;
 };
 
-export const alterar = async (especie: Especie) => {
+/**
+ * Atualiza os dados de uma espécie existente na tabela "especie" do Supabase.
+ *
+ * @param {Especie} especie - Objeto contendo os dados atualizados da espécie (incluindo o ID).
+ * @returns {Promise<Especie>} Uma promessa que resolve para a espécie atualizada.
+ * @throws {Error} Caso ocorra algum erro durante a atualização.
+ */
+export const alterar_especie = async (especie: Especie): Promise<Especie> => {
     const { data, error } = await supabase
         .from('especie')
         .update([especie])
@@ -48,5 +61,5 @@ export const alterar = async (especie: Especie) => {
         throw new Error(error.message);
     }
 
-    return data;
+    return data as Especie;
 };
