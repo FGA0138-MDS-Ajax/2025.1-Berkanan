@@ -47,3 +47,4 @@ export const especieRoutes = new Elysia({ prefix: '/especies' })
             return { error: (error as Error).message };
         }
     });
+
