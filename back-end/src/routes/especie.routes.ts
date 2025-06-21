@@ -1,13 +1,20 @@
 import { Elysia } from 'elysia';
-import { getEspecies } from '../controllers/especie.controller';
-import { saveEspecie } from '../models/especie.model';
+import { getEspecies, inserirEspecie, alterarEspecie } from '../controllers/especie.controller';
 
 export const especieRoutes = new Elysia({ prefix: '/especies' })
     .get('/', async () => await getEspecies())
     .post('/', async ({ body }) => {
         try {
-            const especieCriada = await saveEspecie(body);
-            return especieCriada;
+            const especie = await inserirEspecie(body);
+            return especie;
+        } catch (error) {
+            return { error: (error as Error).message };
+        }
+    })
+    .put('/', async ({ body }) => {
+        try {
+            const especie = await alterarEspecie(body);
+            return especie;
         } catch (error) {
             return { error: (error as Error).message };
         }

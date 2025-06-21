@@ -9,6 +9,7 @@
 
 import { Elysia } from 'elysia';
 import { healthRoute } from './health.route';
+import { especieRoutes } from './especie.routes';
 // Importe outras rotas abaixo conforme necessário
 
 /**
@@ -19,4 +20,5 @@ import { healthRoute } from './health.route';
  * @type {Elysia}
  */
 export const routes = new Elysia()
+  .use(especieRoutes)
   .use(healthRoute);
