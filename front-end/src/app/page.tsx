@@ -1,7 +1,9 @@
 'use client';
+import React from 'react'; // Added React import
 import Navigation from "@/app/components/layout/Navigation"
 import Filter from "@/app/components/search/Filter"
 import SpeciesCard from "./components/species/Card"
+import AnimalInfo from "./components/species/info"
 import { useSpecies } from "./hooks/useSpecies"
 
 export default function Page() {
@@ -13,8 +15,27 @@ export default function Page() {
         getSpecies,
         getSpeciesById,
         clearError
-  } = useSpecies();
+    } = useSpecies();
 
+    // Estado para controlar qual animal está sendo visualizado
+    const [selectedAnimalId, setSelectedAnimalId] = React.useState<string | null>(null);
+
+    // Função para selecionar um animal
+    const handleAnimalSelect = (animalId: string) => {
+        setSelectedAnimalId(animalId);
+    };
+
+    // Função para voltar para a lista
+    const handleBackToList = () => {
+        setSelectedAnimalId(null);
+    };
+
+    // Se um animal está selecionado, mostra a página de info
+    if (selectedAnimalId) {
+        return <AnimalInfo id={selectedAnimalId} onBack={handleBackToList} />;
+    }
+
+    // Caso contrário, mostra a página principal
     return (
         <div className="min-h-screen bg-[#fffed7]">
             <Navigation />
@@ -34,9 +55,7 @@ export default function Page() {
                     {species.map((animal, index) => (
                         <div 
                             key={animal.id} 
-                            onClick={() => {
-                                return animal.id && handleAnimalSelect(animal.id);
-                            }} // Added null check
+                            onClick={() => animal.id && handleAnimalSelect(animal.id)} // Added null check
                             className="cursor-pointer" // Added cursor pointer for better UX
                         >
                             <SpeciesCard 
