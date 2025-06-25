@@ -9,7 +9,12 @@
 
 import { Elysia } from 'elysia';
 import { healthRoute } from './health.route';
+import { especieRoutes } from './especie.routes';
+import dotenv from 'dotenv';
+import { animalRoutes } from './animal.routes';
 // Importe outras rotas abaixo conforme necessário
+
+dotenv.config();
 
 /**
  * Instância agregadora do Elysia que reúne todos os módulos de rota.
@@ -19,4 +24,6 @@ import { healthRoute } from './health.route';
  * @type {Elysia}
  */
 export const routes = new Elysia()
-  .use(healthRoute);
+  .use(healthRoute)
+  .use(especieRoutes)
+  .use(animalRoutes);
