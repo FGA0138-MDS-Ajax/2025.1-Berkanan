@@ -1,10 +1,10 @@
 'use client';
 import React from 'react'; // Added React import
-import Navigation from "@/app/components/layout/Navigation"
-import Filter from "@/app/components/search/Filter"
-import SpeciesCard from "./components/species/Card"
-import AnimalInfo from "./components/species/info"
-import { useSpecies } from "./hooks/useSpecies"
+import Navigation from "@/components/layout/Navigation"
+import Filter from "@/components/search/Filter"
+import SpeciesCard from "../components/species/Card"
+import AnimalInfo from "../components/species/info"
+import { useSpecies } from "../hooks/useSpecies"
 
 export default function Page() {
     const { 
