@@ -9,5 +9,21 @@ export interface Species {
   conservationStatus?: string
   imageUrl?: string
   tags: SpeciesTag[]
-  category?: "mamifero" | "reptil" | "ave" | "peixe" | "invertebrado"
+  scientificName: string;
+  commonName: string;
+  commonNameSecondary: string;
+  phylum: string;
+  class: string;
+  order: string;
+  family: string;
+  group: string;
+  category: "mamifero" | "reptil" | "ave" | "peixe" | "invertebrado"
+  categoryStatus: 'EN' | 'VU' | 'CR' | 'LC' | 'NT';
+  weight: string;
+  height: string;
+  lifespan: string;
+  habitat: string;
+  habitatRegions: string[];
+  description: string;
+  image: string;
 }

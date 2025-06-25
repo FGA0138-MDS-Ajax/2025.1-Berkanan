@@ -1,39 +1,19 @@
 'use client';
-import React from 'react'; // Added React import
-import Navigation from "@/components/layout/Navigation"
+import { useRouter } from 'next/navigation'
+
 import Filter from "@/components/search/Filter"
-import SpeciesCard from "../components/species/Card"
-import AnimalInfo from "../components/species/info"
 import { useSpecies } from "../hooks/useSpecies"
+import SpeciesCard from "../components/species/Card"
+import Navigation from "@/components/layout/Navigation"
 
 export default function Page() {
-    const { 
-        species,
-        loading,
-        error,
-        fetchSpecies,
-        getSpecies,
-        getSpeciesById,
-        clearError
-    } = useSpecies();
-
-    // Estado para controlar qual animal está sendo visualizado
-    const [selectedAnimalId, setSelectedAnimalId] = React.useState<string | null>(null);
+    const { species } = useSpecies();
+    const router = useRouter();
 
     // Função para selecionar um animal
     const handleAnimalSelect = (animalId: string) => {
-        setSelectedAnimalId(animalId);
+        router.push(`/species/${animalId}`);
     };
-
-    // Função para voltar para a lista
-    const handleBackToList = () => {
-        setSelectedAnimalId(null);
-    };
-
-    // Se um animal está selecionado, mostra a página de info
-    if (selectedAnimalId) {
-        return <AnimalInfo id={selectedAnimalId} onBack={handleBackToList} />;
-    }
 
     // Caso contrário, mostra a página principal
     return (
@@ -59,6 +39,7 @@ export default function Page() {
                             className="cursor-pointer" // Added cursor pointer for better UX
                         >
                             <SpeciesCard 
+                                image={animal.image}
                                 name={animal.name} 
                                 tags={animal.tags} 
                             />
