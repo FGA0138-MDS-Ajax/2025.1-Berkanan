@@ -115,6 +115,7 @@ export default function PainelAdministrador() {
             <div className="flex flex-col gap-auto mt-4 text-center w-full">
               {species.map((item, index) => (
                 <div
+                  key={item.id}
                   className={"w-full" + (species.length == index + 1 ? " rounded-b-lg" : " ")}
                   style={(index % 2 === 0 ? { backgroundColor: "#6F826A" } : { backgroundColor: "#BBD8A3" })}>
                   <Manager
