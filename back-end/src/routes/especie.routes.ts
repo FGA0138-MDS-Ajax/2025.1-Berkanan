@@ -12,9 +12,10 @@ export const especieRoutes = new Elysia({ prefix: '/especies' })
      * Recupera todas as espécies.
      *
      * @route GET /especies
+     * @param {query} query - Query da requisição.
      * @returns {Promise<Especie[]>} Lista de espécies.
      */
-    .get('/', async () => await getEspecies())
+    .get('/', async ({ query }) => await getEspecies(query))
 
     /**
      * Insere uma nova espécie no banco de dados.

@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-import { getAnimais } from '../controllers/animal.controller';
+import { getAnimals } from '../controllers/animal.controller';
 import type { Animal } from '../types/animal.type';
 
 /**
@@ -14,4 +14,4 @@ export const animalRoutes = new Elysia({ prefix: '/animais' })
      * @route GET /animais
      * @returns {Promise<Animal[]>} Lista de animais.
      */
-    .get('/', async () => await getAnimais());
+    .get('/', async ({query}) => await getAnimals(query));
