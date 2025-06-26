@@ -9,7 +9,7 @@ import type { Animal } from '../types/animal.type';
  */
 export const animalRoutes = new Elysia({ prefix: '/animais' })
     /**
-     * Recupera todas as espécies.
+     * Recupera todas os animais.
      *
      * @route GET /animais
      * @returns {Promise<Animal[]>} Lista de animais.
