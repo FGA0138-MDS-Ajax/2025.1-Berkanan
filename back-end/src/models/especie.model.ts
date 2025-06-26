@@ -2,17 +2,18 @@ import { supabase } from '../utils/supabase.utils';
 import type { Especie } from '../types/especie.type';
 
 /**
- * Recupera todas as espécies cadastradas na tabela "especie" do Supabase.
+ * Recupera todas as espécies cadastradas na tabela "Especie" do Supabase.
  *
  * @returns {Promise<Especie[]>} Uma promessa que resolve para um array contendo todas as espécies encontradas.
  * @throws {Error} Caso ocorra algum erro na consulta ao banco de dados.
  */
 export const getAllEspecies = async (): Promise<Especie[]> => {
     const { data, error } = await supabase
-        .from('especie')
+        .from('Especie')
         .select('*');
 
     if (error) {
+        console.error(error);
         throw new Error(error.message);
     }
 
@@ -28,7 +29,7 @@ export const getAllEspecies = async (): Promise<Especie[]> => {
  */
 export const inserir_especie = async (especie: Especie): Promise<Especie> => {
     const { data, error } = await supabase
-        .from('especie')
+        .from('Especie')
         .insert([especie])
         .select()
         .single();
@@ -50,9 +51,9 @@ export const inserir_especie = async (especie: Especie): Promise<Especie> => {
  */
 export const alterar_especie = async (especie: Especie): Promise<Especie> => {
     const { data, error } = await supabase
-        .from('especie')
+        .from('Especie')
         .update([especie])
-        .eq('id', especie.id)
+        .eq('cient', especie.cient)
         .select()
         .single();
 
