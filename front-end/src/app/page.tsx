@@ -2,17 +2,18 @@
 import { useRouter } from 'next/navigation'
 
 import Filter from "@/components/search/Filter"
-import { useSpecies } from "../hooks/useSpecies"
 import SpeciesCard from "../components/species/Card"
 import Navigation from "@/components/layout/Navigation"
+import { useAnimals } from '@/hooks/useAnimals';
+import { colorMap } from '@/utils/utils';
 
 export default function Page() {
-    const { species } = useSpecies();
+    const { animals } = useAnimals();
     const router = useRouter();
 
     // Função para selecionar um animal
-    const handleAnimalSelect = (animalId: string) => {
-        router.push(`/species/${animalId}`);
+    const handleAnimalSelect = (animalSlug: string) => {
+        router.push(`/species/${animalSlug}`);
     };
 
     // Caso contrário, mostra a página principal
@@ -32,16 +33,19 @@ export default function Page() {
             <Filter />
             <section className="max-w-7xl mx-auto px-6 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {species.map((animal, index) => (
+                    {animals.map((animal) => (
                         <div 
                             key={animal.id} 
-                            onClick={() => animal.id && handleAnimalSelect(animal.id)} // Added null check
-                            className="cursor-pointer" // Added cursor pointer for better UX
+                            onClick={() => animal.slug && handleAnimalSelect(animal.slug)}
+                            className="cursor-pointer" 
                         >
                             <SpeciesCard 
                                 image={animal.image}
                                 name={animal.name} 
-                                tags={animal.tags} 
+                                tags={[
+                                    { label: animal.grupo, color: colorMap[animal.grupo] },
+                                    { label: animal.risco, color: colorMap[animal.risco] }
+                                ]}
                             />
                         </div>
                     ))}

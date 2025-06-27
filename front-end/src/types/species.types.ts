@@ -3,27 +3,36 @@ export interface SpeciesTag {
   color: string
 }
 
-export interface Species {
-  id?: string
-  name: string
-  conservationStatus?: string
-  imageUrl?: string
-  tags: SpeciesTag[]
-  scientificName: string;
-  commonName: string;
-  commonNameSecondary: string;
-  phylum: string;
-  class: string;
-  order: string;
-  family: string;
-  group: string;
-  category: "mamifero" | "reptil" | "ave" | "peixe" | "invertebrado"
-  categoryStatus: 'EN' | 'VU' | 'CR' | 'LC' | 'NT';
-  weight: string;
-  height: string;
-  lifespan: string;
-  habitat: string;
-  habitatRegions: string[];
-  description: string;
-  image: string;
+export interface ImageProps {
+    id: number
+    url: string
+    alt: string
+    name: string
 }
+
+export type Especie = {
+    id: string;
+    name: string;
+    slug: string;  
+    filo: string;
+    ordem: string;
+    classe: string;
+    id_pesq: number;
+    familia: string;
+    descricao: string;
+};
+
+export type Animal = {
+    id: number; 
+    slug: string;
+    peso: string;
+    name: string;
+    image: ImageProps[];
+    altura: string;
+    id_pesq: number;
+    habitat: string;
+    lifespan: string;
+    populacao: string;
+    risco: 'EN' | 'VU' | 'CR' | 'LC' | 'NT';
+    grupo: "mamifero" | "reptil" | "ave" | "peixe" | "invertebrado";
+};

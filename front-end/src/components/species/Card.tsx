@@ -1,8 +1,9 @@
+import { ImageProps } from "@/types/species.types"
 import Image from "next/image"
 
 interface SpeciesCardProps {
   name: string
-  image: string
+  image: ImageProps[]
   tags: Array<{
     label: string
     color: string
@@ -14,8 +15,8 @@ export default function SpeciesCard(props: SpeciesCardProps) {
     <div className="bg-[#BBD8A3] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       {/* Placeholder da imagem */}
       <Image
-        src={props.image}  // Imagem local na pasta public
-        alt={`${props.name} image`}
+        src={props.image[0].url}
+        alt={props.image[0].alt}
         width={500}
         height={300}
         className="rounded-lg"

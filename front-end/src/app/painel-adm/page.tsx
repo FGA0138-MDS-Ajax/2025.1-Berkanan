@@ -1,43 +1,22 @@
 'use client';
 
-import Footer from "@/components/layout/Footer";
-import Navigation from "@/components/layout/Navigation";
-import SearchBar from "@/components/search/Searchbar";
-import Manager from "@/components/species/Manager";
-import { useSpecies } from "@/hooks/useSpecies";
 import React, { useState } from "react";
 
+import { colorMap } from "@/utils/utils";
+import { useSpecies } from "@/hooks/useSpecies";
+import Footer from "@/components/layout/Footer";
+import { useAnimals } from "@/hooks/useAnimals";
+import Manager from "@/components/species/Manager";
+import SearchBar from "@/components/search/Searchbar";
+import Navigation from "@/components/layout/Navigation";
+
 export default function PainelAdministrador() {
-  const { species } = useSpecies();
+  const { animals, fetchAnimals } = useAnimals();
+  const { species, pagination, fetchSpecies } = useSpecies();
+
   const [grupoSelecionado, setGrupoSelecionado] = useState("Mamífero");
+  const grupos = ["Mamífero", "Invertebrado", "Réptil", "Peixe"];
 
-  const requestOptions = {
-    totalPages: 2,
-    currentPage: 1,
-    pageSize: 3,
-  }
-
-  function getPaginationPages(current: number, total: number): (number | string)[] {
-    const pages: (number | string)[] = [];
-
-    if (total <= 5) {
-      // Mostra todas as páginas se forem poucas
-      for (let i = 1; i <= total; i++) pages.push(i);
-    } else {
-      if (current <= 3) {
-        // Início da paginação
-        pages.push(1, 2, 3, 4, '...', total);
-      } else if (current >= total - 2) {
-        // Fim da paginação
-        pages.push(1, '...', total - 3, total - 2, total - 1, total);
-      } else {
-        // Meio da paginação
-        pages.push(1, '...', current - 1, current, current + 1, '...', total);
-      }
-    }
-
-    return pages;
-  }
   return (
     <div className="min-h-screen bg-[#FFFFED] flex flex-col">
       <Navigation />
@@ -55,32 +34,18 @@ export default function PainelAdministrador() {
               <div className="flex items-center gap-16">
                 <span className="font-semibold text-[#4F4F4F] text-left font-medium min-w-[60px]">Grupo</span>
                 <div className="flex gap-8">
+                {grupos.map((grupo) => (
                   <button
-                    className={`px-4 py-1 rounded-full ${grupoSelecionado === "Mamífero" ? "bg-[#6f826a] text-white" : "bg-white border border-[#6f826a] text-[#6f826a]"}`}
-                    onClick={() => setGrupoSelecionado("Mamífero")}
+                    key={grupo}
+                    className={`px-4 py-1 rounded-full ${
+                      grupoSelecionado === grupo ? "bg-[#6f826a] text-white" : "bg-white border border-[#6f826a] text-[#6f826a]"
+                    }`}
+                    onClick={() => setGrupoSelecionado(grupo)}
                   >
-                    Mamífero
+                    {grupo}
                   </button>
-                  <button
-                    className={`px-4 py-1 rounded-full ${grupoSelecionado === "Invertebrado" ? "bg-[#6f826a] text-white" : "bg-white border border-[#6f826a] text-[#6f826a]"}`}
-                    onClick={() => setGrupoSelecionado("Invertebrado")}
-                  >
-                    Invertebrado
-                  </button>
-                  <button
-                    className={`px-4 py-1 rounded-full ${grupoSelecionado === "Réptil" ? "bg-[#6f826a] text-white" : "bg-white border border-[#6f826a] text-[#6f826a]"}`}
-                    onClick={() => setGrupoSelecionado("Réptil")}
-                  >
-                    Réptil
-                  </button>
-                  <button
-                    className={`px-4 py-1 rounded-full ${grupoSelecionado === "Peixe" ? "bg-[#6f826a] text-white" : "bg-white border border-[#6f826a] text-[#6f826a]"}`}
-                    onClick={() => setGrupoSelecionado("Peixe")}
-                  >
-                    Peixe
-                  </button>
-                </div>
-
+                ))}
+              </div>
               </div>
               <div className="flex items-center gap-8">
                 <span className="font-semibold text-[#4F4F4F] min-w-[100px] text-left">Status</span>
@@ -95,7 +60,6 @@ export default function PainelAdministrador() {
                 <div className="flex flex-col items-end gap-2">
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -113,16 +77,18 @@ export default function PainelAdministrador() {
               <p className="w-1/6 font-semibold">Remover</p>
             </div>
             <div className="flex flex-col gap-auto mt-4 text-center w-full">
-              {species.map((item, index) => (
+              {animals.map((item, index) => (
                 <div
                   key={item.id}
-                  className={"w-full" + (species.length == index + 1 ? " rounded-b-lg" : " ")}
+                  className={"w-full" + (animals.length == index + 1 ? " rounded-b-lg" : " ")}
                   style={(index % 2 === 0 ? { backgroundColor: "#6F826A" } : { backgroundColor: "#BBD8A3" })}>
                   <Manager
-                    key={item.id}
                     id={item.id!}
                     name={item.name}
-                    tags={item.tags}
+                    tags={[
+                      { label: item.grupo, color: colorMap[item.grupo] },
+                      { label: item.risco, color: colorMap[item.risco] }
+                    ]}
                   />
                 </div>
               ))}
@@ -130,60 +96,80 @@ export default function PainelAdministrador() {
           </div>
           <div className="flex justify-between mt-4 ">
             <div className="flex ">
-                <p className=" text-black">Página {requestOptions.currentPage} - {requestOptions.totalPages} de {species.length} registros.</p>
+              <p className=" text-black">Página {pagination.currentPage} - {pagination.totalPages} de {species.length} registros.</p>
             </div>
             <div className="flex gap-2">
-            {getPaginationPages(requestOptions.currentPage, requestOptions.totalPages).map((page, idx) => {
-                if (page === '...') {
-                    return (
-                        <span key={idx} className="px-3 py-2 text-gray-500 select-none">
-                    ...
-                  </span>
-                );
-            }
-            
-            return (
-                <button
-                key={idx}
-                className={`px-4 py-2 rounded-lg transition-colors  ${page === requestOptions.currentPage
-                    ? 'bg-[#BBD8A3] text-white'
-                    : 'bg-[#BBD8A3] text-white hover:bg-[#5a6b5c]'
-                }`}
-                onClick={() => {
-                    requestOptions.currentPage = page as number;
-                }}
-                >
-                  {page}
-                </button>
-              );
-            })}
-            <div className="flex justify-center gap-2 mt-4">
-              {requestOptions.currentPage > 1 && (
-                  <button
-                  className="px-4 py-2 bg-[#BBD8A3] text-white rounded-lg hover:bg-[#5a6b5c] transition-colors"
-                  onClick={() => {
-                      if (requestOptions.currentPage > 1) {
-                          requestOptions.currentPage -= 1;
-                        }
-                    }}
-                    >
-                  {"<"}
-                </button>
-              )}
+              <div className="flex gap-2 items-center">
+                {(() => {
+                  const pages = [];
+                  const { currentPage, totalPages } = pagination;
 
-              {requestOptions.currentPage < requestOptions.totalPages && (
-                  <button
-                  className="px-4 py-2 bg-[#BBD8A3] text-white rounded-lg hover:bg-[#5a6b5c] transition-colors"
-                  disabled={requestOptions.currentPage >= requestOptions.totalPages}
-                  onClick={() => {
-                      if (requestOptions.currentPage < requestOptions.totalPages) {
-                          requestOptions.currentPage += 1;
-                        }
-                    }}
-                >
-                  {">"}
-                </button>
-              )}
+                  const handleClick = (page: number) => {
+                    if (page !== currentPage) {
+                      fetchSpecies(page);
+                      fetchAnimals(page);
+                    }
+                  };
+                  for (let i = 1; i <= Math.min(3, totalPages); i++) {
+                    pages.push(
+                      <button
+                        key={i}
+                        className={`px-4 py-2 rounded-lg transition-colors ${i === currentPage
+                            ? 'bg-[#BBD8A3] text-white'
+                            : 'bg-[#BBD8A3] text-white hover:bg-[#5a6b5c]'
+                          }`}
+                        onClick={() => handleClick(i)}
+                      >
+                        {i}
+                      </button>
+                    );
+                  }
+                  if (currentPage > 4 && currentPage < totalPages - 2) {
+                    pages.push(<span key="dots1">...</span>);
+                  }
+                  if (currentPage > 3 && currentPage < totalPages - 2) {
+                    pages.push(
+                      <button
+                        key={currentPage}
+                        className="px-4 py-2 rounded-lg bg-[#5a6b5c] text-white"
+                        onClick={() => handleClick(currentPage)}
+                      >
+                        {currentPage}
+                      </button>
+                    );
+                  }
+                  if (currentPage < totalPages - 3) {
+                    pages.push(<span key="dots2">...</span>);
+                  }
+                  for (let i = Math.max(totalPages - 1, 4); i <= totalPages; i++) {
+                    if (i > 3) {
+                      pages.push(
+                        <button
+                          key={i}
+                          className={`px-4 py-2 rounded-lg transition-colors ${i === currentPage
+                              ? 'bg-[#BBD8A3] text-white'
+                              : 'bg-[#BBD8A3] text-white hover:bg-[#5a6b5c]'
+                            }`}
+                          onClick={() => handleClick(i)}
+                        >
+                          {i}
+                        </button>
+                      );
+                    }
+                  }
+                  if (currentPage < totalPages) {
+                    pages.push(
+                      <button
+                        key="next"
+                        className="px-4 py-2 rounded-lg bg-[#BBD8A3] text-white hover:bg-[#5a6b5c]"
+                        onClick={() => handleClick(currentPage + 1)}
+                      >
+                        &gt;
+                      </button>
+                    );
+                  }
+                  return pages;
+                })()}
               </div>
             </div>
           </div>

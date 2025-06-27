@@ -1,5 +1,5 @@
 interface ManagerProps {
-    id: string;
+    id: string | number;
     name: string;
     tags: Array<{
         label: string;
