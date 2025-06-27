@@ -53,7 +53,7 @@ export const alterar_especie = async (especie: Especie): Promise<Especie> => {
     const { data, error } = await supabase
         .from('Especie')
         .update([especie])
-        .eq('cient', especie.cient)
+        .eq('slug', especie.cient)
         .select()
         .single();
 
