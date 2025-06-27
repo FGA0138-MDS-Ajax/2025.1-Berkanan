@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import planetaTerra from '@/img/planetaterra.png';
+import planetaTerra from '@/resources/planetaterra.png';
 
 export default function Navigation() {
   return (
