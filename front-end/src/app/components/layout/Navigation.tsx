@@ -16,8 +16,8 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Centro - Planeta Terra */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 z-0">
+        {/* Centro - Logo CerraDex + Planeta Terra */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 z-0 flex items-center gap-2">
           <Image 
             src={planetaTerra}
             alt="Planeta Terra"
@@ -26,6 +26,9 @@ export default function Navigation() {
             priority
             className="h-14 w-auto object-contain transition-transform duration-700 hover:scale-105 hover:rotate-2"
           />
+          <h1 className="text-2xl font-bold text-[#fffed7] whitespace-nowrap">
+            CerraDex
+          </h1>
         </div>
 
         {/* Lado Direito - Sobre o Projeto */}
