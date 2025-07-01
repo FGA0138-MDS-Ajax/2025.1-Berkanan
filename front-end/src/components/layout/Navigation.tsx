@@ -1,5 +1,11 @@
 import Image from 'next/image';
 import planetaTerra from '@/resources/planetaterra.png';
+import { Bebas_Neue } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export default function Navigation() {
   return (
@@ -16,16 +22,21 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Centro - Planeta Terra */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 z-0">
-          <Image 
-            src={planetaTerra}
-            alt="Planeta Terra"
-            width={100}
-            height={100}
-            priority
-            className="h-14 w-auto object-contain transition-transform duration-700 hover:scale-105 hover:rotate-2"
-          />
+        {/* Centro - Logo e Texto alinhados */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center">
+          <div className="flex items-center gap-3 -ml-8">
+            <Image 
+              src={planetaTerra}
+              alt="Planeta Terra"
+              width={100}
+              height={100}
+              priority
+              className="h-14 w-auto object-contain"
+            />
+            <span className={`text-3xl tracking-[0.15em] ${bebasNeue.className}`}>
+              CERRADEX
+            </span>
+          </div>
         </div>
 
         {/* Lado Direito - Sobre o Projeto */}
