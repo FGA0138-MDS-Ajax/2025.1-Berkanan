@@ -29,12 +29,12 @@ export default function Page() {
     };
 
     return (
-        <div className="min-h-screen bg-[#FFFFED] flex flex-col">
+        <div className="min-h-screen bg-[#F1FFED] flex flex-col">
             <Navigation />
             
             {/* Primeira "página" - Hero Section */}
-            <section className="min-h-screen flex flex-col justify-center items-center text-center bg-[#FFFFED] px-6">
-                <div className="max-w-4xl mx-auto">
+            <section className="min-h-screen flex flex-col justify-center items-center text-center bg-[#F1FFED] px-6">
+                <div className="max-w-4xl mx-auto px-6">
                     {/* Logo */}
                     <div className="flex justify-center mb-4">
                         <Image 
@@ -57,7 +57,7 @@ export default function Page() {
                             const section = document.getElementById('species-section');
                             section?.scrollIntoView({ behavior: 'smooth' });
                         }}
-                        className="mt-6 px-6 py-3 bg-[#6f826a] text-[#FFFFED] rounded-full text-lg tracking-wide hover:bg-[#5a6c5a] transition-colors"
+                        className="mt-6 px-6 py-3 bg-[#6f826a] text-[#F1FFED] rounded-full text-lg tracking-wide hover:bg-[#5a6c5a] transition-colors"
                     >
                         Iniciar busca
                     </button>
@@ -65,16 +65,16 @@ export default function Page() {
             </section>
 
             {/* Segunda "página" - Seção de espécies */}
-            <section id="species-section" className="min-h-screen bg-[#FFFFED]">
+            <section id="species-section" className="min-h-screen bg-[#F1FFED]">
                 {/* Seção de filtros com largura total */}
                 <div className="w-full text-white bg-[#6f826a]">
                     <div className="max-w-7xl mx-auto px-6 py-6">
                         <div className="flex items-center justify-between">
                             <div className="flex gap-8">
-                                <button className="hover:text-[#FFFFED] transition-colors text-[#ffffff]">
+                                <button className="hover:text-[#F1FFED] transition-colors text-[#ffffff]">
                                     Randomizar seleção
                                 </button>
-                                <button className="hover:text-[#FFFFED] transition-colors text-[#ffffff]">
+                                <button className="hover:text-[#F1FFED] transition-colors text-[#ffffff]">
                                     Ordenar de A-Z
                                 </button>
                                 <div className="relative"></div>
@@ -82,7 +82,7 @@ export default function Page() {
                             <div className="flex items-center gap-4">
                                 <input 
                                     placeholder="Pesquise por nome" 
-                                    className="bg-white/10 border border-white/20 placeholder:text-white/70 w-64 text-[#FFFFED] px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent" 
+                                    className="bg-white/10 border border-white/20 placeholder:text-white/70 w-64 text-[#F1FFED] px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent" 
                                     type="text" 
                                 />
                             </div>
@@ -114,7 +114,7 @@ export default function Page() {
             </section>
 
             {/* Rodapé */}
-            <footer className="bg-[#6f826a] text-[#FFFFED] py-4 px-6 w-full">
+            <footer className="bg-[#6f826a] text-[#F1FFED] py-4 px-6 w-full">
                 <h2 className={`text-xl tracking-[0.2em] ${bebasNeue.className} text-center`}>
                     C E R R A D E X
                 </h2>
