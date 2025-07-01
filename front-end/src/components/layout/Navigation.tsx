@@ -14,7 +14,7 @@ export default function Navigation() {
         {/* Lado Esquerdo - Menu Inicial */}
         <div className="flex gap-8 z-10">
           <button 
-            className="relative group transition-all duration-300 hover:text-white"
+            className="relative group transition-all duration-300 hover:text-white text-[#fffed7]"
             aria-label="Menu inicial"
           >
             MENU INICIAL
@@ -22,9 +22,9 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Centro - Logo e Texto alinhados */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center">
-          <div className="flex items-center gap-3 -ml-8">
+        {/* Centro - Logo com texto sobreposto */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 z-0 flex items-center justify-center">
+          <div className="relative">
             <Image 
               src={planetaTerra}
               alt="Planeta Terra"
@@ -33,16 +33,18 @@ export default function Navigation() {
               priority
               className="h-14 w-auto object-contain"
             />
-            <span className={`text-3xl tracking-[0.15em] ${bebasNeue.className}`}>
-              CERRADEX
-            </span>
+            <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${bebasNeue.className}`}>
+              <span className="text-3xl tracking-[0.5em] whitespace-nowrap text-[#2B382C]">
+                CERRADEX
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Lado Direito - Sobre o Projeto */}
         <div className="flex gap-8 z-10">
           <button 
-            className="relative group transition-all duration-300 hover:text-white"
+            className="relative group transition-all duration-300 hover:text-white text-[#fffed7]"
             aria-label="Sobre o projeto"
           >
             SOBRE O PROJETO
@@ -52,4 +54,5 @@ export default function Navigation() {
       </div>
     </nav>
   );
+  
 }
