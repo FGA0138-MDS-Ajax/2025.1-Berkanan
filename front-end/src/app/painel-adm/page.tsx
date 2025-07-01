@@ -18,11 +18,11 @@ export default function PainelAdministrador() {
   const grupos = ["Mamífero", "Invertebrado", "Réptil", "Peixe"];
 
   return (
-    <div className="min-h-screen bg-[#FFFFED] flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
       <div className="flex-grow pb-5">
         <div className="max-w-7xl mx-auto my-8 text-center justify-center">
-          <div className="bg-[#BBD8A3] rounded-lg p-5 mb-6 flex-col gap-6">
+          <div className="bg-light-green rounded-lg p-5 mb-6 flex-col gap-6">
             <p className="text-2xl font-semibold text-black mb-6 text-left">Filtros</p>
             <div className="flex flex-col items-end gap-2">
               <button className="bg-[#6f826a] text-white px-8 py-2 rounded-lg flex items-center gap-2">
@@ -32,7 +32,7 @@ export default function PainelAdministrador() {
             </div>
             <div className="flex flex-col gap-16">
               <div className="flex items-center gap-16">
-                <span className="font-semibold text-[#4F4F4F] text-left font-medium min-w-[60px]">Grupo</span>
+                <span className="font-semibold text-dark-green text-left font-medium min-w-[60px]">Grupo</span>
                 <div className="flex gap-8">
                 {grupos.map((grupo) => (
                   <button
@@ -48,14 +48,14 @@ export default function PainelAdministrador() {
               </div>
               </div>
               <div className="flex items-center gap-8">
-                <span className="font-semibold text-[#4F4F4F] min-w-[100px] text-left">Status</span>
+                <span className="font-semibold text-dark-green min-w-[100px] text-left">Status</span>
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-5 h-5 border-3 border-[#6f826a] bg-transparent appearance-none rounded-sm checked:bg-[#6f826a] checked:border-[#6f826a] relative checked:after:content-['✓'] checked:after:text-white checked:after:text-xs checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
-                  <span className="text-[#6f826a]">Criticamente em perigo (CR)</span>
+                  <input type="checkbox" className="w-5 h-5 border-3 border-medium-green bg-transparent appearance-none rounded-sm checked:bg-[#6f826a] checked:border-[#6f826a] relative checked:after:content-['✓'] checked:after:text-white checked:after:text-xs checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
+                  <span className="text-dark-green">Criticamente em perigo (CR)</span>
                 </label>
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-5 h-5 border-3 border-[#6f826a] bg-transparent appearance-none rounded-sm checked:bg-[#6f826a] checked:border-[#6f826a] relative checked:after:content-['✓'] checked:after:text-white checked:after:text-xs checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
-                  <span className="text-[#6f826a]">Em perigo (EN)</span>
+                  <input type="checkbox" className="w-5 h-5 border-3 border-medium-green bg-transparent appearance-none rounded-sm checked:bg-[#6f826a] checked:border-[#6f826a] relative checked:after:content-['✓'] checked:after:text-white checked:after:text-xs checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
+                  <span className="text-dark-green">Em perigo (EN)</span>
                 </label>
                 <div className="flex flex-col items-end gap-2">
                 </div>
@@ -63,7 +63,7 @@ export default function PainelAdministrador() {
             </div>
           </div>
 
-          <div className="bg-[#6F826A] rounded-lg">
+          <div className="bg-medium-green text-background rounded-lg">
             <div className="flex justify-between items-center text-center mb-4 p-4">
               <h2 className="ml-5 text-2xl">Total: {species.length}</h2>
               <SearchBar placeholder="Pesquise por nome" className="mb-4" />
@@ -76,7 +76,7 @@ export default function PainelAdministrador() {
               <p className="w-1/6 font-semibold">Editar</p>
               <p className="w-1/6 font-semibold">Remover</p>
             </div>
-            <div className="flex flex-col gap-auto mt-4 text-center w-full">
+            <div className="flex flex-col gap-auto mt-4 text-center text-foreground w-full">
               {animals.map((item, index) => (
                 <div
                   key={item.id}
@@ -115,8 +115,8 @@ export default function PainelAdministrador() {
                       <button
                         key={i}
                         className={`px-4 py-2 rounded-lg transition-colors ${i === currentPage
-                            ? 'bg-[#BBD8A3] text-white'
-                            : 'bg-[#BBD8A3] text-white hover:bg-[#5a6b5c]'
+                            ? 'bg-light-green text-white'
+                            : 'bg-light-green text-white hover:bg-dark-green'
                           }`}
                         onClick={() => handleClick(i)}
                       >
@@ -131,7 +131,7 @@ export default function PainelAdministrador() {
                     pages.push(
                       <button
                         key={currentPage}
-                        className="px-4 py-2 rounded-lg bg-[#5a6b5c] text-white"
+                        className="px-4 py-2 rounded-lg bg-light-green text-white"
                         onClick={() => handleClick(currentPage)}
                       >
                         {currentPage}

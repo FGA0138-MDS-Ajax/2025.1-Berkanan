@@ -9,7 +9,7 @@ interface ManagerProps {
 
 export default function Manager(props: ManagerProps) {
   return (
-    <div className="grid grid-cols-6 items-center text-black text-center py-2">
+    <div className="grid grid-cols-6 items-center text-center py-2">
       <p className="w-16 mx-auto">{props.id}</p>
       <p className="w-40 mx-auto">{props.name}</p>
 
