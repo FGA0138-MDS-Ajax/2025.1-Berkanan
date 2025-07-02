@@ -10,8 +10,12 @@
 import { Elysia } from 'elysia';
 import { healthRoute } from './health.route';
 import { especieRoutes } from './especie.routes';
-import dotenv from 'dotenv';
 import { animalRoutes } from './animal.routes';
+import { imagensRoutes } from './imagens.routes';
+import { integracoesRoutes } from './integracoes.routes';
+import { moderadorRoutes } from './moderador.routes';
+import { pesquisaRoutes } from './pesquisa.routes';
+import dotenv from 'dotenv';
 // Importe outras rotas abaixo conforme necessário
 
 dotenv.config();
@@ -26,4 +30,8 @@ dotenv.config();
 export const routes = new Elysia()
   .use(healthRoute)
   .use(especieRoutes)
-  .use(animalRoutes);
+  .use(animalRoutes)
+  .use(imagensRoutes)
+  .use(integracoesRoutes)
+  .use(moderadorRoutes)
+  .use(pesquisaRoutes);
