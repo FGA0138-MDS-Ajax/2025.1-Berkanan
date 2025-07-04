@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import planetaTerra from '@/img/planetaterra.png';
+import planetaTerra from '@/resources/planetaterra.png';
 
 export default function Navigation() {
   return (
-    <nav className="relative px-6 py-4 bg-[#6f826a] text-[#fffed7] shadow-lg">
+    <nav className="relative px-6 py-4 bg-medium-green text-background shadow-lg">
       <div className="flex items-center justify-between max-w-6xl mx-auto">
         {/* Lado Esquerdo - Menu Inicial */}
         <div className="flex gap-8 z-10">
@@ -12,7 +12,7 @@ export default function Navigation() {
             aria-label="Menu inicial"
           >
             MENU INICIAL
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"></span>
           </button>
         </div>
 
@@ -35,7 +35,7 @@ export default function Navigation() {
             aria-label="Sobre o projeto"
           >
             SOBRE O PROJETO
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"></span>
           </button>
         </div>
       </div>

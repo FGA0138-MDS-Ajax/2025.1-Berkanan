@@ -58,4 +58,5 @@ export const put_especie = async (especie: Especie): Promise<ResponseProps<Espec
 
   const result: ResponseProps<Especie> = { data, error, count };
   return result;
+
 };
