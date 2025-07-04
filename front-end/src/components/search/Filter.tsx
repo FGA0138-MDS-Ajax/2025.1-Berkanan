@@ -1,6 +1,6 @@
 export default function FilterSection() {
   return (
-    <section className="text-white bg-[#6f826a]">
+    <section className="text-white bg-medium-green ">
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <div className="flex gap-8">

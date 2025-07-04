@@ -6,6 +6,7 @@ import SpeciesCard from "../components/species/Card"
 import Navigation from "@/components/layout/Navigation"
 import { useAnimals } from '@/hooks/useAnimals';
 import { colorMap } from '@/utils/utils';
+import Footer from '@/components/layout/Footer';
 
 export default function Page() {
     const { animals } = useAnimals();
@@ -18,13 +19,13 @@ export default function Page() {
 
     // Caso contrário, mostra a página principal
     return (
-        <div className="min-h-screen bg-[#fffed7]">
+        <div className="min-h-screen">
             <Navigation />
-            <section className="py-16 text-center bg-[#fffed7]">
+            <section className="py-16 text-center">
                 <div className="max-w-4xl mx-auto px-6">
-                    <p className="text-lg mb-4 tracking-wider text-[#6f826a]">Bem-vindo ao</p>
-                    <h1 className="text-5xl font-light text-gray-800 mb-8 tracking-wider">CerraDex</h1>
-                    <div className="text-[#6f826a] text-lg leading-relaxed tracking-wide">
+                    <p className="text-lg mb-4 tracking-wider text-medium-green">Bem-vindo ao</p>
+                    <h1 className="text-5xl font-light text-beige text-shadow-lg border-inherit mb-8 tracking-wider">CERRADEX</h1>
+                    <div className="text-medium-green text-lg leading-relaxed tracking-wide">
                         <p>Procure por uma espécie</p>
                         <p>ou nos deixe te mostrar algumas!</p>
                     </div>
@@ -51,6 +52,7 @@ export default function Page() {
                     ))}
                 </div>
             </section>
+            <Footer />
         </div>
     )
 }

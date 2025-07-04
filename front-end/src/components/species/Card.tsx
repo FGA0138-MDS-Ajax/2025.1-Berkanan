@@ -12,20 +12,18 @@ interface SpeciesCardProps {
 
 export default function SpeciesCard(props: SpeciesCardProps) {
   return (
-    <div className="bg-[#BBD8A3] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      {/* Placeholder da imagem */}
+    <div className="bg-medium-green rounded-lg flex flex-col items-center">
       <Image
         src={props.image[0].url}
         alt={props.image[0].alt}
-        width={500}
-        height={300}
+        width={300}
+        height={200}
         className="rounded-lg"
       />
 
-      {/* Infos */}
-      <div className="p-4">
-        <h3 className="text-gray-800 font-medium mb-3 leading-tight">{props.name}</h3>
-        <div className="flex flex-wrap gap-2">
+      <div className="p-5 bg-light-green w-full rounded-b-lg">
+        <h3 className="font-medium mt-5 leading-tight">{props.name}</h3>
+        <div className="flex mt-5 flex-wrap gap-2">
           {props.tags.map((tag, tagIndex) => (
             <span key={tagIndex} className={`${tag.color} text-xs font-medium px-2 py-1 rounded inline-block`}>
               {tag.label}

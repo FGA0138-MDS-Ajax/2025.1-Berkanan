@@ -1,7 +1,5 @@
 "use client"
 
-//ainda não funciona, só tem o visual
-
 import type React from "react"
 
 interface SearchBarProps {
