@@ -25,7 +25,7 @@ export default function AnimalInfo() {
   return (
     <div className="min-h-screen font-[var(--magra-font)]">
       <Header />
-      <main className="bg-offwhite min-h-[calc(100vh-4rem)] p-4">
+      <main className=" min-h-[calc(100vh-4rem)] p-4">
         <div className="max-w-7xl mx-auto">
           <div className="mb-6">
             <h1 className="text-4xl font-bold text-foreground mb-2">
