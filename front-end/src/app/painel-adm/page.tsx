@@ -1,19 +1,27 @@
 'use client';
 
+//import { createClient } from '@/utils/supabase/client'
+//import { redirect } from 'next/navigation'
 import React, { useState } from "react";
 
 import { colorMap } from "@/utils/utils";
+import { useAnimals } from "@/hooks/useAnimals";
 import { useSpecies } from "@/hooks/useSpecies";
 import Footer from "@/components/layout/Footer";
-import { useAnimals } from "@/hooks/useAnimals";
 import Manager from "@/components/species/Manager";
 import SearchBar from "@/components/search/Searchbar";
 import Navigation from "@/components/layout/Navigation";
 
 export default function PainelAdministrador() {
+  //const supabase = createClient()
   const { animals, fetchAnimals } = useAnimals();
   const { species, pagination, fetchSpecies } = useSpecies();
-
+  
+  // supabase.auth.getUser().then(({data, error}) => {
+  //   if (error || !data?.user) {
+  //     redirect('/login')
+  //   }
+  // })
   const [grupoSelecionado, setGrupoSelecionado] = useState("Mamífero");
   const grupos = ["Mamífero", "Invertebrado", "Réptil", "Peixe"];
 
