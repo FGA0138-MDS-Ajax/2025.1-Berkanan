@@ -23,7 +23,7 @@ export const getAnimals = async (query: QueryParams): Promise<PaginatedResponse<
     totalPages,
     currentPage: page,
   };
-
+}
 
 /**
  * Insere um novo animal no banco de dados.
