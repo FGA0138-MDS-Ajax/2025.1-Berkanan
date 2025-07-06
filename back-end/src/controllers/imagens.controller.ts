@@ -12,7 +12,6 @@ export const getImagens = async (): Promise<Imagens[]> => {
 };
 
 export const getImageByID = async (query: QueryParams): Promise<ParsedImages> => {
-  console.log(query)
   return await get_image_by_id(query.id!);
 }
 /**

@@ -1,3 +1,5 @@
+import type { ParsedImages } from "./imagens.type";
+
 /**
  * Tipo que representa um animal cadastrado.
  */
@@ -14,12 +16,6 @@ export type Animal = {
   peso: string;
 };
 
-export interface ParsedAnimal extends Animal {
-  images: [{
-    id: string,
-    alt: string,
-    url: string,
-    path: string,
-    created_at: string
-  }],
+export interface ParsedAnimal {
+  images: ParsedImages
 }
