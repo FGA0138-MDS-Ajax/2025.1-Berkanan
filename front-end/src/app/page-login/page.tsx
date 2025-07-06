@@ -4,8 +4,9 @@ import Footer from "@/components/layout/Footer";
 import Navigation from "@/components/layout/Navigation";
 import { login } from "./actions";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function AdminLoginPage() {
+function LoginPageContent() {
   const searchParams = useSearchParams();
   const error = searchParams.get("error");
 
@@ -76,4 +77,11 @@ export default function AdminLoginPage() {
       <Footer />
     </div>
   );
+}
+export default function LoginPage() {
+return (
+  <Suspense fallback={<div>Carregando...</div>}>
+    <LoginPageContent />
+  </Suspense>
+);
 }
