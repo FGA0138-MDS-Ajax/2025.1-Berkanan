@@ -24,8 +24,8 @@ const animalsData: Animal[] = [{
     habitat: "Florestas tropicais e subtropicais do Maranhão.",
     populacao: "Menos de 250 indivíduos",
     lifespan: "20 - 30 anos",
-    risco: "EN",
-    grupo: "mamifero",
+    risco: "CR",
+    grupo: "Mamífero",
     },{
     id: 1,
     name: "Bugio-de-mãos-ruivas-do-Maranhão",
@@ -38,7 +38,7 @@ const animalsData: Animal[] = [{
     populacao: "Menos de 250 indivíduos",
     lifespan: "20 - 30 anos",
     risco: "EN",
-    grupo: "mamifero",
+    grupo: "Invertebrado",
     },{
     id: 2,
     name: "CBugio-de-mãos-ruivas-do-Maranhão",
@@ -50,8 +50,8 @@ const animalsData: Animal[] = [{
     habitat: "Florestas tropicais e subtropicais do Maranhão.",
     populacao: "Menos de 250 indivíduos",
     lifespan: "20 - 30 anos",
-    risco: "EN",
-    grupo: "mamifero",
+    risco: "CR",
+    grupo: 'Peixe',
     },{
     id: 3,
     name: "DBugio-de-mãos-ruivas-do-Maranhão",
@@ -64,7 +64,7 @@ const animalsData: Animal[] = [{
     populacao: "Menos de 250 indivíduos",
     lifespan: "20 - 30 anos",
     risco: "EN",
-    grupo: "mamifero",
+    grupo: "Réptil",
     },
 ]
 
