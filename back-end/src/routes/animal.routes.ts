@@ -14,7 +14,8 @@ export const animalRoutes = new Elysia({ prefix: '/animais' })
      * @route GET /animais
      * @returns {Promise<Animal[]>} Lista de animais.
      */
-    .get('/', async () => await getAnimais())
+    .get('/', async ({query}) => await getAnimals(query));
+
 
     /**
      * Insere um novo animal no banco de dados.

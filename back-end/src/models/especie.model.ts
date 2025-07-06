@@ -1,5 +1,6 @@
 import { supabase } from '../utils/supabase.utils';
 import type { Especie } from '../types/especie.type';
+import type { ResponseProps } from '../types/general.type';
 
 /**
  * Recupera todas as espécies cadastradas na tabela "Especie" do Supabase.
@@ -7,17 +8,19 @@ import type { Especie } from '../types/especie.type';
  * @returns {Promise<Especie[]>} Uma promessa que resolve para um array contendo todas as espécies encontradas.
  * @throws {Error} Caso ocorra algum erro na consulta ao banco de dados.
  */
-export const getAllEspecies = async (): Promise<Especie[]> => {
+
+export const get_all_especies = async (from: number, to: number): Promise<ResponseProps<Especie[]>> => {
+    const { count, error: countError } = await supabase
+    .from('Especie')
+    .select('*', { count: 'exact' });
+  
     const { data, error } = await supabase
-        .from('Especie')
-        .select('*');
+    .from('Especie')
+    .select('*')
+    .range(from, to);
 
-    if (error) {
-        console.error(error);
-        throw new Error(error.message);
-    }
-
-    return data as Especie[];
+  const result: ResponseProps<Especie[]> = { data, error, count };
+  return result;
 };
 
 /**
@@ -27,19 +30,15 @@ export const getAllEspecies = async (): Promise<Especie[]> => {
  * @returns {Promise<Especie>} Uma promessa que resolve para a espécie recém-inserida.
  * @throws {Error} Caso ocorra algum erro durante a inserção.
  */
-export const inserir_especie = async (especie: Especie): Promise<Especie> => {
-    const { data, error } = await supabase
-        .from('Especie')
-        .insert([especie])
-        .select()
-        .single();
+export const post_especie = async (especie: Especie): Promise<ResponseProps<Especie>> => {
+  const { data, error, count } = await supabase
+    .from('Especie')
+    .insert([especie])
+    .select()
+    .single();
 
-    if (error) {
-        console.error('Erro ao inserir espécie:', error.message);
-        throw new Error(error.message);
-    }
-
-    return data as Especie;
+  const result: ResponseProps<Especie> = { data, error, count };
+  return result;
 };
 
 /**
@@ -49,18 +48,15 @@ export const inserir_especie = async (especie: Especie): Promise<Especie> => {
  * @returns {Promise<Especie>} Uma promessa que resolve para a espécie atualizada.
  * @throws {Error} Caso ocorra algum erro durante a atualização.
  */
-export const alterar_especie = async (especie: Especie): Promise<Especie> => {
-    const { data, error } = await supabase
-        .from('Especie')
-        .update([especie])
-        .eq('slug', especie.cient)
-        .select()
-        .single();
+export const put_especie = async (especie: Especie): Promise<ResponseProps<Especie>> => {
+  const { data, error, count } = await supabase
+    .from('Especie')
+    .update([especie])
+    .eq('cient', especie.cient)
+    .select()
+    .single();
 
-    if (error) {
-        console.error('Erro ao alterar espécie:', error.message);
-        throw new Error(error.message);
-    }
+  const result: ResponseProps<Especie> = { data, error, count };
+  return result;
 
-    return data as Especie;
 };

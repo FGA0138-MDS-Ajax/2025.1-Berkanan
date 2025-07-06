@@ -14,7 +14,7 @@ import { healthController } from '../controllers/health.controller';
  * @constant
  * @type {Elysia}
  */
-export const healthRoute = new Elysia({ prefix: '/health' })
+export const healthRoute = new Elysia({ prefix: '/' })
   /**
    * @route GET /
    * @summary Verifica a integridade da aplicação.
