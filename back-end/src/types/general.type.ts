@@ -9,6 +9,7 @@ export interface PaginatedResponse<T> {
 export interface QueryParams {
   page?: string;
   limit?: string;
+  id?: string 
 }
 export interface ResponseProps<T> {
   data: T | null;

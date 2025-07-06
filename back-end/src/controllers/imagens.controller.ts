@@ -1,5 +1,6 @@
-import { getAllImagens, inserir_imagens, alterar_imagens } from '../models/imagens.model';
-import type { Imagens } from '../types/imagens.type';
+import { get_all_images, inserir_imagens, alterar_imagens, get_image_by_id } from '../models/imagens.model';
+import type { QueryParams } from '../types/general.type';
+import type { Imagens, ParsedImages } from '../types/imagens.type';
 
 /**
  * Recupera todos as imagens cadastradas no banco de dados.
@@ -7,9 +8,13 @@ import type { Imagens } from '../types/imagens.type';
  * @returns {Promise<Imagens[]>} Uma promessa que resolve para uma lista de imagens.
  */
 export const getImagens = async (): Promise<Imagens[]> => {
-    return await getAllImagens();
+    return await get_all_images();
 };
 
+export const getImageByID = async (query: QueryParams): Promise<ParsedImages> => {
+  console.log(query)
+  return await get_image_by_id(query.id!);
+}
 /**
  * Insere uma nova imagem no banco de dados.
  *

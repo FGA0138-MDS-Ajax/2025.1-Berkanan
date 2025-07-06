@@ -16,7 +16,7 @@ export const getAnimals = async (query: QueryParams): Promise<PaginatedResponse<
   const {count, data} = await get_all_animals(from, to);
 
   const totalPages = Math.ceil((count ?? 0) / limit);
-
+  
   return {
     data: data || [],
     totalItems: count ?? 0,
