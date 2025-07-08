@@ -21,4 +21,4 @@ nav:
     - Bibliografia: "doc-visao/ref-bibliograficas.md"
 
 theme:
-  name: sandstone
+  name: material
