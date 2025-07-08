@@ -36,17 +36,18 @@ O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na
 
 ### Tabela 5 – Planejamento de Fases
 
-| Sprint   | Produto (Entrega)                                                | Data Início  | Data Fim   | Entregável(eis)                                          | Responsáveis                          | % conclusão |
-| :------: | :--------------------------------------------------------------: | :----------: | :--------: | :------------------------------------------------------: | :-----------------------------------: | :---------: |
-| Sprint 0 | Documento de visão e setup do projeto                            | 21/05/2025   | 21/05/2025 | Documento de visão                                       | Todos                                 | 0%          |
-| Sprint 1 | Configuração do ambiente e tecnologias                           | 24/05/2025   | 30/05/2025 | Configuração da plataforma onde a aplicação irá rodar   | Todos                                 | 10%         |
-| Sprint 2 | MVP, Planejamento do Projeto e desenvolvimento inicial de template | 31/05/2025   | 06/06/2025 | Protótipo de baixa fidelidade                            | Manuella, Paulo, Todos                | 20%         |
-| Sprint 3 | Fechamento de template e início do front e back-end             | 07/06/2025   | 13/06/2025 | Protótipo de visualização completo                       | Manuella, Paulo, Thiago, Bruno        | 30%         |
-| Sprint 4 | Início do desenvolvimento da modelagem do banco de dados         | 14/06/2025   | 20/06/2025 | Documentação inicial do banco de dados                   | Eduardo, Gustavo, Ricardo             | 40%         |
-| Sprint 5 | CRUD das espécies em risco                                       | 21/06/2025   | 27/06/2025 | Base de dados inicial                                    | Todos                                 | 50%         |
-| Sprint 8 | Refatoração e ajustes finais                                     | 12/07/2025   | 18/07/2025 | Versão final de teste                                    | Todos                                 | 80%         |
-| Sprint 9 | Deploy final e apresentação do projeto                           | 19/07/2025   | 23/07/2025 | Versão final publicada, documentação final               | Todos                                 | 100%        |
 
+
+| Sprint | Produto (Entrega) | Data Início | Data Fim | Entregável(eis)| Responsáveis|% conclusão|
+| :----: | :----------------: | :--------: | :------: | :------------: | :-----------: | :------------: |
+| Sprint 0 | Documento de visão e setup do projeto | 21/05/2025 | 21/05/2025 | Documento de visão | Todos| 0% |
+| Sprint 1 | Configuração do ambiente e tecnologias | 24/05/2025 | 30/05/2025 | Configuração da plataforma onde a aplicação irá rodar | Todos| 10% |
+| Sprint 2 | MVP, Planejamento do Projeto e desenvolvimento inicial de template | 31/05/2025 | 06/06/2025 | Protótipo de baixa fidelidade | Manuella, Paulo, Todos| 20% |
+| Sprint 3 | Fechamento de template e início do front e back-end | 07/06/2025 | 13/06/2025 | Protótipo de visualização completo | Manuella, Paulo, Thiago, Bruno| 30% |
+| Sprint 4 | Início do desenvolvimento da modelagem do banco de dados | 14/06/2025 | 20/06/2025 | Documentação inicial do banco de dados | Eduardo, Gustavo, Ricardo| 40% |
+| Sprint 5 |CRUD das espécies em risco | 21/06/2025 | 27/06/2025 | Base de dados inicial | Todos| 50% |
+| Sprint 8 |Refatoração e ajustes finais | 12/07/2025 | 18/07/2025 | Versão final de teste | Todos| 80% |
+| Sprint 9 |Deploy final e apresentação do projeto | 19/07/2025 | 23/07/2025 | Versão final publicada, documentação final | Todos| 100% |
 
 ## 2.4 Matriz de Comunicação
 
