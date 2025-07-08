@@ -105,6 +105,7 @@ export default function PainelAdministrador() {
                   const { currentPage, totalPages } = pagination;
 
                   const handleClick = (page: number) => {
+                    
                     if (page !== currentPage) {
                       fetchSpecies(page);
                       fetchAnimals(page);

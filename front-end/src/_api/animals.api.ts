@@ -1,47 +1,24 @@
-import { ApiResponse } from "@/types/api.types";
+import { ApiResponse, QueryParams } from "@/types/api.types";
 import type { Animal } from "@/types/species.types"
+import { baseConfig, handleHttpResponse } from "@/utils/api.utils";
 
-const image = [{
-        id: 1,
-        url: "https://media.discordapp.net/attachments/1359563507640696834/1388160083204112454/cGc.png?ex=685ff852&is=685ea6d2&hm=cb017a7c6f6c136a819093e1cc24d16da8204464cf21c4688d11e04e2e250139&=&format=webp&quality=lossless",
-        alt: "Bugio-de-mãos-ruivas-do-Maranhão",
-        name: "Bugio-de-mãos-ruivas-do-Maranhão",
-    },{
-        id: 2,
-        url: "https://media.discordapp.net/attachments/1359563507640696834/1388160083204112454/cGc.png?ex=685ff852&is=685ea6d2&hm=cb017a7c6f6c136a819093e1cc24d16da8204464cf21c4688d11e04e2e250139&=&format=webp&quality=lossless",
-        alt: "Bugio-de-mãos-ruivas-do-Maranhão",
-        name: "Bugio-de-mãos-ruivas-do-Maranhão",
-    }]
-    
-const animalsData: Animal[] = [{
-    id: 0,
-    name: "Bugio-de-mãos-ruivas-do-Maranhão",
-    slug: "bugio-maos-ruivas",
-    peso: "6 - 10 kg",
-    image: image,
-    altura: "50 - 70 cm",
-    id_pesq: 1,
-    habitat: "Florestas tropicais e subtropicais do Maranhão.",
-    populacao: "Menos de 250 indivíduos",
-    lifespan: "20 - 30 anos",
-    risco: "EN",
-    grupo: "mamifero",
-    },
-]
+const url_base = process.env.NEXT_PUBLIC_URL!;
 
-export const getAnimals = async (page: number): Promise<ApiResponse<Animal[]>> => {
-    // Simula uma chamada de API
-    const api_data: ApiResponse<Animal[]> = {
-        status: "success",
-        data: animalsData,
-        totalPages: 10,
-        currentPage: 1,
-        pageSize: 3,
+/**
+ * Busca todos os animais.
+ * @returns {Promise<ApiResponse<Animal[]>>} Lista de animais
+ */
+export const getAnimals = async (query: QueryParams ): Promise<ApiResponse<Animal[]>> => {
+    const url = `${url_base}/animais?limit=${query.limit}?page=${query.page}`;
+    try {
+        const response = await fetch(url, {
+            ...baseConfig,
+            method: 'GET',
+        } as RequestInit);
+
+        return await handleHttpResponse(response);
+    } catch (error: any) {
+        console.error('Erro ao buscar animais:', error);
+        throw error;
     }
-
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(api_data);
-        }, 1000);
-    });
-};
+}
