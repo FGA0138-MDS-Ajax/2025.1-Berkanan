@@ -46,8 +46,8 @@ O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na
 | Sprint 3 | Fechamento de template e início do front e back-end | 07/06/2025 | 13/06/2025 | Protótipo de visualização completo | Manuella, Paulo, Thiago, Bruno| 30% |
 | Sprint 4 | Início do desenvolvimento da modelagem do banco de dados | 14/06/2025 | 20/06/2025 | Documentação inicial do banco de dados | Eduardo, Gustavo, Ricardo| 40% |
 | Sprint 5 |CRUD das espécies em risco | 21/06/2025 | 27/06/2025 | Base de dados inicial | Todos| 50% |
-| Sprint 8 |Refatoração e ajustes finais | 12/07/2025 | 18/07/2025 | Versão final de teste | Todos| 80% |
-| Sprint 9 |Deploy final e apresentação do projeto | 19/07/2025 | 23/07/2025 | Versão final publicada, documentação final | Todos| 100% |
+| Sprint 6 |Refatoração e ajustes finais | 12/07/2025 | 18/07/2025 | Versão final de teste | Todos| 80% |
+| Sprint 7 |Deploy final e apresentação do projeto | 19/07/2025 | 23/07/2025 | Versão final publicada, documentação final | Todos| 100% |
 
 ## 2.4 Matriz de Comunicação
 
