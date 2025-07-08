@@ -1,0 +1,5 @@
+# Configurações do Test Runner do Bun
+[test]
+
+# Lista de arquivos para pré-carregar antes de executar os testes
+preload = ["./tests/setup.ts"]
