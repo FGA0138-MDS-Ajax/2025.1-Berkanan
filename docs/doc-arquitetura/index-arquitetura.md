@@ -1,11 +1,14 @@
 # Documento de Arquitetura do Projeto *CerraDex*
 
-### Versão: 1.0
+### Versão: 2.0
 
-### Histórico de Revisão
+### Tabela 1 - Histórico de Revisões
 | Data | Versão | Descrição | Autor(es) |
 | :----: | :--: | :--------------------: | :-------------------: |
-| 1.0 | 28/05/2025 | Versão inicial | Todos |
+| 28/05/2025 | 1.0 | Versão inicial | Todos |
+| 04/07/2025 | 2.0 | Correção de texto e estrutura das tabelas | Paulo Victor, Thiago Accioly, Gustavo Oki, Marcos Filho, Davi Rodrigues, João Victor Mello |
+
+### Tabela 2 - Integrantes de grupo
 
 | Matrícula | Nome | Descrição do papel assumido | % de contribuição no trabalho |
 | :----: | :--: | :--------------------: | :-------------------: |

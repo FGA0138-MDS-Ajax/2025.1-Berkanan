@@ -2,16 +2,20 @@
 
 ## 2.1 Definições
 
-A arquitetura optada combina dois estilos complementares:
+A arquitetura optada combina três estilos complementares:
 
 - Arquitetura em Camadas, promovendo uma separação bem definida entre elementos do frontend e backend.
+- Separation of Concerns, promovendo uma divisão clara entre responsabilidades específicas do sistema, como regras de negócio, controle de fluxo e apresentação de dados, aplicado ao backend.
 - Padrão MVC, aplicado sobre camadas, permitindo uma organização mais modular e refatorável tanto no backend quanto no frontend.
 
 Essa combinação visa garantir a escalabilidade, modularidade e manutenção da aplicação, otimizando também a divisão de setores dentro do grupo para melhor desenvolvimento de cada camada do projeto.
 
 ## 2.2 Justifique sua escolha
 
-Foi escolhido seguir com uma arquitetura em camadas por ser um estilo arquitetural que colabora com a estrutura da aplicação, que pode ser dividida nas funcionalidades das áreas do front-end e back-end em camadas específicas para facilitar a organização e separação das responsabilidades conforme o projeto se expande.
+Foi escolhido seguir com uma arquitetura em camadas para o frontend por ser um estilo arquitetural que colabora com a estrutura da aplicação, que pode ser dividida nas funcionalidades das áreas do frontend e em camadas específicas para facilitar a organização e separação das responsabilidades conforme o projeto se expande.
+
+Foi adotado o princípio de Separation of Concerns (Separação de Responsabilidades) para o backend por se tratar de uma abordagem fundamental para manter a organização estrutural do código à medida que a aplicação evolui. Esse princípio permite que cada parte do sistema seja responsável por um único aspecto da lógica, promovendo uma divisão clara entre funcionalidades distintas, como manipulação de dados, lógica de apresentação e regras de negócio. Com essa separação, torna-se mais simples manter, testar e expandir os módulos da aplicação de forma independente, além de facilitar o trabalho colaborativo entre diferentes áreas da equipe de desenvolvimento.
+
 Em síntese, a escolha em camadas com MVC parte dos princípios de:
 
 - Separação de responsabilidades, para fácil manutenção, testes e escalabilidade do sistema
@@ -28,12 +32,22 @@ A arquitetura em camadas é uma estratégia fundamental de organização de sist
 
 - Camada View:  Refere-se a interface do usuário, da qual as ações ordenadas são enviadas para as camadas inferiores.
 - Camada Controller: Opera como um intermediário entre o usuário e o banco de dados, basicamente obtém as interações da interface e age de acordo com as operações recebidas.
-- Camada Model: Adquiri a informação, através da camada intermediária, acessando ou modificando os dados, e devolve ao Controller para ser projetado na camada View
+- Camada Model: Adquiri a informação, através da camada intermediária, acessando ou modificando os dados, e devolve ao Controller para ser projetado na camada View.
 
 Cada camada  atua de forma independente, representando uma abstração específica no processamento das requisições. A forma como elas se comunicam é definida pela equipe de desenvolvimento, de acordo com as necessidades do projeto.
 
-![Figura 1](/docs/img/img1.png)
-*Desenho esquemático da representação arquitetural.*
+<div class="centered-text"><b>Figura 1 - </b> Desenho esquemático da representação arquitetural. </div>
+
+<img src="/img/img1.png" alt="image" class="centered-img"> 
+
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+O princípio de Separation of Concerns (SoC), ou Separação de Responsabilidades, é uma diretriz essencial na construção de sistemas bem estruturados. Ele propõe que diferentes funcionalidades de um sistema sejam divididas em partes independentes, de forma que cada componente seja responsável apenas por um aspecto específico da lógica da aplicação. Essa separação contribui diretamente para a clareza, manutenibilidade e escalabilidade do código. Quando aplicado corretamente, o SoC facilita a identificação de problemas, permite modificações localizadas sem impactos colaterais e melhora o entendimento geral do funcionamento do sistema.
+
+Assim como na arquitetura em camadas, o SoC atua organizando a aplicação em módulos distintos, cada um com uma função bem definida. Por exemplo, a camada View concentra-se apenas na apresentação dos dados e interação com o usuário; a camada Controller interpreta essas interações e orquestra as ações necessárias; e a camada Model lida exclusivamente com os dados e regras de negócio. Cada uma dessas camadas representa uma “preocupação” diferente do sistema, e o SoC garante que essas preocupações não se misturem de forma indevida.
+
+Ao separar essas responsabilidades, o princípio de SoC promove uma organização mais limpa e modular do sistema, permitindo que cada parte possa ser desenvolvida, testada e evoluída de forma independente. Isso também favorece o trabalho em equipe, pois diferentes desenvolvedores podem atuar em áreas distintas do código sem gerar conflitos, mantendo a integridade e a coerência do projeto como um todo.
+
 
 ## 2.4 Metas e restrições arquiteturais
 
@@ -61,14 +75,26 @@ O sistema da aplicação está subdividido nos módulos de:
 - Galeria: armazenamento de imagens das páginas da aplicação, como fotos das espécies de animais ameaçados. Esse módulo se comunica por meio da adição de imagens em alguns pontos das páginas. Além de uma interface que permite que os usuários visualizem cada imagem individualmente e alterne entre elas;
 - CRUD: sistema de cadastro e manipulação dos dados das espécies. Sendo esse módulo necessário para a criação de novas páginas e a atualização ou remoção do conteúdo de páginas. Esse módulo funciona permitindo que os moderadores selecionados pelo administrador possam alterar as páginas conforme desejarem.
 
-![Figura 2](/docs/img/img3.png)
-*Desenho esquemático do diagrama de estados.*
+<div class="centered-text"><b>Figura 2 - </b> Desenho esquemático do diagrama de estados. </div>
 
-![Figura 3](/docs/img/img2.png)
-*Desenho esquemático do diagrama de atividades.*
+<img src="/img/img3.png" alt="image" class="centered-img"> 
 
-![Figura 4](/docs/img/img4.png)
-*Desenho esquemático do diagrama de classes.*
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+
+<div class="centered-text"><b>Figura 3 - </b> Desenho esquemático do diagrama de atividades. </div>
+
+<img src="/img/img2.png" alt="image" class="centered-img"> 
+
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+
+<div class="centered-text"><b>Figura 4 - </b> Desenho esquemático do diagrama de classes. </div>
+
+<img src="/img/img4.png" alt="image" class="centered-img"> 
+
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
 
 ## 2.7 Visão de Implementação
 
@@ -86,8 +112,12 @@ Camada do Banco:
 - Guarda a informação do animal em questão (nome, espécie, imagem, dados referentes a ele).
 Passa para o site a informação coletada.
 
-![Figura 5](/docs/img/img5.png)
-*Desenho esquemático do diagrama de pacotes.*
+<div class="centered-text"><b>Figura 5 - </b> Desenho esquemático do diagrama de pacotes. </div>
+
+<img src="/img/img5.png" alt="image" class="centered-img"> 
+
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
 
 ## 2.8 Visão de Implantação
 

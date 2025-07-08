@@ -15,3 +15,5 @@ O escopo foi estruturado com base nas necessidades da ODS que foram identificada
 - Integração de frontend e backend
 
 Quanto à estratégia de desenvolvimento, escolhemos um processo incremental onde as funcionalidades de visualização, filtragem e cadastro das espécies ameaçadas do Cerrado incluídas no escopo do projeto serão entregues conforme as sprints.
+
+
