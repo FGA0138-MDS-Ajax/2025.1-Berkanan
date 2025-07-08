@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Representação Arquitetural - Documentação</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentação</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">CerraDex</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atas de Reunião</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../atas-reuniao/ata-reuniao-1/" class="dropdown-item">Ata 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Arquitetura</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-arquitetura/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../introducao/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Representação Arquitetural</a>
+</li>
+                                    
+<li>
+    <a href="../bibliografia/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../mkdocs/" class="nav-link">Instruções mkdocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Visão</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../doc-visao/index-visao/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/visao-geral-produto/" class="dropdown-item">Visão do Produto</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/visao-geral-projeto/" class="dropdown-item">Visão do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/processo-desenvolvimento/" class="dropdown-item">Processo de Desenvolvimento</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/decl-escopo/" class="dropdown-item">Declaração de Escopo do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/metricas-medicoes/" class="dropdown-item">Métricas e Medições</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/testes/" class="dropdown-item">Testes de Software</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-visao/ref-bibliograficas/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../introducao/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../bibliografia/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#representacao-arquitetural" class="nav-link">Representação Arquitetural</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#21-definicoes" class="nav-link">2.1 Definições</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#22-justifique-sua-escolha" class="nav-link">2.2 Justifique sua escolha</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#23-detalhamento" class="nav-link">2.3 Detalhamento</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#24-metas-e-restricoes-arquiteturais" class="nav-link">2.4 Metas e restrições arquiteturais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#25-visao-de-casos-de-uso-escopo-do-produto" class="nav-link">2.5 Visão de Casos de uso (escopo do produto)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#26-visao-logica" class="nav-link">2.6 Visão lógica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#27-visao-de-implementacao" class="nav-link">2.7 Visão de Implementação</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#28-visao-de-implantacao" class="nav-link">2.8 Visão de Implantação</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#29-restricoes-adicionais" class="nav-link">2.9 Restrições adicionais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="representacao-arquitetural">Representação Arquitetural</h1>
+<h2 id="21-definicoes">2.1 Definições</h2>
+<p>A arquitetura optada combina três estilos complementares:</p>
+<ul>
+<li>Arquitetura em Camadas, promovendo uma separação bem definida entre elementos do frontend e backend.</li>
+<li>Separation of Concerns, promovendo uma divisão clara entre responsabilidades específicas do sistema, como regras de negócio, controle de fluxo e apresentação de dados, aplicado ao backend.</li>
+<li>Padrão MVC, aplicado sobre camadas, permitindo uma organização mais modular e refatorável tanto no backend quanto no frontend.</li>
+</ul>
+<p>Essa combinação visa garantir a escalabilidade, modularidade e manutenção da aplicação, otimizando também a divisão de setores dentro do grupo para melhor desenvolvimento de cada camada do projeto.</p>
+<h2 id="22-justifique-sua-escolha">2.2 Justifique sua escolha</h2>
+<p>Foi escolhido seguir com uma arquitetura em camadas para o frontend por ser um estilo arquitetural que colabora com a estrutura da aplicação, que pode ser dividida nas funcionalidades das áreas do frontend e em camadas específicas para facilitar a organização e separação das responsabilidades conforme o projeto se expande.</p>
+<p>Foi adotado o princípio de Separation of Concerns (Separação de Responsabilidades) para o backend por se tratar de uma abordagem fundamental para manter a organização estrutural do código à medida que a aplicação evolui. Esse princípio permite que cada parte do sistema seja responsável por um único aspecto da lógica, promovendo uma divisão clara entre funcionalidades distintas, como manipulação de dados, lógica de apresentação e regras de negócio. Com essa separação, torna-se mais simples manter, testar e expandir os módulos da aplicação de forma independente, além de facilitar o trabalho colaborativo entre diferentes áreas da equipe de desenvolvimento.</p>
+<p>Em síntese, a escolha em camadas com MVC parte dos princípios de:</p>
+<ul>
+<li>Separação de responsabilidades, para fácil manutenção, testes e escalabilidade do sistema</li>
+<li>Isolamento de mudanças, onde alterações não impactam diretamente a camada de apresentação</li>
+<li>Alta coesão interna e baixo acoplamento entre módulos</li>
+<li>Adoção de boas práticas de desenvolvimento e padrões amplamente consolidados</li>
+<li>Integração fluida com frameworks modernos</li>
+<li>Modularidade, possibilitando expansões futuras</li>
+<li>Acessibilidade de entendimento para outrem, não pertencentes ao grupo original do projeto</li>
+</ul>
+<h2 id="23-detalhamento">2.3 Detalhamento</h2>
+<p>A arquitetura em camadas é uma estratégia fundamental de organização de sistemas de software. Ela cria uma estrutura organizada e dividida em partes, o que ajuda a manter o sistema mais fácil de entender, de corrigir quando necessário e de melhorar com o tempo. Além disso, essa divisão torna mais claro o que cada parte do sistema deve fazer, essa arquitetura organiza o sistema em camadas distintas. Sendo assim, a ideia central é que os módulos com funcionalidade semelhantes sejam organizados em camadas horizontais, sendo que cada camada possui uma função específica e se comunica com as camadas vizinhas de forma controlada. Essa arquitetura pode ser dividas em módulos, cada um com uma função bem definida dentro do sistema:</p>
+<ul>
+<li>Camada View:  Refere-se a interface do usuário, da qual as ações ordenadas são enviadas para as camadas inferiores.</li>
+<li>Camada Controller: Opera como um intermediário entre o usuário e o banco de dados, basicamente obtém as interações da interface e age de acordo com as operações recebidas.</li>
+<li>Camada Model: Adquiri a informação, através da camada intermediária, acessando ou modificando os dados, e devolve ao Controller para ser projetado na camada View.</li>
+</ul>
+<p>Cada camada  atua de forma independente, representando uma abstração específica no processamento das requisições. A forma como elas se comunicam é definida pela equipe de desenvolvimento, de acordo com as necessidades do projeto.</p>
+<div class="centered-text"><b>Figura 1 - </b> Desenho esquemático da representação arquitetural. </div>
+
+<p><img src="/img/img1.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+<p>O princípio de Separation of Concerns (SoC), ou Separação de Responsabilidades, é uma diretriz essencial na construção de sistemas bem estruturados. Ele propõe que diferentes funcionalidades de um sistema sejam divididas em partes independentes, de forma que cada componente seja responsável apenas por um aspecto específico da lógica da aplicação. Essa separação contribui diretamente para a clareza, manutenibilidade e escalabilidade do código. Quando aplicado corretamente, o SoC facilita a identificação de problemas, permite modificações localizadas sem impactos colaterais e melhora o entendimento geral do funcionamento do sistema.</p>
+<p>Assim como na arquitetura em camadas, o SoC atua organizando a aplicação em módulos distintos, cada um com uma função bem definida. Por exemplo, a camada View concentra-se apenas na apresentação dos dados e interação com o usuário; a camada Controller interpreta essas interações e orquestra as ações necessárias; e a camada Model lida exclusivamente com os dados e regras de negócio. Cada uma dessas camadas representa uma “preocupação” diferente do sistema, e o SoC garante que essas preocupações não se misturem de forma indevida.</p>
+<p>Ao separar essas responsabilidades, o princípio de SoC promove uma organização mais limpa e modular do sistema, permitindo que cada parte possa ser desenvolvida, testada e evoluída de forma independente. Isso também favorece o trabalho em equipe, pois diferentes desenvolvedores podem atuar em áreas distintas do código sem gerar conflitos, mantendo a integridade e a coerência do projeto como um todo.</p>
+<h2 id="24-metas-e-restricoes-arquiteturais">2.4 Metas e restrições arquiteturais</h2>
+<p>Nesta seção, apresenta-se as principais metas e restrições referentes ao projeto CerraDex, priorizando bom desempenho, acessibilidade e fácil navegação.</p>
+<h3 id="241-metas">2.4.1 Metas</h3>
+<p>A aplicação será desenvolvida com foco na usabilidade, sendo acessível através dos principais navegadores web atuais, com destaque para aqueles baseados em Chromium. Sua interface será interativa e apresentará as informações por meio de recursos visuais intuitivos, facilitando a compreensão do conteúdo e garantindo uma ferramenta operacional e eficaz.
+Quanto à manutenibilidade, o sistema será projetado para permitir adaptações conforme a necessidade, seja para implementar melhorias, incorporar novas features ou adicionar conteúdos futuros. Para assegurar o bom desempenho de todas as operações, cada funcionalidade passará por testes que validarão seu comportamento, resultando em um produto final de alta qualidade e eficiência.
+Sobre padrões de codificação. Para tornar o código inteligível, reutilizável e passível de manutenção, reduzindo os defeitos e aumentando a qualidade geral, utilizaremos alguns padrões de codificação essenciais. Indentação adequada, com recuo e formatação consistentes; comentários ao longo do código para clareza e documentação; controle de versão e colaboração utilizando o GitHub.</p>
+<h3 id="242-restricoes">2.4.2 Restrições</h3>
+<p>Durante o desenvolvimento da aplicação, a equipe deve se atentar ao limite de armazenamento do banco de dados, visto que o projeto demanda uma grande e variada quantidade de dados em formato de imagem, restringindo a equipe à otimizar a formatação dos arquivos. </p>
+<h2 id="25-visao-de-casos-de-uso-escopo-do-produto">2.5 Visão de Casos de uso (escopo do produto)</h2>
+<p>O escopo do produto CerraDex, detalhado no documento "Visão do Produto e do Projeto v1.0", abrange as funcionalidades essenciais para o registro, catalogação e divulgação de informações sobre animais do bioma Cerrado em risco de extinção. O sistema permitirá o cadastro, edição, exclusão e visualização de espécies animais ameaçadas, com armazenamento de dados inerentes a cada espécime em páginas dedicadas, incluindo imagens. Adicionalmente, o sistema oferecerá busca e filtragem interativa por critérios pré-definidos, e sua interface será responsiva, acessível e moderna, com integração completa entre frontend e backend.</p>
+<p>Um dos requisitos que contribuíram significativamente para a escolha da arquitetura em camadas foi a necessidade de uma clara separação de responsabilidades entre as funcionalidades de visualização, filtragem e cadastro das espécies. A experiência da equipe em desenvolvimento web, com familiaridade em arquiteturas que promovem a modularidade e a manutenibilidade, também influenciou a decisão. Isso permite que o sistema seja escalável e de fácil adaptação a futuras melhorias e incorporação de novas funcionalidades. O diagrama de casos de uso presente no documento "Visão do Produto e do Projeto v1.0" ilustra em detalhes as interações dos usuários com o sistema, reforçando a abrangência das funcionalidades propostas.</p>
+<h2 id="26-visao-logica">2.6 Visão lógica</h2>
+<p>O sistema da aplicação está subdividido nos módulos de:
+- Busca: permite que o usuário navegue pela aplicação e busque individualmente pela página que quiser acessar. O uso dessa função se daria por meio de uma interface na aplicação como uma “barra de pesquisa”;
+- Galeria: armazenamento de imagens das páginas da aplicação, como fotos das espécies de animais ameaçados. Esse módulo se comunica por meio da adição de imagens em alguns pontos das páginas. Além de uma interface que permite que os usuários visualizem cada imagem individualmente e alterne entre elas;
+- CRUD: sistema de cadastro e manipulação dos dados das espécies. Sendo esse módulo necessário para a criação de novas páginas e a atualização ou remoção do conteúdo de páginas. Esse módulo funciona permitindo que os moderadores selecionados pelo administrador possam alterar as páginas conforme desejarem.</p>
+<div class="centered-text"><b>Figura 2 - </b> Desenho esquemático do diagrama de estados. </div>
+
+<p><img src="/img/img3.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+<div class="centered-text"><b>Figura 3 - </b> Desenho esquemático do diagrama de atividades. </div>
+
+<p><img src="/img/img2.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+<div class="centered-text"><b>Figura 4 - </b> Desenho esquemático do diagrama de classes. </div>
+
+<p><img src="/img/img4.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+<h2 id="27-visao-de-implementacao">2.7 Visão de Implementação</h2>
+<p>Camada de Usuário:
+- O usuário acessa o site.
+- O usuário acessa o catálogo de espécies.
+- O usuário seleciona espécie.
+- O site, em resposta à seleção, mostra as informações a ele.</p>
+<p>Camada de Negócios
+- Na requisição de ver uma espécie, o site manda para o banco de dados uma requisição de coleta de espécies.
+- Depois da requisição do banco, o site pega as informações e as alinha corretamente no site.</p>
+<p>Camada do Banco:
+- Guarda a informação do animal em questão (nome, espécie, imagem, dados referentes a ele).
+Passa para o site a informação coletada.</p>
+<div class="centered-text"><b>Figura 5 - </b> Desenho esquemático do diagrama de pacotes. </div>
+
+<p><img src="/img/img5.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado pelo grupo Berkanan (2025)</div>
+
+<h2 id="28-visao-de-implantacao">2.8 Visão de Implantação</h2>
+<p>O software será executado em um ambiente Linux, com requisitos mínimos de 2 GB de memória RAM, 500 MB de armazenamento disponível e um processador com, no mínimo, dois núcleos e suporte a duas threads. Esses requisitos foram definidos com base na leveza e eficiência da arquitetura adotada, permitindo que o sistema opere de forma estável mesmo em servidores com recursos limitados.</p>
+<p>Toda a aplicação será desenvolvida utilizando a linguagem TypeScript, escolhida por sua sintaxe moderna e sua tipagem estática, que contribui para a legibilidade e a segurança do código. A escolha do TypeScript também se justifica pelo bom desempenho que oferece, considerando seu nível de abstração, tornando-se ideal para um projeto que preza tanto pela manutenibilidade quanto pela performance.</p>
+<p>No back-end, será utilizado o runtime Bun.js, devido ao seu excelente desempenho em comparação com outras soluções tradicionais, como Node.js. O Bun proporciona tempos de execução mais rápidos e um consumo de recursos mais eficiente, o que permite manter o sistema leve e responsivo, mesmo em ambientes com restrições de hardware. Isso colabora diretamente para manter os requisitos do sistema em níveis acessíveis, sem comprometer a performance.</p>
+<p>Para o front-end, optou-se pelo framework Next.js, que oferece uma abordagem moderna e eficiente no desenvolvimento de aplicações web. Entre seus principais diferenciais está o suporte ao Server Side Rendering (SSR), que permite a renderização do conteúdo no servidor, melhorando o tempo de carregamento inicial e contribuindo para uma melhor experiência do usuário. Além disso, o Next.js se integra naturalmente com o TypeScript, o que reforça a coesão tecnológica do projeto.</p>
+<p>O banco de dados adotado será o Supabase, uma solução SQL de baixo custo baseada em PostgreSQL. Além de oferecer todas as funcionalidades tradicionais de um banco relacional, o Supabase também disponibiliza recursos integrados como autenticação de usuários, armazenamento e APIs em tempo real, o que reduz a necessidade de soluções externas e acelera o desenvolvimento.</p>
+<h2 id="29-restricoes-adicionais">2.9 Restrições adicionais</h2>
+<p>O software é acessível diretamente pela internet e não exige autenticação de usuários, o que representa uma restrição negocial importante. Essa decisão foi tomada com o objetivo de facilitar o uso em desktops, permitindo acesso imediato sem etapas adicionais de login. Essa abordagem favorece a agilidade e a conveniência, especialmente em cenários onde o tempo de resposta é crítico ou o público-alvo não requer identificação individual. Contudo, essa escolha também impõe limitações quanto à personalização de conteúdo, armazenamento de dados sensíveis e controle de acesso, aspectos que podem ser considerados em futuras evoluções do sistema, caso se deseje aumentar a segurança ou oferecer funcionalidades mais específicas para cada usuário.</p>
+<p>O sistema foi projetado para suportar até 1.000 acessos simultâneos, garantindo estabilidade e desempenho mesmo sob altas cargas de acesso. Essa capacidade está diretamente ligada à arquitetura escalável adotada durante o desenvolvimento, que permite a ampliação do número de usuários e da carga de trabalho sem perda significativa de desempenho ou eficiência. Essa escalabilidade é fundamental para assegurar a continuidade dos serviços conforme o sistema cresce em popularidade e demanda.</p>
+<p>Quanto às características de qualidade, a usabilidade é um dos pilares do projeto. A interface foi projetada para ser intuitiva e de fácil navegação, reduzindo a curva de aprendizado e facilitando a interação com o sistema mesmo por usuários sem conhecimento técnico avançado. O desempenho também foi uma prioridade, com otimizações voltadas para garantir tempos de resposta rápidos e uma experiência fluida, mesmo em dispositivos com recursos limitados.</p>
+<p>Outro aspecto essencial é a compatibilidade. O software é responsivo, funcionando de forma consistente em diversos navegadores modernos, com destaque para aqueles baseados em Chromium, o que amplia significativamente seu alcance. A confiabilidade do sistema também foi considerada, com foco em assegurar a disponibilidade contínua e a integridade das informações processadas, mesmo em situações de carga elevada ou uso intenso.</p>
+<p>Essas decisões e características refletem um compromisso com a entrega de um software robusto, eficiente e alinhado às necessidades do usuário final, garantindo uma experiência confiável e satisfatória, ao mesmo tempo em que atende a restrições técnicas e negociais previamente definidas.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

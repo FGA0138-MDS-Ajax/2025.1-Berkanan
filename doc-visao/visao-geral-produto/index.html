@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Visão do Produto - Documentação</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentação</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">CerraDex</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atas de Reunião</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../atas-reuniao/ata-reuniao-1/" class="dropdown-item">Ata 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Arquitetura</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../doc-arquitetura/index-arquitetura/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/introducao/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/rep-arquitetural/" class="dropdown-item">Representação Arquitetural</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/bibliografia/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../mkdocs/" class="nav-link">Instruções mkdocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Visão</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-visao/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Visão do Produto</a>
+</li>
+                                    
+<li>
+    <a href="../visao-geral-projeto/" class="dropdown-item">Visão do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../processo-desenvolvimento/" class="dropdown-item">Processo de Desenvolvimento</a>
+</li>
+                                    
+<li>
+    <a href="../decl-escopo/" class="dropdown-item">Declaração de Escopo do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../metricas-medicoes/" class="dropdown-item">Métricas e Medições</a>
+</li>
+                                    
+<li>
+    <a href="../testes/" class="dropdown-item">Testes de Software</a>
+</li>
+                                    
+<li>
+    <a href="../ref-bibliograficas/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../index-visao/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../visao-geral-projeto/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#visao-geral-do-produto" class="nav-link">Visão Geral do Produto</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#11-problema" class="nav-link">1.1 Problema</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-declaracao-de-posicao-do-produto" class="nav-link">1.2 Declaração de Posição do Produto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#13-objetivos-do-produto" class="nav-link">1.3 Objetivos do Produto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#14-tecnologias-a-serem-utilizadas" class="nav-link">1.4 Tecnologias a Serem Utilizadas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="visao-geral-do-produto">Visão Geral do Produto</h1>
+<h2 id="11-problema">1.1 Problema</h2>
+<p>O bioma Cerrado, segundo maior bioma da América do Sul, possui uma biodiversidade vasta e única, sendo considerado um dos hotspots globais para preservação ambiental. Localizado no nordeste do Paraguai, no leste da Bolívia e em grande parte do Brasil, majoritariamente em sua região central, compõe 23,9% do território brasileiro, com uma área de 2.036.448 km², de acordo com o Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio). É reconhecido como a savana com a maior biodiversidade do mundo, abrigando cerca de 11.627 espécies de plantas nativas, sendo que dessas há 4.400, aproximadamente, espécies endêmicas, que são as espécies nativas, restritas a determinada região geográfica, ou seja, ocorrem exclusivamente em uma certa região. Já em relação a fauna, objeto de estudo deste documento, o Cerrado possui também uma imensa variedade de espécies. São cerca de 837 aves, das quais 29 são endêmicas; 185 espécies de répteis, das quais 24 são endêmicas; 194 espécies de mamíferos, das quais 19 são endêmicas; 1200 espécies de peixes e 150 anfíbios, dos quais 45 são endêmicos. Quanto a seres invertebrados, estima-se que há cerca de 14.425 espécies dentro do território. Em decorrência de sua grande biodiversidade, a preservação do Cerrado é fundamental, uma vez que cerca de 200 espécies vegetais do bioma possuem, além de grande potencial econômico, potencial medicinal. A manutenção e proliferação dessas, por sua vez, ocorre através da manutenção do ciclo ecológico de propagação de sementes através da ação da fauna. Outra relevância desse bioma é que ele compreende uma área habitada há centenas de anos, principalmente populações indígenas. É do próprio bioma que esses povos conseguem o seu sustento, extraindo dele recursos naturais, portanto, é necessário que esse bioma seja preservado para que essas comunidades consigam manter a sua sobrevivência. As principais comunidades indígenas existentes no Cerrado são Karajás, Avá-Canoeiros e Xerentes. Desse modo, entende-se que a importância do Cerrado é fundamental para o território do Brasil, tanto culturalmente quanto geograficamente.</p>
+<p>Todavia, apesar da magnitude do bioma Cerrado, ele é o bioma com a menor porcentagem de áreas sobre a proteção integral. Apenas 8,21% da área total do território é legalmente protegida com unidades de conservação, uma das principais causas motivadoras que fazem do Cerrado o bioma brasileiro que mais sofreu com alterações humanas. Atualmente, a região do Cerrado brasileiro conta com uma intensa exploração predatória: animais e plantas estão sendo caçados à exaustão e estima-se que 20% de espécimes nativas e endêmicas da região já não ocorram em áreas protegidas. A perda da biodiversidade no bioma Cerrado é uma realidade presente. Em cinco décadas, o tamanho original do bioma foi reduzido em 41%, segundo o Ministério do Meio Ambiente. As principais atividades que comprometem a conservação desse bioma estão relacionadas com o extrativismo desenfreado e com a expansão agrícola. Expandir a atividade agrícola requer desmatar áreas, o que vem acontecendo com frequência na região abrangida pelo Cerrado. A pecuária também tem provocado inúmeros impactos no bioma, pois o desmatamento para criação de áreas de pastagem é intenso. Essas atividades, além de descaracterizar o bioma no sentido paisagístico, alteram também a manutenção da biodiversidade, visto que muitos animais perdem seu habitat, correndo o risco de entrar em extinção, assim como espécies endêmicas de plantas. É válido lembrar que o Cerrado abrange uma grande área de bacias hidrográficas, possuindo um potencial aquífero imenso, representando 8% da disponibilidade de água em nível nacional. Quando as áreas são desmatadas para viabilizar atividades como a agropecuária, além de degradar a natureza, propicia também o assoreamento das áreas das bacias e pode provocar contaminação das águas devido ao uso de agrotóxicos nas produções agrícolas.</p>
+<p>A sociedade brasileira, em particular a juventude e os que assistem em regiões urbanas, têm pouco acesso a fontes de informações confiáveis, acessíveis ou interessantes sobre espécies animais ameaçadas do Cerrado. Plataformas governamentais e fontes acadêmicas possuem dados relevantes, mas sua riqueza em linguagem técnica e baixa atratividade visual dificultam a compreensão e/ou engajamento de públicos não especializados e fora do círculo acadêmico. Existe, destarte, uma lacuna significativa entre a produção de conhecimento científico aprofundado e revisado e sua absorção e entendimento pela sociedade civil.</p>
+<div class="centered-text"><b>Diagrama 1 - </b> Diagrama de Ishikawa </div>
+
+<p><img src="/img/img6.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado por Paulo Victor (2025)</div>
+
+<p>Nesse contexto, o problema identificado é a ausência de uma ferramenta digital acessível e engajante que auxilie na disseminação de conhecimento ambiental e na valorização do patrimônio natural do Cerrado, com foco específico em espécies da fauna com grave risco de extinção. Assim sendo, a solução em análise seria desenvolver um software que traduza conhecimento científico em uma experiência informativa e visualmente atrativa para a sociedade não acadêmica.</p>
+<p>A ODS 11.4, estabelecida pela Organização das Nações Unidas dentro do marco da Agenda 2030, tem como objetivo fortalecer os esforços para proteger e salvaguardar o patrimônio cultural e natural do mundo. Essa meta integra o Objetivo de Desenvolvimento Sustentável número 11, que busca tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis. Em um contexto global marcado pela intensa urbanização e pela pressão crescente sobre os espaços urbanos, a ODS 11.4 destaca a importância de preservar elementos fundamentais da memória coletiva e do equilíbrio ecológico, assegurando que o crescimento urbano não ocorra em detrimento da identidade histórica e dos recursos naturais.</p>
+<p>A preservação do patrimônio cultural envolve tanto os bens materiais, como edifícios históricos, museus, igrejas, monumentos e sítios arqueológicos, quanto os bens imateriais, como tradições, festas populares, rituais, saberes tradicionais e línguas originárias. Esses elementos constituem a base simbólica de uma sociedade, transmitindo valores, narrativas e identidades que resistem ao tempo. Já o patrimônio natural refere-se às áreas e elementos do meio ambiente com valor ecológico, científico ou paisagístico, como parques nacionais, reservas biológicas, formações geológicas e habitats de espécies ameaçadas. A proteção desses bens naturais é essencial não apenas para a biodiversidade, mas também para a manutenção dos serviços ecossistêmicos que sustentam a vida urbana, como a regulação climática, a purificação do ar e da água, e o controle de enchentes.</p>
+<p>A implementação da ODS 11.4 exige uma abordagem multidisciplinar e multissetorial, envolvendo políticas públicas eficazes, legislação adequada, financiamento contínuo e participação social. Isso inclui ações como o tombamento de bens culturais, a criação de áreas de proteção ambiental, o fomento à educação patrimonial nas escolas, o apoio técnico e financeiro à restauração de monumentos e a integração entre planejamento urbano e preservação histórica. Além disso, o uso de tecnologias digitais, como sistemas de georreferenciamento e bancos de dados digitais, tem ampliado a capacidade de catalogação, monitoramento e difusão dos patrimônios culturais e naturais.</p>
+<p>Para mensurar os avanços dessa meta, a ONU propôs o indicador 11.4.1, que avalia o total da despesa pública e privada per capita com a preservação, proteção e conservação do patrimônio, desagregada por tipo de bem (cultural, natural, misto) e por nível de governo (nacional, regional e local). Esse indicador permite observar, de maneira objetiva, o comprometimento financeiro dos Estados com a salvaguarda de seus bens patrimoniais e sua disposição em transformar o patrimônio em pilar estratégico do desenvolvimento urbano sustentável.</p>
+<p>No Brasil, diversos exemplos ilustram a relevância da ODS 11.4. O Centro Histórico de Salvador, tombado como Patrimônio Mundial pela UNESCO, enfrenta desafios estruturais para garantir sua preservação frente à especulação imobiliária e ao abandono. O Parque Nacional da Serra da Capivara, que abriga sítios arqueológicos milenares, sofre com a escassez de investimentos e a precarização da gestão. Festas tradicionais como o Bumba Meu Boi, reconhecidas como patrimônio imaterial, dependem de políticas públicas de valorização cultural para garantir sua continuidade diante das mudanças sociais e econômicas.</p>
+<p>Diante de tais desafios, a ODS 11.4 propõe uma inflexão no modelo tradicional de urbanização, reconhecendo que o verdadeiro progresso não se mede apenas por indicadores econômicos ou pela verticalização das cidades, mas também pela capacidade de preservar aquilo que nos conecta ao passado e assegura um futuro ambientalmente equilibrado, culturalmente diverso e socialmente coeso. Ao proteger o patrimônio cultural e natural, protegemos também a alma das cidades e o sentido de pertencimento de seus habitantes, criando bases sólidas para um desenvolvimento verdadeiramente sustentável.</p>
+<p>A proposta do CerraDex é ser um site interativo, responsivo e informativo que funcione como um catálogo digital das espécies animais ameaçadas de extinção que são encontradas no Cerrado. O website apresentará fichas técnicas ricas sobre cada animal, incluindo infográficos de suas características físicas (comparativo de seu tamanho com o do ser humano, por exemplo), a pegada do animal ilustrada, mapa de distribuição geográfica, nível de ameaça de extinção e importância dentro de seu nicho ecológico. Além disso, será possível fazer acesso direto a algum animal em específico através de busca, a filtragem de espécies por filtros pré estabelecidos e o redirecionamento rápido para novas páginas, mantendo dinamismo nas informações e gerando engajamento.</p>
+<p>Por meio dessa solução digital, cria-se uma espécie de santuário ecológico digital, que auxilia diretamente na preservação de informações e características dessas espécies animais que possuem alto risco de extinção, salvaguardando esse patrimônio natural. Além disso, cria-se um canal de aproximação entre o cidadão e o bioma, ampliando a consciência ambiental, fomentando políticas públicas e apoiando os esforços da ODS 11.4 da ONU, que visa proteger e salvaguardar o patrimônio natural do mundo. Por sua responsividade e layout moderno, o produto busca ser acessível ao público geral.</p>
+<h2 id="12-declaracao-de-posicao-do-produto">1.2 Declaração de Posição do Produto</h2>
+<p>O projeto “CerraDex” visa preencher uma lacuna crítica de comunicação entre texto acadêmico e usuário cotidiano da internet, provido esse de algum conhecimento prévio ou não. O foco principal é o armazenamento e disseminação de informações sobre espécies classificadas como em risco de extinção ou grave risco de extinção do bioma Cerrado. A proposta é oferecer uma plataforma digital em estilo de catálogo, da modalidade website, engajante e responsiva que combine informações técnicas e científicas com visualizadores didáticos e acessíveis, promovendo a informação e conscientização ambiental de forma contínua e escalável.</p>
+<p>Diferentemente de bancos de dados técnicos, como os mantidos por instituições como o ICMBio ou a IUCN, o CerraDex aposta na usabilidade e interatividade como aspectos diferenciais. Além disso, o rigor técnico para a inclusão de informação também o diferirá de sites como a Wikipédia que, por possibilitar que qualquer usuário faça modificações em seu corpo de texto, não pode garantir a acuracidade daquela informação propagada a todo instante. Por fim, sites institucionais ou escolares tem uma estrutura visual muito rígida e pouco engajante. Para tanto, o CerraDex busca também trazer um visual arrojado e moderno, interativo e dinâmico, além de concentrar essa base de dados em um único local, em vez de se fazer necessário a busca de informações em diferentes páginas, com diferentes graus de qualidade, oferecendo ainda uma boa conveniência ao usuário.</p>
+<p>Com esse objetivo em mente, o CerraDex terá como foco usuários com quaisquer níveis de capacidade de uso de tecnologia, pois o site se propõe a ser acessível a todo tipo de público, com uma interface moderna e facilmente interpretável; e de quaisquer níveis de conhecimento sobre biologia, já que manejará as informações para serem de fácil entendimento, sem sacrificar o rigor técnico por trás da informação.</p>
+<p>A proposta se diferencia de demais símiles por apostar em transformar dados científicos em uma experiência interativa e visual, engajando o usuário a seguir interagindo com a base de dados. Isso possibilita uma integração usuário-bioma, o que pode auxiliar no processo de salvaguardar o Cerrado. </p>
+<p>De forma geral, o projeto vai levar as informações para o usuário da forma mais ágil e atrativa, a partir de uma base de informações curadas e um grande enfoque no aspecto visual do website. Para dinamizar as buscas mais direcionadas, como a busca individual de uma espécie em específico, o cliente pode obter informações sobre ela a partir de um esquema de busca e filtros que será implantado no produto.</p>
+<div class="centered-text"><b>Tabela 3 - </b> Posição do Produto </div>
+
+<p><img src="/img/img7.png" alt="image" class="centered-img"> </p>
+<div class="centered-text"><b>Fonte:</b> Elaborado por grupo Berkanan (2025)</div>
+
+<h2 id="13-objetivos-do-produto">1.3 Objetivos do Produto</h2>
+<p>O objetivo principal deste projeto é o desenvolvimento de uma plataforma web que funcione como um sistema de catalogação digital interativo de espécies animais ameaçadas de extinção no bioma Cerrado, prezando principalmente pela acessibilidade, visualização dinâmica e fluida de informações confiáveis e organização lógica das espécies catalogadas, com rigor em educação ambiental. A solução proposta entende estar alinhada com a ODS 11.4 da ONU, pois cria uma base de dados que preserva informações sobre espécies, garantindo tanto seu resguardo ante ao tempo quanto um auxílio à sua defesa, por intermédio da disseminação de sua importância fundamental no ambiente em que está presente. </p>
+<p>A aplicação será desenvolvida utilizando métodos de desenvolvimento de software modernos, como XP e o SCRUM com foco na estruturação de requisitos, modelagem de dados, usabilidade e manutenção do sistema. Espera-se que o produto final contribua para a disseminação de conhecimento ambiental e armazenamento de informações cruciais sobre a natureza desses espécimes.</p>
+<p>Objetivos secundários:</p>
+<ul>
+<li>Projetar e implementar uma interface web responsiva e de fácil navegação, com estética visual atrativa e engajante;</li>
+<li>Incorporar funcionalidades de busca e filtragem de dados, como permitir o usuário localizar espécies por nome comum, nome científico e grau de ameaça, na modalidade de flat filters;</li>
+<li>Estruturar o banco de dados com base em fontes confiáveis, como o ICMBio (Instituto Chico Mendes de Conservação da Biodiversidade) e a Lista Vermelha da IUCN;</li>
+<li>Disseminar conhecimento científico de forma acessível ao público geral;</li>
+<li>Garantir a escalabilidade do sistema para futura ampliação do escopo, contemplando outros biomas ou categorias de espécies;</li>
+<li>Aplicar metodologias de desenvolvimento de software (como análise de requisitos, versionamento e testes) de forma prática e colaborativa.</li>
+</ul>
+<h2 id="14-tecnologias-a-serem-utilizadas">1.4 Tecnologias a Serem Utilizadas</h2>
+<p>O desenvolvimento da aplicação envolverá uma variedade de tecnologias, métodos e ferramentas, abrangendo desde o front-end até o back-end, incluindo também a integração com um banco de dados para gerenciamento eficiente das informações.</p>
+<h3 id="1-front-end">1. Front-end:</h3>
+<p><strong>Next.js</strong>: Framework full-stack baseado em React que permite criar aplicações web completas com renderização no servidor (SSR), geração estática (SSG), roteamento automático, rotas de API integradas, divisão de código automática (code splitting), pré-fetching inteligente, otimização de carregamento de imagem e outros recursos que resultam em sites mais rápidos para acesso e carregamento, além de SEO.</p>
+<p><strong>TypeScript</strong>: TypeScript é uma linguagem de programação baseada em JavaScript que incorpora tipagem estática, interfaces, generics e recursos avançados de orientação a objetos, como classes, herança e modificadores de acesso. Projetada para detectar erros em tempo de desenvolvimento, ela promove maior segurança, legibilidade e previsibilidade no código. Ao explicitar os contratos entre componentes, facilita a manutenção, refatoração e escalabilidade de sistemas. Seu ecossistema é altamente integrado a ferramentas modernas e, por compilar para JavaScript padrão, pode ser utilizado em qualquer ambiente compatível com JS. Por essas razões, o TypeScript é amplamente adotado em projetos de médio e grande porte, elevando a produtividade e qualidade do desenvolvimento front-end e back-end.</p>
+<h3 id="2-back-end">2. Back-end</h3>
+<p><strong>TypeScript</strong>: TypeScript é uma linguagem de programação baseada em JavaScript que incorpora tipagem estática, interfaces, generics e recursos avançados de orientação a objetos, como classes, herança e modificadores de acesso. Projetada para detectar erros em tempo de desenvolvimento, ela promove maior segurança, legibilidade e previsibilidade no código. Ao explicitar os contratos entre componentes, facilita a manutenção, refatoração e escalabilidade de sistemas. Seu ecossistema é altamente integrado a ferramentas modernas e, por compilar para JavaScript padrão, pode ser utilizado em qualquer ambiente compatível com JS. Por essas razões, o TypeScript é amplamente adotado em projetos de médio e grande porte, elevando a produtividade e qualidade do desenvolvimento front-end e back-end.</p>
+<p><strong>BunJS</strong>: Runtime moderno para JavaScript e TypeScript que tem como foco a velocidade, simplicidade e eficiência. Desenvolvido como uma alternativa ao Node.js, ele inclui nativamente um gerenciador de pacotes (bun install), um bundler, um test runner e um transpilador, tudo em um único binário. Com isso, o Bun oferece uma experiência de desenvolvimento mais rápida e integrada, reduzindo a necessidade de múltiplas ferramentas externas.</p>
+<p><strong>ElysiaJS</strong>: é um framework web moderno para construir APIs com TypeScript, baseado no runtime Bun. Ele oferece uma abordagem minimalista e altamente performática, com foco em tipagem estática, validação de dados, extensibilidade e uma experiência de desenvolvedor simplificada.</p>
+<h3 id="3-banco-de-dados">3. Banco de Dados</h3>
+<p><strong>SQL</strong>: Linguagem padrão para gerenciamento de bancos de dados relacionais, utilizada para criar, consultar, atualizar e excluir dados armazenados em tabelas. Com SQL, é possível estruturar dados em colunas e linhas, realizar filtros complexos, unir informações de múltiplas tabelas (JOINs) e garantir integridade e consistência dos dados. É amplamente usada em sistemas que exigem organização e relacionamento entre grandes volumes de dados, como aplicações web, sistemas financeiros e ERPs.</p>
+<p><strong>Supabase</strong>: Plataforma open source de backend como serviço (BaaS) que oferece uma alternativa moderna ao Firebase, com base em PostgreSQL. Ela fornece recursos completos como banco de dados em tempo real, autenticação, armazenamento de arquivos e funções serverless, tudo integrado em uma única plataforma e com suporte nativo a TypeScript e SQL. A Supabase permite criar e escalar aplicações rapidamente, mantendo o controle total sobre os dados com uma abordagem aberta, segura e fácil de usar.</p>
+<h3 id="4-ambiente-de-desenvolvimento-e-ferramentas">4. Ambiente de Desenvolvimento e Ferramentas:</h3>
+<p><strong>Visual Studio Code (VS Code)</strong>: é um editor de código-fonte leve, gratuito e de código aberto, desenvolvido pela Microsoft, projetado para suportar diversas linguagens de programação como JavaScript, TypeScript, Python, C++, entre outras. Ele oferece recursos poderosos como autocompletar inteligente (IntelliSense), controle de versão com Git integrado e uma vasta biblioteca de extensões que o tornam altamente personalizável. VS Code é amplamente utilizado por desenvolvedores por sua performance, simplicidade e produtividade no desenvolvimento de software.</p>
+<p><strong>Git</strong>: Sistema de controle de versão distribuído amplamente utilizado no desenvolvimento de software para rastrear mudanças no código-fonte ao longo do tempo. Ele permite que múltiplos desenvolvedores colaborem em um projeto simultaneamente, mantendo um histórico completo de modificações, possibilitando voltar a versões anteriores, criar ramificações (branches) para desenvolvimento paralelo e mesclar mudanças de forma controlada. </p>
+<p><strong>Docker</strong>: Plataforma que permite criar, distribuir e executar aplicações dentro de ambientes isolados e leves que incluem tudo o que o software precisa para rodar, como código, bibliotecas e dependências. Isso garante que a aplicação funcione de forma consistente em qualquer lugar, desde o computador do desenvolvedor até servidores de produção. O Docker simplifica o processo de desenvolvimento, testes e implantação, facilitando a escalabilidade e o gerenciamento de aplicações em ambientes diversos.</p>
+<p><strong>Trello</strong>: Ferramenta de gerenciamento de projetos e tarefas baseada em quadros visuais que utilizam cartões e listas para organizar atividades de forma simples e colaborativa. Com uma interface intuitiva e flexível, ele ajuda a planejar, delegar e monitorar tarefas de maneira visual e dinâmica.</p>
+<h3 id="5-metodos-e-tecnicas">5. Métodos e Técnicas:</h3>
+<p><strong>Scrum</strong>: Metodologia ágil de gerenciamento de projetos que foca em entregas rápidas e iterativas por meio de ciclos curtos chamados sprints. Ela promove a colaboração contínua entre equipes multifuncionais, com papéis definidos como Product Owner, Scrum Master e time de desenvolvimento, além de reuniões regulares para planejamento, revisão e adaptação do trabalho. O Scrum ajuda a aumentar a produtividade, a transparência e a capacidade de responder rapidamente a mudanças durante o desenvolvimento de produtos complexos.</p>
+<p><strong>Extreme Programming (XP)</strong>: é uma metodologia ágil de desenvolvimento de software que enfatiza a entrega rápida e contínua de funcionalidades, a colaboração próxima entre equipe e cliente, e práticas técnicas rigorosas como programação em par (pair programming), testes automatizados, integração contínua e refatoração constante, que serão técnicas fundamentais para o desenvolvimento do projeto. O XP busca aumentar a qualidade do código e a satisfação do cliente, promovendo um ambiente flexível e adaptável a mudanças durante todo o ciclo de desenvolvimento.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

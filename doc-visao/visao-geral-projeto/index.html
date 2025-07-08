@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Visão do Projeto - Documentação</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentação</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">CerraDex</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atas de Reunião</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../atas-reuniao/ata-reuniao-1/" class="dropdown-item">Ata 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Arquitetura</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../doc-arquitetura/index-arquitetura/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/introducao/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/rep-arquitetural/" class="dropdown-item">Representação Arquitetural</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/bibliografia/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../mkdocs/" class="nav-link">Instruções mkdocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Visão</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-visao/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../visao-geral-produto/" class="dropdown-item">Visão do Produto</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Visão do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../processo-desenvolvimento/" class="dropdown-item">Processo de Desenvolvimento</a>
+</li>
+                                    
+<li>
+    <a href="../decl-escopo/" class="dropdown-item">Declaração de Escopo do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../metricas-medicoes/" class="dropdown-item">Métricas e Medições</a>
+</li>
+                                    
+<li>
+    <a href="../testes/" class="dropdown-item">Testes de Software</a>
+</li>
+                                    
+<li>
+    <a href="../ref-bibliograficas/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../visao-geral-produto/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../processo-desenvolvimento/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#visao-geral-do-projeto" class="nav-link">Visão Geral do Projeto</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#21-ciclo-de-vida-do-projeto-de-desenvolvimento-de-software" class="nav-link">2.1 Ciclo de vida do projeto de desenvolvimento de software</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#22-organizacao-do-projeto" class="nav-link">2.2 Organização do Projeto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#23-planejamento-das-fases-eou-iteracoes-do-projeto" class="nav-link">2.3 Planejamento das Fases e/ou Iterações do Projeto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#24-matriz-de-comunicacao" class="nav-link">2.4 Matriz de Comunicação</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#26-criterios-de-replanejamento" class="nav-link">2.6 Critérios de Replanejamento</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="visao-geral-do-projeto">Visão Geral do Projeto</h1>
+<h2 id="21-ciclo-de-vida-do-projeto-de-desenvolvimento-de-software">2.1 Ciclo de vida do projeto de desenvolvimento de software</h2>
+<p>O projeto CerraDex seguirá um ciclo de vida baseado na abordagem iterativa e incremental, alinhado aos princípios das metodologias ágeis de desenvolvimento de software. O modelo adotado será o Scrum, pois permite uma entrega contínua de valor, rápida adaptação a mudanças e maior envolvimento dos stakeholders ao longo do desenvolvimento. A escolha por Scrum também se justifica pela previsibilidade das entregas e facilidade de inspeção e revisão, além da adaptabilidade conferida pelo modelo, permitindo ajustes contínuos baseados na demanda do cliente.</p>
+<p>A estrutura do projeto será organizada em sprints semanais, cada uma com backlog definido, metas claras e objetivos específicos. O ciclo de vida completo do projeto contará com as seguintes fases:
+- Definição inicial e conceituação do produto;
+- Desenvolvimento do MVP;
+- Desenvolvimento iterativo das funcionalidades principais;
+- Testes de validação;
+- Entrega de Checkpoints semanais, após o desenvolvimento da sprint;
+- Entrega final com documentação completa.</p>
+<p>Cada iteração contemplará as atividades de planejamento (planejamento de sprints); execução técnica; reuniões três vezes na semana (checagem de desenvolvimento e definição de nova sprint); daily dividida por subgrupo, com foco em entender o progresso diário; revisão da sprint, para análise de erro e possível débito técnico.</p>
+<p>O modelo incremental favorece a entrega de versões progressivamente mais completas do produto, permitindo uma validação contínua das funcionalidades com o cliente. Essa estratégia visa mitigar possíveis riscos de refatoração ou descarte de desenvolvimentos errôneos, e assegura que o produto final esteja alinhado às reais necessidades dos usuários e aos objetivos prescritos no documento.</p>
+<p>O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na web e acompanhado por documentação técnica, relatório de testes e validação.</p>
+<h2 id="22-organizacao-do-projeto">2.2 Organização do Projeto</h2>
+<h3 id="tabela-4-organizacao-do-projeto">Tabela 4 - Organização do Projeto</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Papel</th>
+<th style="text-align: center;">Atribuições</th>
+<th style="text-align: center;">Responsável</th>
+<th style="text-align: center;">Participantes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Desenvolvedor Front-End</td>
+<td style="text-align: center;">Estruturar e estilizar o painel visível para o usuário, dando dinamicidade e interatividade.</td>
+<td style="text-align: center;">Breno Lourenço Teixeira, Bruno Barbosa Schirmbeck, Marcos Filho Pereira Quixabeira, Manuella Dal Bianco Perlin Almeida.</td>
+<td style="text-align: center;">Breno Lourenço Teixeira, Bruno Barbosa Schirmbeck, Marcos Filho Pereira Quixabeira, Manuella Dal Bianco Perlin Almeida.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Desenvolvedor Back-End</td>
+<td style="text-align: center;">Codificar toda a lógica, o “cérebro” da aplicação, usando funções, variáveis.</td>
+<td style="text-align: center;">João Victor Mello da Costa Bruno, Ricardo Lucas Winchello Vieira Branco.</td>
+<td style="text-align: center;">João Victor Mello da Costa Bruno, Ricardo Lucas Winchello Vieira Branco.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Desenvolvedor Full-stack</td>
+<td style="text-align: center;">Conectar as áreas de back-end e front-end.</td>
+<td style="text-align: center;">Davi Rodrigues Nunes, Lucas Mateus Teixeira de Souza, Paulo Victor Mendes Silva, Thiago Viriato Accioly.</td>
+<td style="text-align: center;">Davi Rodrigues Nunes, Lucas Mateus Teixeira de Souza, Paulo Victor Mendes Silva, Thiago Viriato Accioly.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Desenvolvedor Banco de Dados</td>
+<td style="text-align: center;">Estruturar tabelas com atributos e tuplas que irão armazenar dados vindos do projeto.</td>
+<td style="text-align: center;">Eduardo Oliveira Valadares, Gustavo Oki de Freitas Rodrigues Leite, Ricardo Lucas Winchello Vieira Branco.</td>
+<td style="text-align: center;">Eduardo Oliveira Valadares, Gustavo Oki de Freitas Rodrigues Leite, Ricardo Lucas Winchello Vieira Branco.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Dono do Produto</td>
+<td style="text-align: center;">Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas</td>
+<td style="text-align: center;">Paulo Victor Mendes Silva.</td>
+<td style="text-align: center;">Paulo Victor Mendes Silva.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Analista de Qualidade</td>
+<td style="text-align: center;">Garantir a qualidade do produto, garantir o cumprimento do conceito de pronto, realizar inspeções de código</td>
+<td style="text-align: center;">Paulo Vinicius Pinheiro do Nascimento.</td>
+<td style="text-align: center;">Paulo Vinicius Pinheiro do Nascimento.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Usuários com quaisquer níveis de capacidade de uso de tecnologia e de quaisquer níveis de conhecimento sobre biologia</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="23-planejamento-das-fases-eou-iteracoes-do-projeto">2.3 Planejamento das Fases e/ou Iterações do Projeto</h2>
+<h3 id="tabela-5-planejamento-de-fases">Tabela 5 – Planejamento de Fases</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Sprint</th>
+<th style="text-align: center;">Produto (Entrega)</th>
+<th style="text-align: center;">Data Início</th>
+<th style="text-align: center;">Data Fim</th>
+<th style="text-align: center;">Entregável(eis)</th>
+<th style="text-align: center;">Responsáveis</th>
+<th style="text-align: center;">% conclusão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Sprint 0</td>
+<td style="text-align: center;">Documento de visão e setup do projeto</td>
+<td style="text-align: center;">21/05/2025</td>
+<td style="text-align: center;">21/05/2025</td>
+<td style="text-align: center;">Documento de visão</td>
+<td style="text-align: center;">Todos</td>
+<td style="text-align: center;">0%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 1</td>
+<td style="text-align: center;">Configuração do ambiente e tecnologias</td>
+<td style="text-align: center;">24/05/2025</td>
+<td style="text-align: center;">30/05/2025</td>
+<td style="text-align: center;">Configuração da plataforma onde a aplicação irá rodar</td>
+<td style="text-align: center;">Todos</td>
+<td style="text-align: center;">10%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 2</td>
+<td style="text-align: center;">MVP, Planejamento do Projeto e desenvolvimento inicial de template</td>
+<td style="text-align: center;">31/05/2025</td>
+<td style="text-align: center;">06/06/2025</td>
+<td style="text-align: center;">Protótipo de baixa fidelidade</td>
+<td style="text-align: center;">Manuella, Paulo, Todos</td>
+<td style="text-align: center;">20%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 3</td>
+<td style="text-align: center;">Fechamento de template e início do front e back-end</td>
+<td style="text-align: center;">07/06/2025</td>
+<td style="text-align: center;">13/06/2025</td>
+<td style="text-align: center;">Protótipo de visualização completo</td>
+<td style="text-align: center;">Manuella, Paulo, Thiago, Bruno</td>
+<td style="text-align: center;">30%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 4</td>
+<td style="text-align: center;">Início do desenvolvimento da modelagem do banco de dados</td>
+<td style="text-align: center;">14/06/2025</td>
+<td style="text-align: center;">20/06/2025</td>
+<td style="text-align: center;">Documentação inicial do banco de dados</td>
+<td style="text-align: center;">Eduardo, Gustavo, Ricardo</td>
+<td style="text-align: center;">40%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 5</td>
+<td style="text-align: center;">CRUD das espécies em risco</td>
+<td style="text-align: center;">21/06/2025</td>
+<td style="text-align: center;">27/06/2025</td>
+<td style="text-align: center;">Base de dados inicial</td>
+<td style="text-align: center;">Todos</td>
+<td style="text-align: center;">50%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 6</td>
+<td style="text-align: center;">Refatoração e ajustes finais</td>
+<td style="text-align: center;">12/07/2025</td>
+<td style="text-align: center;">18/07/2025</td>
+<td style="text-align: center;">Versão final de teste</td>
+<td style="text-align: center;">Todos</td>
+<td style="text-align: center;">80%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint 7</td>
+<td style="text-align: center;">Deploy final e apresentação do projeto</td>
+<td style="text-align: center;">19/07/2025</td>
+<td style="text-align: center;">23/07/2025</td>
+<td style="text-align: center;">Versão final publicada, documentação final</td>
+<td style="text-align: center;">Todos</td>
+<td style="text-align: center;">100%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="24-matriz-de-comunicacao">2.4 Matriz de Comunicação</h2>
+<h3 id="tabela-6-matriz-de-comunicacao">Tabela 6 – Matriz de Comunicação</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Descrição</th>
+<th style="text-align: center;">Área/Envolvidos</th>
+<th style="text-align: center;">Periodicidade</th>
+<th style="text-align: center;">Produtos Gerados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Acompanhamento das Atividades Gerais</td>
+<td style="text-align: center;">Equipe do Projeto</td>
+<td style="text-align: center;">Semanal (quarta-feira e sexta-feira)</td>
+<td style="text-align: center;">Ata de reunião; Relatório de situação do projeto.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Reforçar ações pendentes e preparação para novas etapas</td>
+<td style="text-align: center;">Equipe do Projeto</td>
+<td style="text-align: center;">Semanal  (Sábado)</td>
+<td style="text-align: center;">Calendário de entregas; Reconsiderações de problemas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Comunicar situação do projeto</td>
+<td style="text-align: center;">Equipe; Prof/Monitor</td>
+<td style="text-align: center;">Semanal</td>
+<td style="text-align: center;">Ata de reunião; Relatório de situação do projeto</td>
+</tr>
+<tr>
+<td style="text-align: center;">Checagem e alinhamento das atividades</td>
+<td style="text-align: center;">Equipe específica (back-end, front-end ou banco de dados)</td>
+<td style="text-align: center;">Diário</td>
+<td style="text-align: center;">Fiscalização das atividades atribuídas nas reuniões semanais.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-gerenciamento-de-riscos">2.5 Gerenciamento de Riscos</h3>
+<h3 id="tabela-7-riscos">Tabela 7 – Riscos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Risco</th>
+<th style="text-align: center;">Grau de Exposição</th>
+<th style="text-align: center;">Mitigação</th>
+<th style="text-align: center;">Plano de contingência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Limitação de acessos do banco de dados</td>
+<td style="text-align: center;">Baixo</td>
+<td style="text-align: center;">Testes efetivos para garantir o funcionamento adequado e pesquisa preemptiva quanto a qualidade do banco de dados</td>
+<td style="text-align: center;">Restringir o acesso ao banco de dados a apenas um acesso ao site</td>
+</tr>
+<tr>
+<td style="text-align: center;">Escassez de dados disponíveis sobre as espécies</td>
+<td style="text-align: center;">Baixo</td>
+<td style="text-align: center;">Assegurar dados fundamentais de todas as espécies no catálogo</td>
+<td style="text-align: center;">Reunir uma equipe de campo para ir em local especializado (santuários, zoológico) e garantir as informações necessárias ou usar fontes de referência que tenham feito igual pesquisa de  campo</td>
+</tr>
+<tr>
+<td style="text-align: center;">Limitação de armazenamento do banco de dados</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Otimizar a formatação dos arquivos de imagem</td>
+<td style="text-align: center;">Investir em uma assinatura mais completa do banco de dados</td>
+</tr>
+<tr>
+<td style="text-align: center;">Versionamento do Git</td>
+<td style="text-align: center;">Baixo</td>
+<td style="text-align: center;">Garantir uma comunicação eficaz da equipe</td>
+<td style="text-align: center;">Resgatar o versionamento anterior em caso de conflito</td>
+</tr>
+<tr>
+<td style="text-align: center;">Licenciamento do uso de imagens</td>
+<td style="text-align: center;">Baixo</td>
+<td style="text-align: center;">Garantir uma pesquisa cautelosa</td>
+<td style="text-align: center;">Disponibilizar canais de contato com os responsáveis para solicitar a remoção do conteúdo</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint encerrada com pendências</td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: center;">Assegurar a conclusão das sprints através do remanejamento temporário de mão de obra</td>
+<td style="text-align: center;">Manter a penúltima sprint para a solução de possíveis débitos técnicos caso haja algum</td>
+</tr>
+</tbody>
+</table>
+<h2 id="26-criterios-de-replanejamento">2.6 Critérios de Replanejamento</h2>
+<p>Os critérios de replanejamento do projeto CerraDex foram estabelecidos para identificar situações que possam comprometer o cumprimento dos objetivos, prazos ou qualidade das entregas. Estes critérios serão monitorados continuamente e acionados quando necessário para garantir o sucesso do projeto. Os critérios para replanejamento são: 
+- Não cumprimento de metas em um ciclo de sprint
+- Perda de mão de obra
+- Validação de usuário indicando necessidade de reformulação de funcionalidades
+- Defeitos do produto que impossibilitem a utilização do usuário final</p>
+<p>Caso seja avaliado coletivamente pela equipe e registrado com os devidos motivos, soluções adotadas e remanejamento do novo plano para as datas pré-definidas. O documento de visão será também sempre versionado sempre que houver replanejamento que implique em mudanças de ferramentas ou escopo, arquitetura ou backlog do projeto.</p>
+<p>O Product Owner e o Analista de Qualidade terão papel central na proposta de planejamentos, mas qualquer membro pode acusar necessidade de reformulação. Planejamentos parciais, como redistribuição de mão de obra ou ajuste de meta mid-sprint são plausíveis, desde que estabelecido em reunião.</p>
+<p>Todas as alterações serão documentadas e registradas no documento de visão, garantindo transparência no processo e rastreabilidade de decisões. </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

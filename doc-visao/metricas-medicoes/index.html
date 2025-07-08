@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Métricas e Medições - Documentação</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentação</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">CerraDex</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atas de Reunião</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../atas-reuniao/ata-reuniao-1/" class="dropdown-item">Ata 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Arquitetura</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../doc-arquitetura/index-arquitetura/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/introducao/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/rep-arquitetural/" class="dropdown-item">Representação Arquitetural</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/bibliografia/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../mkdocs/" class="nav-link">Instruções mkdocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Visão</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-visao/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../visao-geral-produto/" class="dropdown-item">Visão do Produto</a>
+</li>
+                                    
+<li>
+    <a href="../visao-geral-projeto/" class="dropdown-item">Visão do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../processo-desenvolvimento/" class="dropdown-item">Processo de Desenvolvimento</a>
+</li>
+                                    
+<li>
+    <a href="../decl-escopo/" class="dropdown-item">Declaração de Escopo do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Métricas e Medições</a>
+</li>
+                                    
+<li>
+    <a href="../testes/" class="dropdown-item">Testes de Software</a>
+</li>
+                                    
+<li>
+    <a href="../ref-bibliograficas/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../decl-escopo/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../testes/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#metricas-e-medicoes" class="nav-link">MÉTRICAS E MEDIÇÕES</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#gqm-de-medicoes" class="nav-link">GQM de medições</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="metricas-e-medicoes">MÉTRICAS E MEDIÇÕES</h1>
+<h2 id="gqm-de-medicoes">GQM de medições</h2>
+<p><strong>Objetivo:</strong>
+Desenvolver um software que comunique efetivamente dados sobre espécies em risco de extinção no Cerrado brasileiro, maximizando o engajamento do usuário e a confiabilidade das informações apresentadas.</p>
+<h3 id="tabela-11-gqm-medicoes">Tabela 11 – GQM Medições</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: center;">Objetivo</th>
+<th style="text-align: center;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">G1</td>
+<td style="text-align: center;">Eficácia do Engajamento</td>
+<td style="text-align: center;">Avaliar se o software consegue atrair e manter o interesse dos usuários no conteúdo sobre espécies em risco de extinção</td>
+</tr>
+<tr>
+<td style="text-align: center;">G2</td>
+<td style="text-align: center;">Eficiência do Desenvolvimento</td>
+<td style="text-align: center;">Aferir se o que há para ser desenvolvido x o que há para desenvolver pode ser desenvolvido em tempo hábil de entrega (percentual de trabalho desenvolvido x tempo restante para entrega)</td>
+</tr>
+<tr>
+<td style="text-align: center;">G3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Credibilidade Científica</td>
+</tr>
+</tbody>
+</table>
+<h3 id="questoes">Questões:</h3>
+<p><strong>G1</strong>
+- Como maximizar o engajamento dos usuários com o conteúdo?
+    - Taxa de engajamento inicial;
+    - Tempo médio de permanência;
+    - Taxa de retorno;
+- Os dados estão sendo apresentados de forma atrativa?
+    - Tela de introdução receptiva;
+    - Dados mostradas de uma forma chamativa;</p>
+<p><strong>G2</strong>
+- Plano de Distribuição de Tempo</p>
+<h4 id="tabela-12-plano-de-distribuicao-de-tempo">Tabela 12 – Plano de Distribuição de Tempo</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Fase</th>
+<th style="text-align: center;">Duração Mínima</th>
+<th style="text-align: center;">Entregáveis Principais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Pesquisa</td>
+<td style="text-align: center;">1 Sprint</td>
+<td style="text-align: center;">Base de dados de espécies com fontes verificadas</td>
+</tr>
+<tr>
+<td style="text-align: center;">Desenvolvimento</td>
+<td style="text-align: center;">2-3 Sprints</td>
+<td style="text-align: center;">Interface de usuário e funcionalidades core</td>
+</tr>
+<tr>
+<td style="text-align: center;">Teste</td>
+<td style="text-align: center;">1 Sprint</td>
+<td style="text-align: center;">Validação de usabilidade e precisão científica</td>
+</tr>
+<tr>
+<td style="text-align: center;">Refinamento</td>
+<td style="text-align: center;">1 Sprint</td>
+<td style="text-align: center;">Ajustes baseados no feedback de testes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>G3</strong>
+- Como assegurar a credibilidade das informações?
+    - Todas fontes indicadas em uma aba do site;
+    - Atualidade das fontes;
+    - Completude das referências;</p>
+<h3 id="metricas-associadas-as-questoes">Métricas Associadas às Questões</h3>
+<h4 id="tabela-13-metricas-associadas">Tabela 13 – Métricas Associadas</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Nome da Métrica</td>
+<td style="text-align: center;">Definição</td>
+</tr>
+<tr>
+<td style="text-align: center;">Taxa de Conversão da Tela Inicial</td>
+<td style="text-align: center;">Percentual de usuários que navegam além da tela de introdução</td>
+</tr>
+<tr>
+<td style="text-align: center;">Tempo de Permanência</td>
+<td style="text-align: center;">Duração média que usuários permanecem explorando os dados</td>
+</tr>
+<tr>
+<td style="text-align: center;">Velocidade de Desenvolvimento</td>
+<td style="text-align: center;">Número de funcionalidades implementadas por sprint</td>
+</tr>
+<tr>
+<td style="text-align: center;">Produtividade de Pesquisa</td>
+<td style="text-align: center;">Quantidade de espécies catalogadas por dia de pesquisa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cobertura de Referenciação</td>
+<td style="text-align: center;">Percentual de informações que possuem fonte científica citada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detalhamento-das-metricas">Detalhamento das Métricas</h3>
+<h4 id="tabela-14-detalhamento-das-metricas">Tabela 14 – Detalhamento das Métricas</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Definição</th>
+<th style="text-align: center;">Cálculo</th>
+<th style="text-align: center;">Unidade</th>
+<th style="text-align: center;">Meta</th>
+<th style="text-align: center;">Análise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Usuários que passam da tela inicial</td>
+<td style="text-align: center;">(Usuários navegando ÷ Total acessos) × 100</td>
+<td style="text-align: center;">%</td>
+<td style="text-align: center;">≥70%</td>
+<td style="text-align: center;">Gráfico semanal</td>
+</tr>
+<tr>
+<td style="text-align: center;">Tempo médio explorando dados</td>
+<td style="text-align: center;">Tempo total ÷ Nº sessões</td>
+<td style="text-align: center;">Minutos</td>
+<td style="text-align: center;">≥3min</td>
+<td style="text-align: center;">Gráfico temporal</td>
+</tr>
+<tr>
+<td style="text-align: center;">Stories concluídas por sprint</td>
+<td style="text-align: center;">Stories finalizadas ÷ Semanas</td>
+<td style="text-align: center;">Stories/sem</td>
+<td style="text-align: center;">≥8</td>
+<td style="text-align: center;">Burndown chart</td>
+</tr>
+<tr>
+<td style="text-align: center;">Espécies catalogadas por dia</td>
+<td style="text-align: center;">Espécies documentadas ÷ Dias</td>
+<td style="text-align: center;">Espécies/dia</td>
+<td style="text-align: center;">≥5</td>
+<td style="text-align: center;">Gráfico controle</td>
+</tr>
+<tr>
+<td style="text-align: center;">Informações com fonte científica</td>
+<td style="text-align: center;">(Info c/ referência ÷ Total info) × 100</td>
+<td style="text-align: center;">%</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">Checklist auditoria</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

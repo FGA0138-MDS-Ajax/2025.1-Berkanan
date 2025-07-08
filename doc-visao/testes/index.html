@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Testes de Software - Documentação</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentação</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">CerraDex</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atas de Reunião</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../atas-reuniao/ata-reuniao-1/" class="dropdown-item">Ata 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Arquitetura</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../doc-arquitetura/index-arquitetura/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/introducao/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/rep-arquitetural/" class="dropdown-item">Representação Arquitetural</a>
+</li>
+                                    
+<li>
+    <a href="../../doc-arquitetura/bibliografia/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../mkdocs/" class="nav-link">Instruções mkdocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documento de Visão</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-visao/" class="dropdown-item">CerraDex</a>
+</li>
+                                    
+<li>
+    <a href="../visao-geral-produto/" class="dropdown-item">Visão do Produto</a>
+</li>
+                                    
+<li>
+    <a href="../visao-geral-projeto/" class="dropdown-item">Visão do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../processo-desenvolvimento/" class="dropdown-item">Processo de Desenvolvimento</a>
+</li>
+                                    
+<li>
+    <a href="../decl-escopo/" class="dropdown-item">Declaração de Escopo do Projeto</a>
+</li>
+                                    
+<li>
+    <a href="../metricas-medicoes/" class="dropdown-item">Métricas e Medições</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Testes de Software</a>
+</li>
+                                    
+<li>
+    <a href="../ref-bibliograficas/" class="dropdown-item">Bibliografia</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../metricas-medicoes/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ref-bibliograficas/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#testes-de-software" class="nav-link">Testes de Software</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#61-estrategia-de-testes" class="nav-link">6.1 Estratégia de Testes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#niveis-de-testes-abordados" class="nav-link">Níveis de Testes Abordados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tipos-de-testes-abordados" class="nav-link">Tipos de Testes Abordados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ambientes-de-testes-usados" class="nav-link">Ambientes de Testes Usados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#criterios-de-aprovacao-geral" class="nav-link">Critérios de Aprovação Geral</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="testes-de-software">Testes de Software</h1>
+<h2 id="61-estrategia-de-testes">6.1 Estratégia de Testes</h2>
+<p>A estratégia de testes do projeto foi definida para garantir a qualidade, funcionalidade e usabilidade do aplicativo web, considerando as especificações de um catálogo digital de espécies ameaçadas do Cerrado.</p>
+<h2 id="niveis-de-testes-abordados">Níveis de Testes Abordados</h2>
+<h3 id="testes-unitarios">Testes Unitários</h3>
+<ul>
+<li>Validação de funções individuais do back-end (TypeScript)</li>
+<li>Testes de componentes React isolados</li>
+<li>Verificação de consultas SQL e operação do banco de dados</li>
+<li>Validação de funções de filtro e busca</li>
+</ul>
+<h3 id="testes-de-integracao">Testes de Integração</h3>
+<ul>
+<li>Comunicação entre front-end (React) e back-end(TypeScript)</li>
+<li>Integração com o banco de dados Supabase</li>
+<li>Conectividade entre diferentes módulos da aplicação</li>
+<li>Testes de APIs internas</li>
+</ul>
+<h3 id="testes-de-sistema">Testes de Sistema</h3>
+<ul>
+<li>Funcionamento completo da aplicação web</li>
+<li>Navegação entre páginas e funcionalidades</li>
+<li>Performance geral do sistema</li>
+<li>Fluxos de navegação e experiência do usuário</li>
+</ul>
+<h2 id="tipos-de-testes-abordados">Tipos de Testes Abordados</h2>
+<h3 id="testes-funcionais">Testes Funcionais</h3>
+<ul>
+<li>Funcionalidades de busca e filtro de espécies</li>
+<li>Visualização de fichas técnicas dos animais</li>
+<li>Navegação responsiva</li>
+<li>Sistema de categorização por nível de ameaça</li>
+</ul>
+<h3 id="testes-nao-funcionais-extra">Testes Não Funcionais (EXTRA)</h3>
+<ul>
+<li>Performance: Tempo de carregamento de páginas e consultas</li>
+<li>Responsividade: Adaptação a diferentes tamanhos de tela</li>
+<li>Segurança: Validação de entrada de dados e proteção contra ataques</li>
+<li>Usabilidade: Interface intuitiva e experiência do usuário</li>
+<li>Compatibilidade: Funcionamento em diferentes navegadores (Chrome, Firefox, Safari, Edge)</li>
+</ul>
+<h2 id="ambientes-de-testes-usados">Ambientes de Testes Usados</h2>
+<h3 id="ambiente-de-desenvolvimento">Ambiente de Desenvolvimento</h3>
+<ul>
+<li>Sistema local dos desenvolvedores</li>
+<li>Banco de dados de desenvolvimento com dados sintéticos</li>
+<li>Utilizado para testes unitários e de integração iniciais</li>
+</ul>
+<h3 id="ambiente-de-testehomologacao">Ambiente de Teste/Homologação</h3>
+<ul>
+<li>Servidor de testes com configuração similar ao ambiente de produção</li>
+<li>Base de dados de homologação com amostra representativa</li>
+<li>Ambiente para testes de sistema e aceitação</li>
+</ul>
+<h3 id="ambiente-de-producao-testes-de-aceitacao">Ambiente de Produção (Testes de Aceitação)</h3>
+<ul>
+<li>Testes de aceitação pelo usuário final</li>
+</ul>
+<h3 id="formas-de-analise-dos-testes-propostos">Formas de Análise dos Testes Propostos</h3>
+<h4 id="metricas-de-cobertura">Métricas de Cobertura</h4>
+<ul>
+<li>Cobertura de código mínima de 80% para testes unitários</li>
+<li>Cobertura de 100% para requisitos críticos</li>
+<li>Cobertura de 70% para testes de integração</li>
+</ul>
+<h3 id="analise-de-defeitos">Análise de Defeitos</h3>
+<ul>
+<li>Classificação com criticidade (crítico, alto, médio, baixo)</li>
+<li>Rastreabilidade entre defeitos e requisitos</li>
+<li>Taxa de reincidência de defeitos</li>
+</ul>
+<h3 id="relatorios-de-teste">Relatórios de Teste</h3>
+<ul>
+<li>Relatórios de execução de testes por sprint</li>
+<li>Dashboards de métricas de qualidade</li>
+<li>Documentação de lições aprendidas</li>
+</ul>
+<!-- 
+Colocar aqui a tabela 15 - de Roteiro de Testes
+-->
+
+<h3 id="registro-de-execucao-dos-testes">Registro de Execução dos Testes</h3>
+<p>Para cada teste executado, será registrado:</p>
+<h3 id="informacoes-de-execucao">Informações de Execução</h3>
+<ul>
+<li>Data/hora da execução</li>
+<li>Responsável pela execução</li>
+<li>Ambiente utilizado</li>
+<li>Versão da aplicação testada</li>
+</ul>
+<h3 id="resultados">Resultados</h3>
+<ul>
+<li>Status: Aprovado/Reprovado/Bloqueado</li>
+<li>Evidências objetivas (screenshots, logs, vídeos)</li>
+<li>Tempo de execução</li>
+<li>Observações relevantes</li>
+</ul>
+<h3 id="gestao-de-defeitos">Gestão de Defeitos</h3>
+<p>Defeitos identificados
+Severidade e prioridade
+Responsável pela correção
+Status de correção</p>
+<h3 id="ciclos-de-teste">Ciclos de Teste</h3>
+<p>Número de execuções necessárias
+Motivos de reexecução
+Resultados de cada ciclo</p>
+<h2 id="criterios-de-aprovacao-geral">Critérios de Aprovação Geral</h2>
+<h3 id="para-release">Para Release</h3>
+<ul>
+<li>100% dos testes críticos aprovados</li>
+<li>95% dos testes de alta prioridade aprovados</li>
+<li>Zero defeitos críticos em aberto</li>
+<li>Performance dentro dos padrões estabelecidos</li>
+</ul>
+<h3 id="para-sprint">Para Sprint</h3>
+<ul>
+<li>Todos os testes relacionados às funcionalidades da sprint aprovados</li>
+<li>Testes de regressão executados e aprovados</li>
+<li>Documentação de testes atualizada</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
