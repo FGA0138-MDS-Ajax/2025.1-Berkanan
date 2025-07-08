@@ -23,7 +23,7 @@
 
 ### Tabela 2 - Histórico de Revisões
 | Data | Versão | Descrição | Autor(es) |
-| :--: | :----:-----------:-----------: |
+| :--: | :----: | :----: | :----: |
 | 21/05/2025 | 1.0 | Versão inicial do projeto | Todos |
 | 04/07/2025 | 2.0 | Correção de texto e estrutura das tabelas | Paulo Victor, Thiago Accioly, Gustavo Oki, Marcos Filho, Davi Rodrigues, João Victor Mello |
 
