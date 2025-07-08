@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-import { getEspecies, inserirEspecie, alterarEspecie } from '../controllers/especie.controller';
+import { getEspecies, inserirEspecie, alterarEspecie, getEspeciesSugestao } from '../controllers/especie.controller';
 import type { Especie } from '../types/especie.type';
 
 /**
@@ -47,4 +47,18 @@ export const especieRoutes = new Elysia({ prefix: '/especies' })
         } catch (error) {
             return { error: (error as Error).message };
         }
+    })
+    
+    /** 
+     * Retorna uma lista de espécies para o carrossel.
+     * 
+     * @route GET /especies/sugestoes
+     * @returns {Promise<Especie[]>} Lista de espécies sugeridas.
+    */
+   .get("/sugestoes", async () => {
+    try {
+        return await getEspeciesSugestao();
+    } catch (error) {
+        return { error: (error as Error).message };
+    }
     });

@@ -60,3 +60,18 @@ export const put_especie = async (especie: Especie): Promise<ResponseProps<Espec
   return result;
 
 };
+
+/**
+ * Recupera uma lista de espécies sugeridas para o carrossel.
+ * As espécies são escolhidas aleatoriamente.
+ * * @returns {Promise<ResponseProps><Especie[]>} Lista de espécies sugeridas.
+ */
+export const get_especies_sugestao = async (): Promise<ResponseProps<Especie[]>> => {
+  const { data, error, count } = await supabase
+    .from('Especie')
+    .select('*')
+    .order('random()') // Ordena aleatoriamente
+    .limit(10); // Limita a 10 espécies aleatórias
+
+return { data, error, count };
+};

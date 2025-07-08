@@ -31,7 +31,7 @@ export const animalRoutes = new Elysia({ prefix: '/animais' })
         } catch (error) {
             return { error: (error as Error).message };
         }
-    })
+    });
 
     /**
      * Atualiza os dados de um animal existente.

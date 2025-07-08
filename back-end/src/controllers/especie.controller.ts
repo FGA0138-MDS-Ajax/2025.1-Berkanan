@@ -1,4 +1,4 @@
-import { get_all_especies, post_especie, put_especie } from '../models/especie.model';
+import { get_all_especies, post_especie, put_especie, get_especies_sugestao } from '../models/especie.model';
 import type { Especie } from '../types/especie.type';
 import type { PaginatedResponse, QueryParams } from '../types/general.type';
 
@@ -56,4 +56,19 @@ export const alterarEspecie = async (especie: Especie): Promise<Especie> => {
   }
 
   return data!;
+};
+
+/** 
+ * Retorna uma lista de espécies para sugerir.
+ * 
+ * @returns {Promise<Especie[]>} Lista de espécies sugeridas.
+ */
+export const getEspeciesSugestao = async (): Promise<Especie[]> => {
+  const {data, error} = await get_especies_sugestao();
+
+  if (error) {
+    throw new Error(`Erro ao obter espécies sugeridas: ${error.message}`);
+  }
+
+  return data || [];
 };
