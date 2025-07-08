@@ -23,7 +23,7 @@ O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na
 ### Tabela 4 - Organização do Projeto
 
 | Papel | Atribuições | Responsável | Participantes |
-| :----: | :--: | :--------------------: | :-------------------: |
+| :---: | :---------: | :---------: | :-----------: |
 | Desenvolvedor Front-End | Estruturar e estilizar o painel visível para o usuário, dando dinamicidade e interatividade. | Breno Lourenço Teixeira, Bruno Barbosa Schirmbeck, Marcos Filho Pereira Quixabeira, Manuella Dal Bianco Perlin Almeida. | Breno Lourenço Teixeira, Bruno Barbosa Schirmbeck, Marcos Filho Pereira Quixabeira, Manuella Dal Bianco Perlin Almeida. |
 | Desenvolvedor Back-End | Codificar toda a lógica, o “cérebro” da aplicação, usando funções, variáveis. | João Victor Mello da Costa Bruno, Ricardo Lucas Winchello Vieira Branco. | João Victor Mello da Costa Bruno, Ricardo Lucas Winchello Vieira Branco. |
 | Desenvolvedor Full-stack | Conectar as áreas de back-end e front-end. | Davi Rodrigues Nunes, Lucas Mateus Teixeira de Souza, Paulo Victor Mendes Silva, Thiago Viriato Accioly. | Davi Rodrigues Nunes, Lucas Mateus Teixeira de Souza, Paulo Victor Mendes Silva, Thiago Viriato Accioly. |
@@ -37,7 +37,7 @@ O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na
 ### Tabela 5 – Planejamento de Fases
 
 | Sprint | Produto (Entrega) | Data Início | Data Fim | Entregável(eis)| Responsáveis|% conclusão|
-| :----: | :--: | :--: | :----: | :----: | :--: | :--: |
+| :----: | :----------------: | :--------: | :------: | :------------: | :-----------: | :------------: |
 | Sprint 0 | Documento de visão e setup do projeto | 21/05/2025 | 21/05/2025 | Documento de visão | Todos| 0% |
 | Sprint 1 | Configuração do ambiente e tecnologias | 24/05/2025 | 30/05/2025 | Configuração da plataforma onde a aplicação irá rodar | Todos| 10% |
 | Sprint 2 | MVP, Planejamento do Projeto e desenvolvimento inicial de template | 31/05/2025 | 06/06/2025 | Protótipo de baixa fidelidade | Manuella, Paulo, Todos| 20% |
@@ -53,7 +53,7 @@ O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na
 ### Tabela 6 – Matriz de Comunicação
 
 | Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados |
-| :----: | :--: | :--: | :----: |
+| :-------: | :-------------: | :-----------: | :--------------: |
 | Acompanhamento das Atividades Gerais | Equipe do Projeto | Semanal (quarta-feira e sexta-feira) | Ata de reunião; Relatório de situação do projeto. |
 | Reforçar ações pendentes e preparação para novas etapas | Equipe do Projeto | Semanal  (Sábado) | Calendário de entregas; Reconsiderações de problemas. |
 | Comunicar situação do projeto | Equipe; Prof/Monitor | Semanal | Ata de reunião; Relatório de situação do projeto |
@@ -64,7 +64,7 @@ O ciclo será encerrado com a entrega final do catálogo funcional, hospedado na
 ### Tabela 7 – Riscos
 
 | Risco | Grau de Exposição | Mitigação | Plano de contingência |
-| :----: | :--: | :--: | :----: |
+| :---: | :---------------: | :-------: | :-------------------: |
 | Limitação de acessos do banco de dados | Baixo | Testes efetivos para garantir o funcionamento adequado e pesquisa preemptiva quanto a qualidade do banco de dados | Restringir o acesso ao banco de dados a apenas um acesso ao site |
 | Escassez de dados disponíveis sobre as espécies | Baixo | Assegurar dados fundamentais de todas as espécies no catálogo | Reunir uma equipe de campo para ir em local especializado (santuários, zoológico) e garantir as informações necessárias ou usar fontes de referência que tenham feito igual pesquisa de  campo |
 | Limitação de armazenamento do banco de dados | Alto | Otimizar a formatação dos arquivos de imagem | Investir em uma assinatura mais completa do banco de dados |

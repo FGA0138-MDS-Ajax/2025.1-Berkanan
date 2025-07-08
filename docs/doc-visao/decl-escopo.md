@@ -11,7 +11,7 @@ O backlog reflete a estratégia de desenvolvimento incremental, em que funcional
 ### Tabela 8 – Perfis
 
 | Nome do perfil | Características do perfil | Permissões de acesso |
-| :----: | :--: | :--: |
+| :------------: | :-----------------------: | :------------------: |
 | Administrador | Responsável por manter os perfis de acesso da aplicação, criar novos usuários, alterar usuários já existentes, ou excluir usuários (Manter usuários). Responsável por atualizar e acrescentar informações sobre itens da plataforma. | Descrever sucintamente as permissões de acesso e criar ou editar itens. |
 | Usuário comum | Público geral, visualiza os conteúdos dos itens da plataforma. | Visualizar os itens |
 
@@ -22,7 +22,7 @@ O backlog reflete a estratégia de desenvolvimento incremental, em que funcional
 **Sistema: CerraDex**
 
 | Numeração do cenário | Nome do cenário | Sprints |
-| :----: | :--: | :--: |
+| :------------------: | :-------------: | :-----: |
 | 1 | Acesso a página de uma espécie | Sprint 6 |
 | 2| Cadastro e edição dos dados de uma espécie | Sprint 5|
 | 3 | Visualização de imagens de uma espécie | Sprint 6 |
@@ -32,7 +32,7 @@ O backlog reflete a estratégia de desenvolvimento incremental, em que funcional
 ### Tabela 10 – Backlog do Produto
 
 | Numeração | Sprint | Nome do Requisito | Tipo de requisito | Priorização do requisito | Descrição sucinta do requisito | User stories (U.S.) associadas
-| :----: | :--: | :--: | :--: | :--: |:--: | :--: |
+| :-------: | :----: | :---------------: | :---------------: | :----------------------: |:-----------------------------: | :-----------------: |
 | 1.1 | 1 | Criação do repositório e setup inicial | Funcional | Must |Organização inicial das ferramentas e ambiente, para abarcar as necessidades de desenvolvimento. | Como usuário, considero de tamanha importância armazenar a codificação e participação dos autores do software.
 | 1.2| 1 | Wireframe da interface principal| Funcional | Must | Planejamento da estrutura de navegação. | Como usuário, gostaria de uma navegação simples e funcional. 
 | 2.1 | 2 | Definição de MVP| Não funcional| Must | Desenvolver a primeira versão funcional do software. | Como usuário, gostaria de ter um produto já definido, para que eu entenda o que é o mínimo para que ele seja funcional.

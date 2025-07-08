@@ -5,7 +5,7 @@
 ### Tabela 1 - Integrantes do Grupo
 
 | Matrícula | Nome | Função (responsabilidade) | nota de participação |
-| :----: | :--: | :--------------------: | :-------------------: |
+| :-------: | :--: | :-----------------------: | :------------------: |
 | 232014398 | Breno L. Teixeira | Front-end | 7,6923 |
 | 231011159 | Bruno B. Schirmbeck| Front-end | 7,6923 |
 | 232014413 | Davi R. Nunes | Fullstack dev. | 7,6923 |
@@ -23,7 +23,7 @@
 
 ### Tabela 2 - Histórico de Revisões
 | Data | Versão | Descrição | Autor(es) |
-| :----: | :--: | :--------------------: | :-------------------: |
+| :--: | :----:-----------:-----------: |
 | 21/05/2025 | 1.0 | Versão inicial do projeto | Todos |
 | 04/07/2025 | 2.0 | Correção de texto e estrutura das tabelas | Paulo Victor, Thiago Accioly, Gustavo Oki, Marcos Filho, Davi Rodrigues, João Victor Mello |
 

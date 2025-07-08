@@ -10,6 +10,15 @@ nav:
     - Representação Arquitetural: "doc-arquitetura/rep-arquitetural.md"
     - Bibliografia: "doc-arquitetura/bibliografia.md"
   - Instruções mkdocs: "mkdocs.md"
+  - Documento de Visão:
+    - CerraDex: "doc-visao/index-visao.md"
+    - Visão do Produto: "doc-visao/visao-geral-produto.md"
+    - Visão do Projeto: "doc-visao/visao-geral-projeto.md"
+    - Processo de Desenvolvimento: "doc-visao/processo-desenvolvimento.md"
+    - Declaração de Escopo do Projeto: "doc-visao/decl-escopo.md"
+    - Métricas e Medições: "doc-visao/metricas-medicoes.md"
+    - Testes de Software: "doc-visao/testes.md"
+    - Bibliografia: "doc-visao/ref-bibliograficas.md"
 
 theme:
-  name: lux
+  name: sandstone
