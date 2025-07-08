@@ -8,6 +8,7 @@ import Loading from '@/components/utils/Loading';
 import SpeciesError from '@/components/species/Error';
 import { colorMap, getCategoryName } from '@/utils/utils';
 import { useAnimals } from '@/hooks/useAnimals';
+import Footer from '@/components/layout/Footer';
 
 export default function AnimalInfo() {
   const router = useRouter();
@@ -149,6 +150,7 @@ export default function AnimalInfo() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
