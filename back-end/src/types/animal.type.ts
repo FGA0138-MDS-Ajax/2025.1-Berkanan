@@ -1,14 +1,21 @@
+import type { ParsedImages } from "./imagens.type";
+
 /**
  * Tipo que representa um animal cadastrado.
  */
 export type Animal = {
-    id_animal?: number;  // opcional no caso de inserção
-    img_id: string;
-    grupo: string;
-    pop: string;
-    risco: string;
-    altura: string;
-    peso: string;
-    id_pesq: number;
-    cient: string;
+  id: number;  
+  slug: string;
+  id_pesq: string;
+  image: string;
+  name: string;
+  grupo: string;
+  risco: string;
+  altura: string;
+  populacap: number;
+  peso: string;
 };
+
+export interface ParsedAnimal {
+  images: ParsedImages
+}

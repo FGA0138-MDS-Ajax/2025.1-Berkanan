@@ -2,7 +2,12 @@
  * Tipo que representa uma imagem cadastrada.
  */
 export type Imagens = {
-    cient?: string;  // opcional no caso de inserção
-    cod: string;
-    pasta: string;
+  id: string;
+  slug?: string;  // opcional no caso de inserção
+  codigo: string;
+  pasta: string;
 };
+export interface ParsedImages extends Imagens {
+  alt: string,
+  url: string,
+}

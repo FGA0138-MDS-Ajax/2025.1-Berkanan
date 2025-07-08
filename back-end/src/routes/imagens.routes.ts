@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-import { getImagens, inserirImagens, alterarImagens } from '../controllers/imagens.controller';
+import { getImagens, inserirImagens, alterarImagens, getImageByID } from '../controllers/imagens.controller';
 import type { Imagens } from '../types/imagens.type';
 
 /**
@@ -15,6 +15,8 @@ export const imagensRoutes = new Elysia({ prefix: '/imagens' })
      * @returns {Promise<Imagens[]>} Lista de imagens.
      */
     .get('/', async () => await getImagens())
+
+    .get('/id', async ({query}) => await getImageByID(query))
 
     /**
      * Insere uma nova imagem no banco de dados.
