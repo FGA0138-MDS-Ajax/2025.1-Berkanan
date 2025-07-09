@@ -1,31 +1,29 @@
-import { getAllPesquisas, inserir_pesquisa, alterar_pesquisa } from '../models/pesquisa.model';
+// src/models/pesquisa.model.ts
 import type { Pesquisa } from '../types/pesquisa.type';
 
-/**
- * Recupera todas as pesquisas cadastradas no banco de dados.
- *
- * @returns {Promise<Pesquisa[]>} Uma promessa que resolve para uma lista de pesquisas.
- */
-export const getPesquisas = async (): Promise<Pesquisa[]> => {
-    return await getAllPesquisas();
+export const getAllPesquisas = async (dbClient: any): Promise<Pesquisa[]> => {
+    const { data, error } = await dbClient.from('Pesquisa').select('*');
+    if (error) {
+        console.error(error);
+        throw new Error(error.message);
+    }
+    return data as Pesquisa[];
 };
 
-/**
- * Insere uma nova pesquisa no banco de dados.
- *
- * @param {Pesquisa} pesquisa - Objeto contendo os dados da pesquisa a ser inserida.
- * @returns {Promise<Pesquisa>} Uma promessa que resolve para a pesquisa recém-inserida.
- */
-export const inserirPesquisa = async (pesquisa: Pesquisa): Promise<Pesquisa> => {
-    return await inserir_pesquisa(pesquisa);
+export const inserir_pesquisa = async (pesquisa: Pesquisa, dbClient: any): Promise<Pesquisa> => {
+    const { data, error } = await dbClient.from('Pesquisa').insert([pesquisa]).select().single();
+    if (error) {
+        console.error('Erro ao inserir pesquisa:', error.message);
+        throw new Error(error.message);
+    }
+    return data as Pesquisa;
 };
 
-/**
- * Atualiza os dados de uma pesquisa existente no banco de dados.
- *
- * @param {Pesquisa} pesquisa - Objeto contendo os dados atualizados da pesquisa (incluindo o ID).
- * @returns {Promise<Pesquisa>} Uma promessa que resolve para a pesquisa atualizada.
- */
-export const alterarPesquisa = async (pesquisa: Pesquisa): Promise<Pesquisa> => {
-    return await alterar_pesquisa(pesquisa);
+export const alterar_pesquisa = async (pesquisa: Pesquisa, dbClient: any): Promise<Pesquisa> => {
+    const { data, error } = await dbClient.from('Pesquisa').update(pesquisa).eq('id_pesq', pesquisa.id_pesq).select().single();
+    if (error) {
+        console.error('Erro ao alterar pesquisa:', error.message);
+        throw new Error(error.message);
+    }
+    return data as Pesquisa;
 };
