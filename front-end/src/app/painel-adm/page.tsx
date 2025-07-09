@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo } from "react";
+import { useRouter } from 'next/navigation';
 
 import { colorMap } from "@/utils/utils";
 import { useAnimals } from "@/hooks/useAnimals";
@@ -10,15 +11,12 @@ import Manager from "@/components/species/Manager";
 import SearchBar from "@/components/search/Searchbar";
 import Pagination from "@/components/utils/Pagination";
 import Navigation from "@/components/layout/Navigation";
-
-enum RiskStatus {
-  CR = "CR",
-  EN = "EN"
-}
-
-const grupos = ["Todos", "Mamífero", "Invertebrado", "Réptil", "Peixe"];
+import SelectGroup from "@/components/layout/Group";
+import SelectStatus from "@/components/layout/Status";
+import { RiskStatus } from "@/types/general.types";
 
 export default function PainelAdministrador() {
+  const router = useRouter();
   const { animals, fetchAnimals } = useAnimals();
   const { pagination, fetchSpecies } = useSpecies();
 
@@ -41,17 +39,9 @@ export default function PainelAdministrador() {
     });
   }, [animals, grupoSelecionado, searchTerm, selectedRiskStatuses]);
 
-  const handleRiskStatusToggle = useCallback((status: RiskStatus) => {
-    setSelectedRiskStatuses(prev =>
-      prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status]
-    );
-  }, []);
-
-  const getRiskStatusLabel = (status: RiskStatus): string => ({
-    [RiskStatus.CR]: "Criticamente em perigo (CR)",
-    [RiskStatus.EN]: "Em perigo (EN)"
-  })[status];
-
+  const AddSpecie = () => {
+     router.push(`/adicionar-animal`);
+  }
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -60,50 +50,14 @@ export default function PainelAdministrador() {
           <div className="bg-light-green rounded-lg p-5 mb-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-semibold text-black">Filtros</h2>
-              <button className="bg-[#6f826a] text-white px-8 py-2 rounded-lg flex items-center gap-2">
+              <button className="bg-[#6f826a] text-white px-8 py-2 rounded-lg flex items-center gap-2" onClick={AddSpecie}>
                 <span>➕</span> Adicionar Espécie
               </button>
             </div>
 
             <div className="flex flex-col gap-8">
-              <div className="flex items-center gap-6">
-                <span className="font-semibold text-dark-green min-w-[60px]">Grupo</span>
-                <div className="flex gap-4 flex-wrap">
-                  {grupos.map(grupo => (
-                    <button
-                      key={grupo}
-                      className={`px-4 py-1 rounded-full transition-colors ${grupoSelecionado === grupo
-                          ? "bg-[#6f826a] text-white"
-                          : "bg-white border border-[#6f826a] text-[#6f826a]"
-                        }`}
-                      onClick={() => setGrupoSelecionado(grupo)}
-                    >
-                      {grupo}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-6">
-                <span className="font-semibold text-dark-green min-w-[100px]">Status</span>
-                <div className="flex gap-4 flex-wrap">
-                  {Object.values(RiskStatus).map(status => (
-                    <label key={status} className="flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        checked={selectedRiskStatuses.includes(status)}
-                        onChange={() => handleRiskStatusToggle(status)}
-                        className="w-5 h-5 border-3 border-medium-green bg-transparent appearance-none rounded-sm 
-                      checked:bg-[#6f826a] checked:border-[#6f826a] 
-                      relative checked:after:content-['✓'] checked:after:text-white 
-                      checked:after:text-xs checked:after:absolute checked:after:inset-0 
-                      checked:after:flex checked:after:items-center checked:after:justify-center"
-                      />
-                      <span className="text-dark-green">{getRiskStatusLabel(status)}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+              <SelectGroup onClick={setGrupoSelecionado} selected={grupoSelecionado} showAll/>
+              <SelectStatus selectedRiskStatuses={selectedRiskStatuses} setSelectedRiskStatuses={setSelectedRiskStatuses}/>
             </div>
           </div>
 
