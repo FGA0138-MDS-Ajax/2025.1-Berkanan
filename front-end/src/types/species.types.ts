@@ -34,5 +34,5 @@ export type Animal = {
     lifespan: string;
     populacao: string;
     risco: 'EN' | 'VU' | 'CR' | 'LC' | 'NT';
-    grupo: "mamifero" | "reptil" | "ave" | "peixe" | "invertebrado";
+    grupo: "Mamífero" | "Invertebrado" | "Réptil" | "Peixe";
 };
