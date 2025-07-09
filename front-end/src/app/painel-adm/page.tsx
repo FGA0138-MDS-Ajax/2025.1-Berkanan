@@ -31,7 +31,7 @@ export default function PainelAdministrador() {
       redirect('/login')
     }
   })
-  console.log(selectedRiskStatuses)
+
   const filteredAnimals = useMemo(() => {
     return animals.filter((animal) => {
       const matchesGrupo = grupoSelecionado === "Todos" || animal.grupo === grupoSelecionado;
@@ -62,9 +62,8 @@ export default function PainelAdministrador() {
                 <span>➕</span> Adicionar Espécie
               </button>
             </div>
-
             <div className="flex flex-col gap-8">
-              <SelectGroup onClick={setGrupoSelecionado} selected={grupoSelecionado} showAll />
+              <SelectGroup onClick={setGrupoSelecionado} selected={grupoSelecionado} showAll={true} />
               <SelectStatus selectedRiskStatuses={selectedRiskStatuses} setSelectedRiskStatuses={setSelectedRiskStatuses} />
             </div>
           </div>

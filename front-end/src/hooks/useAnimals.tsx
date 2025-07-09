@@ -5,14 +5,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { getAnimals } from "@/_api/animals.api";
 import { Animal } from '@/types/species.types';
-import { PaginationProps } from '@/types/api.types';
+import { PaginationProps, QueryParams } from '@/types/api.types';
 
 interface AnimalsStore {
     animals: Animal[];
     loading: boolean;
     error: string | null;
     pagination: PaginationProps;
-    fetchAnimals: (page?: number, append?: boolean) => void;
+    fetchAnimals: (page?: number,limit?: number, append?: boolean) => void;
     getAnimals: () => Animal[];
     getAnimalsBySlug: (slug: string) => Animal | undefined;
     getAnimalsById: (id: number) => Animal | undefined;

@@ -21,13 +21,13 @@ export default function SpeciesPage() {
   const { animals, pagination, fetchAnimals } = useAnimals();
   const router = useRouter();
 
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [isSorted, setIsSorted] = useState(false);
   const [isRandomized, setIsRandomized] = useState(false);
 
   const handleAnimalSelect = useCallback((animalSlug: string) => {
     router.push(`/species/${animalSlug}`);
-  };
   }, [router]);
 
   const scrollToSpecies = useCallback(() => {
@@ -126,7 +126,7 @@ export default function SpeciesPage() {
                   className="cursor-pointer transform transition-transform duration-300 hover:scale-105"
                 >
                   <SpeciesCard
-                    image={animal.image}
+                    image={animal.images}
                     name={animal.name}
                     tags={[
                       { label: animal.grupo, color: colorMap[animal.grupo] },
