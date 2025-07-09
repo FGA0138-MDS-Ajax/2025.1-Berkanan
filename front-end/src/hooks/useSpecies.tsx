@@ -28,10 +28,10 @@ export const useSpeciesStore = create<SpeciesStore>()(
       pagination: {
         totalPages: 1,
         currentPage: 1,
-        pageSize: 10
+        pageSize: 20
       },
 
-      fetchSpecies: async (page = 1, limit = 10, append = false) => {
+      fetchSpecies: async (page = 1, limit = 20, append = false) => {
         const query: QueryParams = {
           page,
           limit

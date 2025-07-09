@@ -11,8 +11,6 @@ import Footer from '@/components/layout/Footer';
 import logo from '@/resources/logo.png';
 import { Bebas_Neue, Magra } from 'next/font/google';
 
-// Fontes
-const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'] });
 const magra = Magra({ weight: ['400'], subsets: ['latin'] });
 
 export default function Page() {
@@ -22,7 +20,7 @@ export default function Page() {
   const handleAnimalSelect = (animalSlug: string) => {
     router.push(`/species/${animalSlug}`);
   };
-
+  console.log(animals)
   return (
     <div className="min-h-screen bg-background-light flex flex-col">
       <Navigation />
@@ -97,7 +95,7 @@ export default function Page() {
                 className="cursor-pointer transform transition-transform duration-300 hover:scale-105"
               >
                 <SpeciesCard
-                  image={animal.image}
+                  image={animal.images}
                   name={animal.name}
                   tags={[
                     { label: animal.grupo, color: colorMap[animal.grupo] },
