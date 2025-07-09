@@ -1,4 +1,4 @@
-import { get_all_images, inserir_imagens, alterar_imagens, get_image_by_id } from '../models/imagens.model';
+import { get_all_images, inserir_imagens, alterar_imagens, get_image_by_slug } from '../models/imagens.model';
 import type { QueryParams } from '../types/general.type';
 import type { Imagens, ParsedImages } from '../types/imagens.type';
 
@@ -11,8 +11,8 @@ export const getImagens = async (): Promise<Imagens[]> => {
     return await get_all_images();
 };
 
-export const getImageByID = async (query: QueryParams): Promise<ParsedImages> => {
-  return await get_image_by_id(query.id!);
+export const getImageBySlug = async (query: QueryParams): Promise<ParsedImages> => {
+  return await get_image_by_slug(query.slug!);
 }
 /**
  * Insere uma nova imagem no banco de dados.

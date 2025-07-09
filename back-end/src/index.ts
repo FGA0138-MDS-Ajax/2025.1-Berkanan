@@ -10,7 +10,7 @@ import 'dotenv/config'; // Carrega variáveis de ambiente do .env
 
 import { Elysia } from 'elysia';
 import swagger from '@elysiajs/swagger';
-
+import { cors } from '@elysiajs/cors'
 import { LOG } from './utils/logger.util';
 import { routes } from './routes/index';
 
@@ -41,6 +41,7 @@ app
       },
     })
   )
+  .use(cors())
   .use(routes)
   .listen(Number(process.env.PORT) || 3003);
 

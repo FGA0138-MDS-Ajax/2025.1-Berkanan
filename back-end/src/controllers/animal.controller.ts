@@ -2,7 +2,7 @@ import { get_all_animals, inserir_animal, alterar_animal } from '../models/anima
 import type { Animal, ParsedAnimal } from '../types/animal.type';
 import type { PaginatedResponse, QueryParams } from '../types/general.type';
 import type { ParsedImages } from '../types/imagens.type';
-import { getImageByID } from './imagens.controller';
+import { getImageBySlug } from './imagens.controller';
 
 /**
  * Recupera todos os animais cadastrados no banco de dados com paginação,
@@ -24,11 +24,10 @@ export const getAnimals = async (
 
   const parsedData: ParsedAnimal[] = await Promise.all(
     data!.map(async (item) => {
-      const imageData = await getImageByID({ id: item.image! }) as ParsedImages;
+      const imageData = await getImageBySlug({ slug: item.image! }) as ParsedImages;
       return {
         ...item,
         images: {
-          id: imageData.id,
           slug: imageData.slug,
           codigo: imageData.codigo,
           pasta: imageData.pasta,
