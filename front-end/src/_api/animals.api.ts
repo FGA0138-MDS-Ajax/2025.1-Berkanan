@@ -1,6 +1,7 @@
 import { ApiResponse, QueryParams } from "@/types/api.types";
-import type { Animal } from "@/types/species.types"
+import type { Animal, AnimalData, ImageProps } from "@/types/species.types"
 import { baseConfig, handleHttpResponse } from "@/utils/api.utils";
+
 
 const url_base = process.env.NEXT_PUBLIC_URL!;
 
@@ -27,7 +28,6 @@ export const postAnimals = async (data: AnimalData): Promise<Animal> => {
   const reader = new FileReader();
   await reader.readAsDataURL(data.image!);
   const image: ImageProps = {
-    id: 'a',
     codigo: 'n sei',
     pasta: 'n sei',
     alt: data.name,
@@ -38,7 +38,7 @@ export const postAnimals = async (data: AnimalData): Promise<Animal> => {
     slug: data.name,
     peso: data.weight,
     name: data.name,
-    image: image,
+    images: image,
     altura: data.height,
     id_pesq: 0,
     habitat: data.habitat,

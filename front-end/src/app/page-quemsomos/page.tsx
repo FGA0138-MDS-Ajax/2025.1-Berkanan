@@ -6,7 +6,7 @@ export default function QuemSomos() {
     <div className="min-h-screen bg-background-light flex flex-col justify-between">
       <Navigation />
 
-      <main className="flex-grow flex flex-col items-center px-6 text-center pt-8 md:pt-12">
+      <main className="flex-grow flex flex-col items-center px-6 text-center pt-8 md:pt-12 mb-10">
         {/* Título centralizado */}
         <div className="mb-0">
           <h1 className="text-[64px] font-bold text-[#2A3A2B] mb-0 leading-tight">

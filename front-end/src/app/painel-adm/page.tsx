@@ -28,7 +28,7 @@ export default function PainelAdministrador() {
   
   supabase.auth.getUser().then(({data, error}) => {
     if (error || !data?.user) {
-      redirect('/login')
+      redirect('/page-login')
     }
   })
 

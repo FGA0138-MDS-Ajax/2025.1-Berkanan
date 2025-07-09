@@ -21,7 +21,12 @@ export const get_all_images = async (): Promise<ParsedImages[]> => {
   const parsedData: ParsedImages[] = data.map((item) => {
     const { data } = supabase.storage
       .from('imagens-animais')
-      .getPublicUrl(`${item.pasta}/${item.codigo}`);
+      .getPublicUrl(`${item.pasta}/${item.codigo}`,{
+      transform: {
+        width: 300,
+        height: 200,
+      }
+    })
 
     return {
       id: item.id,

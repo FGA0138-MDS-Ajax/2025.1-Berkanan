@@ -63,7 +63,7 @@ export default function AddAnimal() {
   }
   supabase.auth.getUser().then(({data, error}) => {
     if (error || !data?.user) {
-      redirect('/login')
+      redirect('/page-login')
     }
   })
   return (
