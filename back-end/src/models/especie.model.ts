@@ -70,7 +70,6 @@ export const get_especies_sugestao = async (): Promise<ResponseProps<Especie[]>>
   const { data, error, count } = await supabase
     .from('Especie')
     .select('*')
-    .order('random()') // Ordena aleatoriamente
     .limit(10); // Limita a 10 espécies aleatórias
 
 return { data, error, count };

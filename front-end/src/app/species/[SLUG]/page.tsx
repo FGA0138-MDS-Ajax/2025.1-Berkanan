@@ -8,10 +8,14 @@ import Loading from '@/components/utils/Loading';
 import SpeciesError from '@/components/species/Error';
 import { colorMap, getCategoryName } from '@/utils/utils';
 import { useAnimals } from '@/hooks/useAnimals';
+import Carrossel from '@/components/species/Carrossel';
+import { useSuggestedSpecies } from '@/hooks/useSuggestedSpecies';
 
 export default function AnimalInfo() {
   const router = useRouter();
   const params = useParams();
+  const { data: sugestoes, loading: loadingSugestoes } = useSuggestedSpecies();
+
 
   const { getSpeciesBySlug, loading: speciesLoading, error: speciesError } = useSpecies();
   const { getAnimalsBySlug, loading: animalLoading, error: animalError } = useAnimals();
@@ -146,6 +150,12 @@ export default function AnimalInfo() {
           <div className="mt-6 bg-light-green rounded-lg p-6">
             <h2 className="text-2xl font-bold text-dark-green mb-4">SOBRE</h2>
             <p className="text-medium-green leading-relaxed">{specie.descricao}</p>
+            {!loadingSugestoes && sugestoes.length > 0 && (
+  <div className="mt-12">
+    <h2 className="text-xl font-bold text-dark-green mb-4">Espécies Relacionadas</h2>
+    <Carrossel especies={sugestoes} />
+      </div>
+)}
           </div>
         </div>
       </main>

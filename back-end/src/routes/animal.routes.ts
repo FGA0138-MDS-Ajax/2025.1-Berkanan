@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-import { getAnimais, inserirAnimal, alterarAnimal } from '../controllers/animal.controller';
+import { getAnimals, inserirAnimal, alterarAnimal } from '../controllers/animal.controller';
 import type { Animal } from '../types/animal.type';
 
 /**
