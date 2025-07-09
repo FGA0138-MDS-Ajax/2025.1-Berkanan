@@ -68,7 +68,7 @@ export default function AddAnimal() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
-      <form onSubmit={handleSubmit} className="grid grid-cols-6 px-10 py-10 gap-6">
+      <form onSubmit={handleSubmit} className="flex  px-10 py-10 gap-6">
         <div className="min-w-[65vw] flex bg-light-green rounded p-5 ">
           <div>
             <h2 className="text-2xl font-bold mb-4">Adicionar Espécie</h2>
@@ -129,12 +129,12 @@ export default function AddAnimal() {
           </div>
           <div className='ml-4 mt-[6.3vh]'>
             <p className='text-dark-green'>Sobre</p>
-            <textarea placeholder='oii' className='bg-medium-green h-50 rounded text-start' />
+            <textarea placeholder='Digite uma descrição' className='bg-medium-green placeholder-white h-50 rounded text-start' />
           </div>
 
         </div>
-        <div className="col-end-7 bg-light-green   p-5 rounded">
-          <div className='flex flex-col '>
+        <div className="bg-light-green p-5 rounded min-w-[20vw]">
+          <div className='flex flex-col'>
             <h2 className="text-2xl font-bold mb-4">Adicionar Imagem</h2>
             <input
               type="file"

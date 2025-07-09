@@ -11,12 +11,12 @@ export default function TextInput(props: TextInputProps) {
     }
   return (
     <div>
-      <p>{props.title}</p>
+      <p className="text-dark-green">{props.title}</p>
       <input 
       type="text" 
       onChange={handleChange}
       placeholder={props.placeholder}
-      className="bg-medium-green rounded p-5  w-[15rem]"
+      className="bg-medium-green rounded p-5 placeholder-white w-[15rem]"
       />
     </div>
   )
