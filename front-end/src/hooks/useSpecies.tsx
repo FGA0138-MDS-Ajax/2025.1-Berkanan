@@ -5,13 +5,13 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { getSpecies } from "@/_api/species.api";
 import { Especie } from '@/types/species.types';
-import { Pagination } from '@/types/api.types';
+import { PaginationProps } from '@/types/api.types';
 
 interface SpeciesStore {
     species: Especie[];
     loading: boolean;
     error: string | null;
-    pagination: Pagination;
+    pagination: PaginationProps;
     fetchSpecies: (page?: number, append?: boolean) => void;
     getSpecies: () => Especie[];
     getSpeciesById: (id: string) => Especie | undefined;

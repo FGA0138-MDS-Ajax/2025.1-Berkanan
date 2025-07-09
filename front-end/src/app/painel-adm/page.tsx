@@ -1,21 +1,23 @@
 'use client';
 
+import { createClient } from '@/utils/supabase/client'
 import React, { useState, useMemo } from "react";
-import { useRouter } from 'next/navigation';
+import { useRouter, redirect } from 'next/navigation';
 
 import { colorMap } from "@/utils/utils";
 import { useAnimals } from "@/hooks/useAnimals";
 import Footer from "@/components/layout/Footer";
 import { useSpecies } from "@/hooks/useSpecies";
+import { RiskStatus } from "@/types/general.types";
 import Manager from "@/components/species/Manager";
+import SelectGroup from "@/components/layout/Group";
+import SelectStatus from "@/components/layout/Status";
 import SearchBar from "@/components/search/Searchbar";
 import Pagination from "@/components/utils/Pagination";
 import Navigation from "@/components/layout/Navigation";
-import SelectGroup from "@/components/layout/Group";
-import SelectStatus from "@/components/layout/Status";
-import { RiskStatus } from "@/types/general.types";
 
 export default function PainelAdministrador() {
+  const supabase = createClient()
   const router = useRouter();
   const { animals, fetchAnimals } = useAnimals();
   const { pagination, fetchSpecies } = useSpecies();
@@ -23,7 +25,13 @@ export default function PainelAdministrador() {
   const [grupoSelecionado, setGrupoSelecionado] = useState("Todos");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRiskStatuses, setSelectedRiskStatuses] = useState<RiskStatus[]>([]);
-
+  
+  supabase.auth.getUser().then(({data, error}) => {
+    if (error || !data?.user) {
+      redirect('/login')
+    }
+  })
+  console.log(selectedRiskStatuses)
   const filteredAnimals = useMemo(() => {
     return animals.filter((animal) => {
       const matchesGrupo = grupoSelecionado === "Todos" || animal.grupo === grupoSelecionado;
@@ -40,7 +48,7 @@ export default function PainelAdministrador() {
   }, [animals, grupoSelecionado, searchTerm, selectedRiskStatuses]);
 
   const AddSpecie = () => {
-     router.push(`/adicionar-animal`);
+    router.push(`/adicionar-animal`);
   }
   return (
     <div className="min-h-screen flex flex-col">
@@ -50,14 +58,14 @@ export default function PainelAdministrador() {
           <div className="bg-light-green rounded-lg p-5 mb-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-semibold text-black">Filtros</h2>
-              <button className="bg-[#6f826a] text-white px-8 py-2 rounded-lg flex items-center gap-2" onClick={AddSpecie}>
+              <button className="bg-medium-green text-white px-8 py-2 rounded-lg flex items-center gap-2" onClick={AddSpecie}>
                 <span>➕</span> Adicionar Espécie
               </button>
             </div>
 
             <div className="flex flex-col gap-8">
-              <SelectGroup onClick={setGrupoSelecionado} selected={grupoSelecionado} showAll/>
-              <SelectStatus selectedRiskStatuses={selectedRiskStatuses} setSelectedRiskStatuses={setSelectedRiskStatuses}/>
+              <SelectGroup onClick={setGrupoSelecionado} selected={grupoSelecionado} showAll />
+              <SelectStatus selectedRiskStatuses={selectedRiskStatuses} setSelectedRiskStatuses={setSelectedRiskStatuses} />
             </div>
           </div>
 
