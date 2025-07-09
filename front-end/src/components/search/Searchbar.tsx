@@ -3,14 +3,13 @@
 import { SearchBarProps } from "@/types/general.types"
 import type React from "react"
 
-
 export default function SearchBar({ placeholder = "Pesquise por nome", onSearch, className = "" }: SearchBarProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onSearch?.(e.target.value)
   }
 
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
+    <div className={`flex items-center ${className}`}>
       <input
         type="text"
         placeholder={placeholder}

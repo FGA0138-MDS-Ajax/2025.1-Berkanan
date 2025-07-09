@@ -4,11 +4,12 @@ export interface SpeciesTag {
 }
 
 export interface ImageProps {
-    id: number
-    url: string
-    alt: string
-    name: string
-}
+  slug?: string;  // opcional no caso de inserção
+  codigo: string;
+  pasta: string;
+  alt: string;
+  url: string;
+};
 
 export type Especie = {
     id: string;
@@ -27,7 +28,7 @@ export type Animal = {
     slug: string;
     peso: string;
     name: string;
-    image: ImageProps[];
+    images: ImageProps;
     altura: string;
     id_pesq: number;
     habitat: string;
@@ -36,3 +37,18 @@ export type Animal = {
     risco: 'EN' | 'VU' | 'CR' | 'LC' | 'NT';
     grupo: "Mamífero" | "Invertebrado" | "Réptil" | "Peixe";
 };
+
+export interface AnimalData {
+  name: string;
+  order: string;
+  height: string;
+  phylum: string;
+  family: string;
+  lifeExpectancy: string;
+  class: string;
+  weight: string;
+  habitat: string;
+  image?: File | null;
+  risk: 'EN' | 'VU' | 'CR' | 'LC' | 'NT',
+  group: "Mamífero" | "Invertebrado" | "Réptil" | "Peixe",
+}

@@ -45,8 +45,8 @@ export default function AnimalInfo() {
                 </button>
                 <div className="relative mb-4">
                   <Image
-                    src={animal.image[0].url}
-                    alt={animal.image[0].alt}
+                    src={animal.images.url}
+                    alt={animal.images.alt}
                     width={600}
                     height={400}
                     className="w-full h-auto shadow-lg object-cover"

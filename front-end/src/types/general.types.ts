@@ -3,3 +3,7 @@ export interface SearchBarProps {
   onSearch?: (value: string) => void
   className?: string
 }
+export enum RiskStatus {
+  CR = "CR",
+  EN = "EN"
+}

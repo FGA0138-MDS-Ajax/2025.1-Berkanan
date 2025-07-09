@@ -21,7 +21,12 @@ export const get_all_images = async (): Promise<ParsedImages[]> => {
   const parsedData: ParsedImages[] = data.map((item) => {
     const { data } = supabase.storage
       .from('imagens-animais')
-      .getPublicUrl(`${item.pasta}/${item.codigo}`);
+      .getPublicUrl(`${item.pasta}/${item.codigo}`,{
+      transform: {
+        width: 300,
+        height: 200,
+      }
+    })
 
     return {
       id: item.id,
@@ -43,11 +48,11 @@ export const get_all_images = async (): Promise<ParsedImages[]> => {
  * @returns {Promise<ParsedImages>} Uma promessa que resolve para a imagem encontrada com dados completos.
  * @throws {Error} Caso ocorra algum erro durante a consulta.
  */
-export const get_image_by_id = async (id: string): Promise<ParsedImages> => {
+export const get_image_by_slug = async (slug: string): Promise<ParsedImages> => {
   const { data, error } = await supabase
     .from('Imagens')
     .select('*')
-    .eq('id', id)
+    .eq('slug', slug)
     .single();
 
   if (error) {
@@ -60,7 +65,7 @@ export const get_image_by_id = async (id: string): Promise<ParsedImages> => {
     .getPublicUrl(`${data.pasta}/${data.codigo}`);
 
   const returnData: ParsedImages = {
-    id: data.id,
+    slug: data.slug,
     url: urlData.publicUrl,
     alt: data.slug,
     pasta: data.pasta,
