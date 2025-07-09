@@ -6,7 +6,7 @@ interface SelectGroupProps {
 
 export default function SelectGroup(props: SelectGroupProps) {
   const grupos = ["Mamífero", "Invertebrado", "Réptil", "Peixe"];
-  if(props.showAll) grupos.join("Todos");
+  if(props.showAll) grupos[4] = "Todos";
   
   return (
     <div className="flex items-center gap-6">

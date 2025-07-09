@@ -6,12 +6,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "media.discordapp.net",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.discordapp.com",
-      },
+        hostname: "**.supabase.co",
+      }
     ],
   },
 };

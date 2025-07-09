@@ -3,7 +3,7 @@ import Image from "next/image"
 
 interface SpeciesCardProps {
   name: string
-  image: ImageProps[]
+  image: ImageProps
   tags: Array<{
     label: string
     color: string
@@ -14,8 +14,8 @@ export default function SpeciesCard(props: SpeciesCardProps) {
   return (
     <div className="bg-medium-green rounded-lg flex flex-col items-center">
       <Image
-        src={props.image[0].url}
-        alt={props.image[0].alt}
+        src={props.image.url}
+        alt={props.image.alt}
         width={300}
         height={200}
         className="rounded-lg"

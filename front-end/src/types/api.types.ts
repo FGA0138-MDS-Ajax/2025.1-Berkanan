@@ -10,3 +10,9 @@ export interface PaginationProps {
     currentPage: number;
     pageSize: number;
 }
+export interface QueryParams {
+  page?: number;
+  limit?: number;
+  slug?: string 
+}
+

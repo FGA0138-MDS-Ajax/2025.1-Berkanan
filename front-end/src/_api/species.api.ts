@@ -1,32 +1,24 @@
-import { ApiResponse } from "@/types/api.types";
+import { ApiResponse, QueryParams } from "@/types/api.types";
 import type { Especie } from "@/types/species.types"
+import { baseConfig, handleHttpResponse } from "@/utils/api.utils";
 
-const speciesData: Especie[] = [{
-    id: "bugio-maos-ruivas",
-    name: "Bugio-de-mãos-ruivas-do-Maranhão",
-    filo: "CHORDATA",
-    classe: "MAMMALIA",
-    ordem: "PRIMATES",
-    familia: "ATELIDAE",
-    slug: "bugio-maos-ruivas",
-    id_pesq: 1,
-    descricao: "O Bugio-de-mãos-ruivas-do-Maranhão é um primata endêmico do Maranhão, conhecido por suas mãos avermelhadas e vocalizações distintas.",
-  },
-]
+const url_base = process.env.NEXT_PUBLIC_URL!;
 
-export const getSpecies = async (page: number): Promise<ApiResponse<Especie[]>> => {
-    // Simula uma chamada de API
-    const api_data: ApiResponse<Especie[]> = {
-        status: "success",
-        data: speciesData,
-        totalPages: 10,
-        currentPage: 1,
-        pageSize: 3,
+/**
+ * Busca todos as espécies.
+ * @returns {Promise<ApiResponse<Especie[]>>} Lista de espécies
+ */
+export const getSpecies = async (query: QueryParams ): Promise<ApiResponse<Especie[]>> => {
+    const url = `${url_base}/especies?limit=${query.limit}?page=${query.page}`;
+    try {
+        const response = await fetch(url, {
+            ...baseConfig,
+            method: 'GET',
+        } as RequestInit);
+
+        return await handleHttpResponse(response);
+    } catch (error: any) {
+        console.error('Erro ao buscar espécies:', error);
+        throw error;
     }
-
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(api_data);
-        }, 1000);
-    });
-};
+}

@@ -7,6 +7,11 @@ import logo from '@/resources/logo.png';
 import { colorMap } from '@/utils/utils';
 import { useAnimals } from '@/hooks/useAnimals';
 import Footer from '@/components/layout/Footer';
+
+import { Bebas_Neue, Magra } from 'next/font/google';
+
+const magra = Magra({ weight: ['400'], subsets: ['latin'] });
+
 import SpeciesCard from "../components/species/Card";
 import FilterSection from '@/components/search/Filter';
 import Navigation from "@/components/layout/Navigation";
@@ -16,6 +21,7 @@ export default function SpeciesPage() {
   const { animals, pagination, fetchAnimals } = useAnimals();
   const router = useRouter();
 
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [isSorted, setIsSorted] = useState(false);
   const [isRandomized, setIsRandomized] = useState(false);
@@ -120,7 +126,7 @@ export default function SpeciesPage() {
                   className="cursor-pointer transform transition-transform duration-300 hover:scale-105"
                 >
                   <SpeciesCard
-                    image={animal.image}
+                    image={animal.images}
                     name={animal.name}
                     tags={[
                       { label: animal.grupo, color: colorMap[animal.grupo] },

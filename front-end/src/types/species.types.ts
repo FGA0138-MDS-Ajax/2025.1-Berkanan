@@ -4,7 +4,6 @@ export interface SpeciesTag {
 }
 
 export interface ImageProps {
-  id: string;
   slug?: string;  // opcional no caso de inserção
   codigo: string;
   pasta: string;
@@ -29,7 +28,7 @@ export type Animal = {
     slug: string;
     peso: string;
     name: string;
-    image: ImageProps;
+    images: ImageProps;
     altura: string;
     id_pesq: number;
     habitat: string;
