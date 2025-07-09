@@ -14,7 +14,7 @@ const SUPABASE_URL = process.env.SUPABASE_URL!;
  * @type {string}
  * @throws {Error} Se SUPABASE_KEY não estiver definida
  */
-const SUPABASE_KEY = process.env.SUPABASE_ANON_KEY!;
+const SUPABASE_KEY = process.env.SUPABASE_KEY!;
 
 /**
  * Cria uma instância do cliente Supabase para interagir com o backend do Supabase

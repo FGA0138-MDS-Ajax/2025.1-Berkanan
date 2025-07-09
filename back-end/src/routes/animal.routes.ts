@@ -14,7 +14,7 @@ export const animalRoutes = new Elysia({ prefix: '/animais' })
      * @route GET /animais
      * @returns {Promise<Animal[]>} Lista de animais.
      */
-    .get('/', async ({query}) => await getAnimals(query));
+    .get('/', async ({query}) => await getAnimals(query))
 
 
     /**
@@ -31,7 +31,7 @@ export const animalRoutes = new Elysia({ prefix: '/animais' })
         } catch (error) {
             return { error: (error as Error).message };
         }
-    });
+    })
 
     /**
      * Atualiza os dados de um animal existente.
