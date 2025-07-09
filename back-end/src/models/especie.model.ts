@@ -23,6 +23,19 @@ export const get_all_especies = async (from: number, to: number): Promise<Respon
   return result;
 };
 
+export const get_especie_by_slug = async (slug: string): Promise<Especie> => {
+  const { data, error } = await supabase
+    .from('Especie')
+    .select('*')
+    .eq('slug', slug)
+    .single();
+
+  if (error) {
+    console.error('Erro ao buscar especie:', error.message);
+    throw new Error(`Erro ao buscar especie: ${error.message}`);
+  }
+  return data;
+};
 /**
  * Insere uma nova espécie na tabela "especie" do Supabase.
  *
@@ -52,7 +65,7 @@ export const put_especie = async (especie: Especie): Promise<ResponseProps<Espec
   const { data, error, count } = await supabase
     .from('Especie')
     .update([especie])
-    .eq('cient', especie.cient)
+    .eq('slug', especie.slug)
     .select()
     .single();
 

@@ -38,7 +38,19 @@ export const get_animal_by_id = async (id: string): Promise<Animal | null> => {
 
   return data;
 }
+export const get_animal_by_slug = async (slug: string): Promise<Animal> => {
+  const { data, error } = await supabase
+    .from('Animal')
+    .select('*')
+    .eq('slug', slug)
+    .single();
 
+  if (error) {
+    console.error('Erro ao buscar animal:', error.message);
+    throw new Error(`Erro ao buscar animal: ${error.message}`);
+  }
+  return data;
+};
 /**
  * Insere um novo animal na tabela "animal" do Supabase.
  *

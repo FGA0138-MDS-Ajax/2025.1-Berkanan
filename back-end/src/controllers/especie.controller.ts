@@ -1,4 +1,4 @@
-import { get_all_especies, post_especie, put_especie } from '../models/especie.model';
+import { get_all_especies, post_especie, put_especie, get_especie_by_slug } from '../models/especie.model';
 import type { Especie } from '../types/especie.type';
 import type { PaginatedResponse, QueryParams } from '../types/general.type';
 
@@ -25,7 +25,9 @@ export const getEspecies = async (query: QueryParams): Promise<PaginatedResponse
     currentPage: page,
   };
 };
-
+export const getEspecieBySlug = async (query: QueryParams): Promise<Especie> => {
+  return await get_especie_by_slug(query.slug!);
+}
 /**
  * Insere uma nova espécie no banco de dados.
  *
