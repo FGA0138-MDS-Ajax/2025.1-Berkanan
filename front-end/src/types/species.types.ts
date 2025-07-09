@@ -35,5 +35,20 @@ export type Animal = {
     lifespan: string;
     populacao: string;
     risco: 'EN' | 'VU' | 'CR' | 'LC' | 'NT';
-    grupo: "mamifero" | "reptil" | "ave" | "peixe" | "invertebrado";
+    grupo: "Mamífero" | "Invertebrado" | "Réptil" | "Peixe";
 };
+
+export interface AnimalData {
+  name: string;
+  order: string;
+  height: string;
+  phylum: string;
+  family: string;
+  lifeExpectancy: string;
+  class: string;
+  weight: string;
+  habitat: string;
+  image?: File | null;
+  risk: 'EN' | 'VU' | 'CR' | 'LC' | 'NT',
+  group: "Mamífero" | "Invertebrado" | "Réptil" | "Peixe",
+}

@@ -5,7 +5,7 @@ export interface ApiResponse<T> {
     currentPage: number;
     pageSize: number;
 }
-export interface Pagination {
+export interface PaginationProps {
     totalPages: number;
     currentPage: number;
     pageSize: number;
@@ -13,5 +13,6 @@ export interface Pagination {
 export interface QueryParams {
   page?: number;
   limit?: number;
-  id?: string 
+  slug?: string 
 }
+

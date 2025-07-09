@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${magraSans.variable} antialiased`}
+        className={`${magraSans.className} antialiased`}
       >
         {children}
       </body>

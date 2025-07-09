@@ -5,18 +5,18 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { getSpecies } from "@/_api/species.api";
 import { Especie } from '@/types/species.types';
-import { Pagination, QueryParams } from '@/types/api.types';
+import { PaginationProps } from '@/types/api.types';
 
 interface SpeciesStore {
-  species: Especie[];
-  loading: boolean;
-  error: string | null;
-  pagination: Pagination;
-  fetchSpecies: (page?: number, limit?: number, append?: boolean) => void;
-  getSpecies: () => Especie[];
-  getSpeciesById: (id: string) => Especie | undefined;
-  getSpeciesBySlug: (slug: string) => Especie | undefined;
-  clearError: () => void;
+    species: Especie[];
+    loading: boolean;
+    error: string | null;
+    pagination: PaginationProps;
+    fetchSpecies: (page?: number, append?: boolean) => void;
+    getSpecies: () => Especie[];
+    getSpeciesById: (id: string) => Especie | undefined;
+    getSpeciesBySlug: (slug: string) => Especie | undefined;
+    clearError: () => void;
 }
 
 export const useSpeciesStore = create<SpeciesStore>()(

@@ -22,3 +22,34 @@ export const getAnimals = async (query: QueryParams ): Promise<ApiResponse<Anima
         throw error;
     }
 }
+
+export const postAnimals = async (data: AnimalData): Promise<Animal> => {
+  const reader = new FileReader();
+  await reader.readAsDataURL(data.image!);
+  const image: ImageProps = {
+    id: 'a',
+    codigo: 'n sei',
+    pasta: 'n sei',
+    alt: data.name,
+    url: reader.result! as string
+  }
+  const result: Animal = {
+    id: 0,
+    slug: data.name,
+    peso: data.weight,
+    name: data.name,
+    image: image,
+    altura: data.height,
+    id_pesq: 0,
+    habitat: data.habitat,
+    lifespan: data.lifeExpectancy,
+    populacao: data.order,
+    risco: data.risk,
+    grupo: data.group   
+  }
+  return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(result);
+        }, 1000);
+    });
+}
