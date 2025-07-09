@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import planetaTerra from '@/resources/planetaterra.png';
 
@@ -30,6 +32,8 @@ export default function Navigation() {
           <button
             className="relative group transition-all duration-300 hover:text-white"
             aria-label="Sobre o projeto"
+            onClick={() => {
+              window.location.href = '../page-quemsomos';}}
           >
             SOBRE O PROJETO
             <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"></span>
