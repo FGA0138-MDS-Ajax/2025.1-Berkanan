@@ -73,8 +73,8 @@ export default function PainelAdministrador() {
                     <button
                       key={grupo}
                       className={`px-4 py-1 rounded-full transition-colors ${grupoSelecionado === grupo
-                          ? "bg-[#6f826a] text-white"
-                          : "bg-white border border-[#6f826a] text-[#6f826a]"
+                          ? "bg-medium-green text-white"
+                          : "bg-white border border-medium-green text-medium-green"
                         }`}
                       onClick={() => setGrupoSelecionado(grupo)}
                     >
@@ -94,7 +94,7 @@ export default function PainelAdministrador() {
                         checked={selectedRiskStatuses.includes(status)}
                         onChange={() => handleRiskStatusToggle(status)}
                         className="w-5 h-5 border-3 border-medium-green bg-transparent appearance-none rounded-sm 
-                      checked:bg-[#6f826a] checked:border-[#6f826a] 
+                      checked:bg-medium-green checked:border-medium-green 
                       relative checked:after:content-['✓'] checked:after:text-white 
                       checked:after:text-xs checked:after:absolute checked:after:inset-0 
                       checked:after:flex checked:after:items-center checked:after:justify-center"
