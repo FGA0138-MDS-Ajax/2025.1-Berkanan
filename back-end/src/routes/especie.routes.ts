@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-import { getEspecies, inserirEspecie, alterarEspecie } from '../controllers/especie.controller';
+import { getEspecies, inserirEspecie, alterarEspecie, getEspecieBySlug } from '../controllers/especie.controller';
 import type { Especie } from '../types/especie.type';
 
 /**
@@ -16,6 +16,7 @@ export const especieRoutes = new Elysia({ prefix: '/especies' })
      * @returns {Promise<Especie[]>} Lista de espécies.
      */
     .get('/', async ({ query }) => await getEspecies(query))
+    .get('/slug', async ({query}) => await getEspecieBySlug(query))
 
     /**
      * Insere uma nova espécie no banco de dados.

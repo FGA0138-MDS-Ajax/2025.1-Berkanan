@@ -3,7 +3,7 @@
 import React from 'react';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { getAnimals } from "@/_api/animals.api";
+import { getAnimals, getAnimalBySlug } from "@/_api/animals.api";
 import { Animal } from '@/types/species.types';
 import { PaginationProps, QueryParams } from '@/types/api.types';
 
@@ -14,7 +14,7 @@ interface AnimalsStore {
     pagination: PaginationProps;
     fetchAnimals: (page?: number,limit?: number, append?: boolean) => void;
     getAnimals: () => Animal[];
-    getAnimalsBySlug: (slug: string) => Animal | undefined;
+    getAnimalsBySlug: (slug: string) => Promise<Animal>;
     getAnimalsById: (id: number) => Animal | undefined;
     clearError: () => void;
 }
@@ -28,10 +28,10 @@ export const useAnimalsStore = create<AnimalsStore>()(
       pagination: {
         totalPages: 1,
         currentPage: 1,
-        pageSize: 20
+        pageSize: 10
       },
 
-      fetchAnimals: async (page = 1, limit = 20, append = false) => {
+      fetchAnimals: async (page = 1, limit = 10, append = false) => {
         const query: QueryParams = {
           page,
           limit
@@ -64,8 +64,10 @@ export const useAnimalsStore = create<AnimalsStore>()(
         return get().animals.find(animal => animal.id === id);
       },
 
-      getAnimalsBySlug: (slug: string) => {
-        return get().animals.find(animal => animal.slug === slug);
+      getAnimalsBySlug: async (slug: string) => {
+        const response = await getAnimalBySlug(slug);
+        console.log(response)
+        return response
       },
 
       clearError: () => {

@@ -1,4 +1,4 @@
-import { get_all_animals, inserir_animal, alterar_animal } from '../models/animal.model';
+import { get_all_animals, inserir_animal, alterar_animal, get_animal_by_slug } from '../models/animal.model';
 import type { Animal, ParsedAnimal } from '../types/animal.type';
 import type { PaginatedResponse, QueryParams } from '../types/general.type';
 import type { ParsedImages } from '../types/imagens.type';
@@ -48,6 +48,24 @@ export const getAnimals = async (
   };
 };
 
+export const getAnimalBySlug = async (query: QueryParams): Promise<ParsedAnimal> => {
+  const data = await get_animal_by_slug(query.slug!);
+
+  const imageData = await getImageBySlug({ slug: data.image! }) as ParsedImages;
+
+  const parsedData: ParsedAnimal = {
+    ...data,
+    images: {
+      slug: imageData.slug,
+      codigo: imageData.codigo,
+      pasta: imageData.pasta,
+      alt: imageData.alt,
+      url: imageData.url
+    }
+  };
+
+  return parsedData;
+};
 /**
  * Insere um novo animal no banco de dados.
  *

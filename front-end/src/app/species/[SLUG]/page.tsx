@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useState } from "react";
 import { useParams, useRouter } from 'next/navigation';
 import { useSpecies } from '@/hooks/useSpecies';
 import Header from '@/components/layout/Navigation';
@@ -12,14 +13,34 @@ import { useAnimals } from '@/hooks/useAnimals';
 export default function AnimalInfo() {
   const router = useRouter();
   const params = useParams();
+  const [specie, setSpecie] = useState<any>(null);
+  const [animal, setAnimal] = useState<any>(null);
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<any>(null);
 
   const { getSpeciesBySlug, loading: speciesLoading, error: speciesError } = useSpecies();
   const { getAnimalsBySlug, loading: animalLoading, error: animalError } = useAnimals();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const specieData = await getSpeciesBySlug(params.SLUG as string);
+        const animalData = await getAnimalsBySlug(params.SLUG as string);
+        console.log(specieData, animalData)
 
-  const specie = getSpeciesBySlug(params.SLUG as string);
-  const animal = getAnimalsBySlug(params.SLUG as string);
+        setSpecie(specieData);
+        setAnimal(animalData);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (speciesLoading || animalLoading) return <Loading />;
+    fetchData();
+  }, [getSpeciesBySlug, getAnimalsBySlug, params.SLUG]);
+
+  if (speciesLoading || animalLoading || loading) return <Loading />;
   if (speciesError || animalError || !animal || !specie) return <SpeciesError error={speciesError || animalError!} router={router} />;
 
   return (

@@ -3,20 +3,20 @@
 import React from 'react';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { getSpecies } from "@/_api/species.api";
+import { getSpecieBySlug, getSpecies } from "@/_api/species.api";
 import { Especie } from '@/types/species.types';
 import { PaginationProps, QueryParams } from '@/types/api.types';
 
 interface SpeciesStore {
-    species: Especie[];
-    loading: boolean;
-    error: string | null;
-    pagination: PaginationProps;
-    fetchSpecies: (page?: number,limit?: number, append?: boolean) => void;
-    getSpecies: () => Especie[];
-    getSpeciesById: (id: string) => Especie | undefined;
-    getSpeciesBySlug: (slug: string) => Especie | undefined;
-    clearError: () => void;
+  species: Especie[];
+  loading: boolean;
+  error: string | null;
+  pagination: PaginationProps;
+  fetchSpecies: (page?: number, limit?: number, append?: boolean) => void;
+  getSpecies: () => Especie[];
+  getSpeciesById: (id: string) => Especie | undefined;
+  getSpeciesBySlug: (slug: string) => Promise<Especie>;
+  clearError: () => void;
 }
 
 export const useSpeciesStore = create<SpeciesStore>()(
@@ -28,7 +28,7 @@ export const useSpeciesStore = create<SpeciesStore>()(
       pagination: {
         totalPages: 1,
         currentPage: 1,
-        pageSize: 20
+        pageSize: 10
       },
 
       fetchSpecies: async (page = 1, limit = 20, append = false) => {
@@ -62,8 +62,9 @@ export const useSpeciesStore = create<SpeciesStore>()(
         return get().species.find(spec => spec.id === id);
       },
 
-      getSpeciesBySlug: (slug: string) => {
-        return get().species.find(spec => spec.slug === slug);
+      getSpeciesBySlug: async (slug: string) => {
+        const response = await getSpecieBySlug(slug);
+        return response
       },
 
       clearError: () => set({ error: null })
