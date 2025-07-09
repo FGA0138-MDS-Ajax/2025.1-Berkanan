@@ -12,14 +12,15 @@ interface SpeciesCardProps {
 
 export default function SpeciesCard(props: SpeciesCardProps) {
   return (
-    <div className="bg-medium-green rounded-lg flex flex-col items-center">
-      <Image
-        src={props.image.url}
-        alt={props.image.alt}
-        width={300}
-        height={200}
-        className="rounded-lg"
-      />
+    <div className="bg-medium-green rounded-lg flex flex-col items-center ">
+      <div className="w-[300px] h-[200px] relative">
+        <Image
+          src={props.image.url}
+          alt={props.image.alt}
+          fill
+          className="rounded-lg object-cover"
+        />
+      </div>
 
       <div className="p-5 bg-light-green w-full rounded-b-lg">
         <h3 className="font-medium mt-5 leading-tight">{props.name}</h3>
