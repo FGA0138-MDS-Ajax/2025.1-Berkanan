@@ -1,16 +1,10 @@
 'use client';
 
+import { Especie } from '@/types/species.types';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import Link from 'next/link';
 
-export type Especie = {
-  id: number;
-  nome_comum: string;
-  imagem_url: string;
-  grupo: string;
-  status_conservacao: string;
-};
 
 export default function CarrosselEspecies({ especies }: { especies: Especie[] }) {
   const [sliderRef] = useKeenSlider({
@@ -39,18 +33,18 @@ export default function CarrosselEspecies({ especies }: { especies: Especie[] })
           >
             <Link href={`/especies/${esp.id}`}>
               <img
-                src={esp.imagem_url}
-                alt={esp.nome_comum}
+                src="https://media.discordapp.net/attachments/1359563507640696834/1390744611676229755/cerradex_logo.png?ex=686ea55a&is=686d53da&hm=a0e67381c92a22d5e246003578f669d149d575e121db46fdb1afec18f5742fbe&=&format=webp&quality=lossless&width=1376&height=865" //imagem
+                alt={esp.name}
                 className="w-full h-40 object-cover"
               />
               <div className="p-2">
-                <h3 className="text-sm font-semibold truncate">{esp.nome_comum}</h3>
+                <h3 className="text-sm font-semibold truncate">{esp.name}</h3>
                 <div className="flex gap-2 mt-2">
-                  <span className={`text-xs text-white px-2 py-1 rounded-full ${coresGrupo[esp.grupo.toLowerCase()] || 'bg-gray-500'}`}>
-                    {esp.grupo}
+                  <span className={`text-xs text-white px-2 py-1 rounded-full ${coresGrupo[esp.familia.toLowerCase()] || 'bg-gray-500'}`}>
+                    {esp.familia}
                   </span>
                   <span className={`text-xs text-white px-2 py-1 rounded-full ${corStatus}`}>
-                    ({esp.status_conservacao})
+                    () //tipo de risco
                   </span>
                 </div>
               </div>

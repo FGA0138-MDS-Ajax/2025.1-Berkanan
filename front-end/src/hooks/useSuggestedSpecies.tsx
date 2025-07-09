@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import type { Especie } from "@/types/species.types";
 
 export function useSuggestedSpecies() {
-    const [data, setData] = useState<Species[]>([]);
+    const [data, setData] = useState<Especie[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
