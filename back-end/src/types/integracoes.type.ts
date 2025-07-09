@@ -3,5 +3,5 @@
  */
 export type Integracoes = {
     uid?: string;  // opcional no caso de inserção
-    cient: string;
+    especie_id: string;
 };

@@ -1,56 +1,29 @@
 'use client';
 
-import React, { useState, useMemo, useCallback } from "react";
+//import { createClient } from '@/utils/supabase/client'
+//import { redirect } from 'next/navigation'
+import React, { useState } from "react";
 
 import { colorMap } from "@/utils/utils";
 import { useAnimals } from "@/hooks/useAnimals";
-import Footer from "@/components/layout/Footer";
 import { useSpecies } from "@/hooks/useSpecies";
+import Footer from "@/components/layout/Footer";
 import Manager from "@/components/species/Manager";
 import SearchBar from "@/components/search/Searchbar";
-import Pagination from "@/components/utils/Pagination";
 import Navigation from "@/components/layout/Navigation";
 
-enum RiskStatus {
-  CR = "CR",
-  EN = "EN"
-}
-
-const grupos = ["Todos", "Mamífero", "Invertebrado", "Réptil", "Peixe"];
-
 export default function PainelAdministrador() {
+  //const supabase = createClient()
   const { animals, fetchAnimals } = useAnimals();
-  const { pagination, fetchSpecies } = useSpecies();
-
-  const [grupoSelecionado, setGrupoSelecionado] = useState("Todos");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedRiskStatuses, setSelectedRiskStatuses] = useState<RiskStatus[]>([]);
-
-  const filteredAnimals = useMemo(() => {
-    return animals.filter((animal) => {
-      const matchesGrupo = grupoSelecionado === "Todos" || animal.grupo === grupoSelecionado;
-      const matchesSearch = searchTerm.trim() === "" || [
-        animal.name,
-        animal.grupo,
-        animal.risco,
-        animal.id?.toString()
-      ].some(field => field?.toLowerCase().includes(searchTerm.toLowerCase().trim()));
-
-      const matchesRisk = selectedRiskStatuses.length === 0 || selectedRiskStatuses.includes(animal.risco as RiskStatus);
-      return matchesGrupo && matchesSearch && matchesRisk;
-    });
-  }, [animals, grupoSelecionado, searchTerm, selectedRiskStatuses]);
-
-  const handleRiskStatusToggle = useCallback((status: RiskStatus) => {
-    setSelectedRiskStatuses(prev =>
-      prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status]
-    );
-  }, []);
-
-  const getRiskStatusLabel = (status: RiskStatus): string => ({
-    [RiskStatus.CR]: "Criticamente em perigo (CR)",
-    [RiskStatus.EN]: "Em perigo (EN)"
-  })[status];
+  const { species, pagination, fetchSpecies } = useSpecies();
+  
+  // supabase.auth.getUser().then(({data, error}) => {
+  //   if (error || !data?.user) {
+  //     redirect('/login')
+  //   }
+  // })
+  const [grupoSelecionado, setGrupoSelecionado] = useState("Mamífero");
+  const grupos = ["Mamífero", "Invertebrado", "Réptil", "Peixe"];
 
   return (
     <div className="min-h-screen flex flex-col">

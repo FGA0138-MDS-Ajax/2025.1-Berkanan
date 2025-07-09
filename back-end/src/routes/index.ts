@@ -13,7 +13,6 @@ import { especieRoutes } from './especie.routes';
 import { animalRoutes } from './animal.routes';
 import { imagensRoutes } from './imagens.routes';
 import { integracoesRoutes } from './integracoes.routes';
-import { moderadorRoutes } from './moderador.routes';
 import { pesquisaRoutes } from './pesquisa.routes';
 import dotenv from 'dotenv';
 // Importe outras rotas abaixo conforme necessário
@@ -33,5 +32,4 @@ export const routes = new Elysia()
   .use(animalRoutes)
   .use(imagensRoutes)
   .use(integracoesRoutes)
-  .use(moderadorRoutes)
   .use(pesquisaRoutes);
